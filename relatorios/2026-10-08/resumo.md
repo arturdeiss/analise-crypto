@@ -78,9 +78,10 @@ O slippage forte considera execução meio ATR de 4h pior em BTC e ETH e 1 ATR p
 
 Com o ETH ainda grande, um desses shorts funciona como proteção parcial. Não abra os dois ao mesmo tempo: depois de três stops ontem, um trade novo por vez.
 
-**Alertas a criar (não criei, faça no TradingView):**
-- SOL short: zona 114,8 (stop 118,3; alvos 110,4 / 106,9). Desative os alertas antigos de long de SOL em 114,8 / 110,4 / 106,9.
-- SUI short: zona 1,0856 (stop 1,125; alvos 1,04 / 1,00). O alerta antigo "SUI long: zona 1,09" já perdeu o sentido.
+**Alertas criados no TradingView (09/10, 08:50):**
+- SOL short: cruzando 114,8 (stop 118,3; alvos 110,4 / 106,9).
+- SUI short: cruzando 1,0856 (stop 1,125; alvos 1,04 / 1,00).
+- Aviso: os alertas antigos de long de SOL (114,8 / 110,4 / 106,9) e "SUI long: zona 1,09" perderam o sentido; foram mantidos como estavam.
 
 ## Esperar
 
