@@ -6,6 +6,7 @@ Resumo diário pós-fechamento (21h, horário de Brasília) do watchlist CRYPTO:
 
 | Data | Resumo | HTML | PDF |
 |---|---|---|---|
+| 2026-10-10 | [texto](relatorios/2026-10-10/resumo.md) | [html](relatorios/2026-10-10/resumo.html) | [pdf](relatorios/2026-10-10/resumo.pdf) |
 | 2026-10-09 | [texto](relatorios/2026-10-09/resumo.md) | [html](relatorios/2026-10-09/resumo.html) | [pdf](relatorios/2026-10-09/resumo.pdf) |
 | 2026-10-08 | [texto](relatorios/2026-10-08/resumo.md) | [html](relatorios/2026-10-08/resumo.html) | [pdf](relatorios/2026-10-08/resumo.pdf) |
 | 2026-10-07 | [texto](relatorios/2026-10-07/resumo.md) | [html](relatorios/2026-10-07/resumo.html) | [pdf](relatorios/2026-10-07/resumo.pdf) |
