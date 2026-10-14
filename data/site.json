@@ -1,5 +1,5 @@
 {
- "gerado": "14/10/2026 12:29",
+ "gerado": "14/10/2026 12:31",
  "fechamento": "2026-10-13",
  "titulo": "Resumo técnico: 11 ativos (13/10/2026, pós-fechamento, ~23h30 BRT)",
  "discord": "2026-10-14",
@@ -61,96 +61,6 @@
    "resumo": true,
    "pdf": true,
    "discord": true
-  },
-  {
-   "data": "2026-10-12",
-   "resumo": true,
-   "pdf": true,
-   "discord": true
-  },
-  {
-   "data": "2026-10-11",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-10",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-09",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-08",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-07",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-06",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-05",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-04",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-03",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-02",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-10-01",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-09-30",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-09-29",
-   "resumo": true,
-   "pdf": true,
-   "discord": false
-  },
-  {
-   "data": "2026-09-28",
-   "resumo": true,
-   "pdf": false,
-   "discord": false
   }
  ]
 }

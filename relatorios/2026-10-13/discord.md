@@ -31,7 +31,7 @@ Preços: BTC 83.700, ETH 2.521, SOL 107,81, ASTER 0,6915
 
 - O que mudou desde ontem: o long de BTC do Cobra executou e está aberto com stop na entrada e 10% realizado; o long de SOL do Cobra quase executou (faltaram 0,32); o Jayson tomou dois stops pequenos nos longs ontem à noite; o canal do ETH long 2.507 (que estava vermelho) sumiu da lista.
 - Pela regra do tempo gráfico maior, o 12h e o 1D do BTC, ETH e SOL seguem com divergência de baixa confirmada. Os longs pendentes (SOL 101,37, ETH 2.317, long alternativo do Jayson) vão contra essa leitura; os shorts (Jayson 84.300 e 84.950–85.840, Cobra 88.440) vão a favor.
-- O short 4h do Jayson em ≈84.300 coincide com a nossa zona de rejeição de 83,1–84,4 mil no BTC. Pela regra do Artur, a entrada só vale com fechamento de 1h com ponto vermelho, onda cruzando na sobrecompra e o 4h alinhado.
+- O short 4h do Jayson em ≈84.300 coincide com a nossa zona de rejeição de 83,1–84,4 mil no BTC. Pela regra do relatório, a entrada só vale com fechamento de 1h com ponto vermelho, onda cruzando na sobrecompra e o 4h alinhado.
 - Alertas: nenhum trade novo ou com níveis alterados com entrada pendente, então não criei alertas hoje. O preço já cruzou COBRA BTC long 82.085, JAYSON BTC long 81.900 e JAYSON short scalp 83.317, que eram de disparo único. Os dois do Jayson perderam o sentido (trade encerrado e setup vencido). Seguem armados COBRA BTC short 88.440, ETH long 2.317, ETH short 2.846, SOL long 101,37 e JAYSON long alt 80.300 e short 4h 84.300.
 
 Isso é análise técnica, não recomendação.
