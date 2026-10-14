@@ -1,0 +1,156 @@
+{
+ "gerado": "14/10/2026 12:29",
+ "fechamento": "2026-10-13",
+ "titulo": "Resumo técnico: 11 ativos (13/10/2026, pós-fechamento, ~23h30 BRT)",
+ "discord": "2026-10-14",
+ "setups": [
+  {
+   "ativo": "AAVE",
+   "direcao": "short",
+   "zona": [
+    164.5,
+    165.5
+   ],
+   "stop": 174.5,
+   "alvos": [
+    150.4,
+    141.6
+   ],
+   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10)"
+  },
+  {
+   "ativo": "TAO",
+   "direcao": "short",
+   "zona": [
+    287.0,
+    290.0
+   ],
+   "stop": 299.0,
+   "alvos": [
+    272.0,
+    262.0
+   ],
+   "setup": "Short na zona 287–290 → confirmação 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303–305"
+  },
+  {
+   "ativo": "SOL",
+   "direcao": "short",
+   "zona": [
+    108.7,
+    110.6
+   ],
+   "stop": 112.5,
+   "alvos": [
+    104.4,
+    98.2
+   ],
+   "setup": "Short na zona 108,7–110,6 → confirmação 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Zona tocada sem gatilho; secundária 114,8"
+  }
+ ],
+ "placar_md": "Setups marcados como Oportunidade ou Top 3 desde 28/09/2026, com os níveis escritos no dia. Preços da Binance (velas de 1h, e de 5m quando há empate) até 13/10 23:30 (Brasília). A tabela mostra os setups ativos e os dos últimos 7 dias; os mais antigos entram só no resumo.\n\n| Data | Ativo | Direção | Entrada | Stop | Alvo 1 | Tendência maior | Situação hoje | Resultado R |\n|---|---|---|---|---|---|---|---|---|\n| 28/09 | BTC | long | 82.850 | 75.700 | 87.400 | contra | Aberto | 0R |\n| 07/10 | ETH | long | 2.505 | 2.390 | 2.585 | contra | Aberto | 0R |\n| 07/10 | SOL | long | 114,8 | 103,5 | 118 | contra | Stop | -1,00R |\n| 07/10 | SUI | long | 1,13 | 1,015 | 1,18 | misto | Stop | -1,00R |\n| 08/10 | SOL | short | 114,8 | 118,3 | 110,4 | a favor | Não acionado | 0R |\n| 08/10 | SUI | short | 1,0856 | 1,125 | 1,04 | a favor | Stop | -1,00R |\n| 10/10 | AAVE | short | 177 | 182,5 | 168,5 | a favor | Não acionado | 0R |\n| 10/10 | TAO | short | 288,6 | 299 | 271,6 | a favor | Stop | -1,00R |\n| 11/10 | TAO | short | 303,4 | 311 | 290,4 | a favor | Não acionado | 0R |\n| 12/10 | AAVE | short | 164,5 | 174,5 | 150,4 | a favor | Não acionado | 0R |\n| 12/10 | SOL | short | 108,7 | 112,5 | 104,4 | a favor | Aberto | 0R |\n| 12/10 | TAO | short | 287 | 299 | 272 | a favor | Não acionado | 0R |\n| 13/10 | TAO | short | 287 | 305 | 272 | a favor | Não acionado | 0R |\n\n**Resumo (todos os setups desde 28/09):**\n\n- Total no registro: 31 (Não acionado: 6; Aberto: 3; Alvo 1: 1; Alvo 2: 1; Stop: 15; Expirado: 3; Invalidado: 2)\n- Geral: 20 acionados (17 encerrados, 3 abertos); alvo 1: 12%; stop: 88%; R médio por setup: -0,75R; soma: -12,83R\n- A favor do 12h/1D: 5 acionados (4 encerrados, 1 abertos); alvo 1: 0%; stop: 100%; R médio por setup: -1,00R; soma: -4,00R\n- Contra o 12h/1D: 12 acionados (10 encerrados, 2 abertos); alvo 1: 10%; stop: 90%; R médio por setup: -0,77R; soma: -7,75R\n- Misto (só um dos dois contra): 3 acionados (3 encerrados, 0 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,36R; soma: -1,09R\n\n*% de alvo 1 e % de stop contam só os encerrados (Alvo 1, Alvo 2 e Stop). Aberto, Não acionado, Expirado (5 dias sem tocar a entrada desde a última vez que o setup foi repetido) e Invalidado (stop antes da entrada) valem 0R e ficam fora da média. Ambíguo (alvo e stop na mesma vela de 5m) não entra nos totais.*\n\n*O SOL short (108,7) aparece como **Aberto** no placar porque o preço tocou a borda da zona; **não houve entrada** — faltou confirmação no 1h. A linha \"13/10 TAO short 287 / stop 305\" foi registrada pela rotina interrompida antes deste relatório; o setup válido continua com stop 299 (linha de 12/10, reafirmada hoje).*",
+ "top3_md": "1. **SOL short:** zona 108,7–110,6 → confirmação 1h, stop 112,5, alvos 104,4 / 98,2, US$ 12k. Já tocou a zona hoje — o mais perto do gatilho.\n2. **TAO short:** zona 287–290 → confirmação 1h, stop 299, alvos 272 / 262, US$ 12k. Preço ~280.\n3. **AAVE short:** zona 164,5–165,5 → confirmação 1h, stop 174,5, alvos 150,4 / 141,6, ~US$ 8k. Preço ~161.\n\nNenhum long a favor da tendência maior. Os três são short, cada um com risco ≤~US$ 500 e teto ~US$ 12k, e só um de cada vez.\n\n---\nIsso é análise técnica, não recomendação.",
+ "historico": [
+  {
+   "data": "2026-10-14",
+   "resumo": false,
+   "pdf": false,
+   "discord": true
+  },
+  {
+   "data": "2026-10-13",
+   "resumo": true,
+   "pdf": true,
+   "discord": true
+  },
+  {
+   "data": "2026-10-12",
+   "resumo": true,
+   "pdf": true,
+   "discord": true
+  },
+  {
+   "data": "2026-10-11",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-10",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-09",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-08",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-07",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-06",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-05",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-04",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-03",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-02",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-10-01",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-09-30",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-09-29",
+   "resumo": true,
+   "pdf": true,
+   "discord": false
+  },
+  {
+   "data": "2026-09-28",
+   "resumo": true,
+   "pdf": false,
+   "discord": false
+  }
+ ]
+}

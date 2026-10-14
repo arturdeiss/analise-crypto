@@ -1,0 +1,84 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise CRYPTO</title><meta name="theme-color" content="#0f172a">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:#f1f5f9;color:#1e293b;line-height:1.45;font-size:14.5px}
+.wrap{max-width:1150px;margin:auto;padding:12px}header{background:linear-gradient(135deg,#0f172a,#334155);color:#fff;padding:18px;border-radius:14px}
+header h1{margin:0;font-size:21px}.dt{opacity:.8;font-size:12.5px;margin-top:4px}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:#f1f5f9}
+nav button{flex:0 0 auto;border:0;background:#fff;color:#334155;padding:8px 14px;border-radius:99px;font-weight:600;font-size:13.5px;box-shadow:0 1px 3px #0002;cursor:pointer}
+nav button.on{background:#0f172a;color:#fff}
+.tab{display:none}.tab.on{display:block}
+h2{margin:18px 0 8px;font-size:18px}.sub{color:#64748b;margin:0 0 10px;font-size:13px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
+.pc{background:#fff;border-radius:10px;padding:8px 10px;box-shadow:0 1px 3px #0002}.pc small{display:block;color:#64748b;font-weight:700;font-size:11.5px}
+.pc b{font-size:16px;display:block}.pc span{font-size:12px;font-weight:600}
+.g{color:#16a34a}.r{color:#dc2626}.mut{color:#64748b}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 1px 3px #0002;border-top:4px solid #16a34a}
+.card.short{border-top-color:#dc2626}.top{display:flex;justify-content:space-between;align-items:center}.nm{font-weight:700;font-size:17px}
+.bd{color:#fff;font-size:11.5px;padding:3px 9px;border-radius:99px;background:#16a34a}.short .bd{background:#dc2626}
+.lv{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:10px 0}.lv div{background:#f8fafc;border-radius:8px;padding:6px;font-size:13.5px}.lv small{display:block;color:#64748b;font-size:11px}
+.bar{height:8px;background:#e2e8f0;border-radius:9px;overflow:hidden;margin:4px 0}.bar i{display:block;height:100%}
+.st{font-size:13px}.note{font-size:12.5px;color:#475569;margin-top:6px}
+.frame{width:100%;height:80vh;border:0;border-radius:12px;background:#fff;box-shadow:0 1px 3px #0002}
+.lk{display:inline-block;margin:0 8px 8px 0;font-size:13px;color:#1d4ed8}
+.box{background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 1px 3px #0002;margin-top:10px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;background:#fff;font-size:13px}
+th{background:#0f172a;color:#fff;text-align:left;padding:6px 8px;white-space:nowrap}td{padding:6px 8px;border-top:1px solid #e2e8f0}tr:nth-child(even) td{background:#f8fafc}
+.hl a{display:flex;justify-content:space-between;background:#fff;border-radius:10px;padding:10px 14px;margin:6px 0;box-shadow:0 1px 3px #0002;color:#1e293b;text-decoration:none}
+.hl a span{font-size:12.5px;color:#64748b}
+footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-weight:600}
+</style></head><body><div class="wrap">
+<header><h1>📈 Análise diária CRYPTO</h1><div class="dt" id="dt">carregando…</div></header>
+<nav><button data-t="painel" class="on">Painel ao vivo</button><button data-t="fech">Fechamento diário</button><button data-t="disc">Trades do Discord</button><button data-t="plac">Placar</button><button data-t="hist">Histórico</button></nav>
+<section class="tab on" id="painel">
+ <h2>Preços ao vivo</h2><p class="sub">Binance spot, atualiza a cada 10 s · <span id="upd">—</span></p><div class="pgrid" id="prices"></div>
+ <h2>Oportunidades do último fechamento</h2><p class="sub" id="opsub"></p><div class="sgrid" id="setups"></div>
+</section>
+<section class="tab" id="fech"><div id="fechlk"></div><iframe class="frame" id="ffech" loading="lazy"></iframe></section>
+<section class="tab" id="disc"><div id="disclk"></div><iframe class="frame" id="fdisc" loading="lazy"></iframe></section>
+<section class="tab" id="plac"><h2>Placar</h2><div class="box" id="placar"></div></section>
+<section class="tab" id="hist"><h2>Histórico</h2><div class="hl" id="hl"></div></section>
+<footer>Isso é análise técnica, não recomendação.</footer></div>
+<script>
+const SYM=['BTC','ETH','SOL','AAVE','TAO','NEAR','ONDO','SUI','DOGE','ZEC','HBAR'];
+let D=null, P={};
+const fmt=v=>{if(v==null)return'—';const a=Math.abs(v),d=a>=1000?0:a>=100?1:a>=1?3:5;return v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})};
+const br=d=>d?d.split('-').reverse().join('/'):'—';
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,.tab').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on');location.hash=b.dataset.t});
+if(location.hash){const b=document.querySelector(`nav button[data-t="${location.hash.slice(1)}"]`);b&&b.click()}
+function md(s){const E=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');const inl=t=>E(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>');
+ let h='',tb=null,ul=false;for(const l of s.split('\n')){const t=l.trim();
+ if(t.startsWith('|')){if(/^\|[\s|:-]+\|$/.test(t))continue;const c=t.slice(1,-1).split('|').map(x=>x.trim());if(!tb){tb=[];h+='<div class="tw"><table><tr>'+c.map(x=>'<th>'+inl(x)+'</th>').join('')+'</tr>';tb=1}else h+='<tr>'+c.map(x=>'<td>'+inl(x)+'</td>').join('')+'</tr>';continue}
+ if(tb){h+='</table></div>';tb=null}
+ if(/^[-*] /.test(t)){if(!ul){h+='<ul>';ul=true}h+='<li>'+inl(t.slice(2))+'</li>';continue}if(ul){h+='</ul>';ul=false}
+ if(/^\d+\. /.test(t)){h+='<p>'+inl(t)+'</p>';continue} if(t)h+='<p>'+inl(t)+'</p>'}
+ if(tb)h+='</table></div>';if(ul)h+='</ul>';return h}
+function renderSetups(){const el=document.getElementById('setups');if(!D)return;
+ if(!D.setups.length){el.innerHTML='<div class="box">Nenhuma Oportunidade no último fechamento.</div>';return}
+ el.innerHTML=D.setups.map(s=>{const p=P[s.ativo];let st='<span class="mut">aguardando preço…</span>',bar='';
+  if(p&&s.zona){const [a,b]=[Math.min(...s.zona),Math.max(...s.zona)];let dist,txt;
+   if(p>=a&&p<=b){txt='<b class="g">DENTRO DA ZONA</b> — esperar confirmação no 1h';dist=0}
+   else{const ed=s.direcao==='short'?a:b;dist=(ed-p)/p*100;txt=`Falta <b>${dist>0?'+':''}${dist.toFixed(2)}%</b> até a zona (${fmt(ed)})`}
+   if(s.stop&&((s.direcao==='short'&&p>=s.stop)||(s.direcao==='long'&&p<=s.stop)))txt='<b class="r">Passou do stop — setup invalidado</b>';
+   const w=Math.max(4,100-Math.min(100,Math.abs(dist)*12)),c=Math.abs(dist)<2?'#16a34a':Math.abs(dist)<6?'#f59e0b':'#94a3b8';
+   st=`Preço ${fmt(p)} · ${txt}`;bar=`<div class="bar"><i style="width:${w}%;background:${c}"></i></div>`}
+  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo}</span><span class="bd">${s.direcao.toUpperCase()}</span></div>
+  <div class="lv"><div><small>Zona</small>${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'}</div><div><small>Stop</small><span class="r">${fmt(s.stop)}</span></div><div><small>Alvos</small><span class="g">${s.alvos.map(fmt).join(' / ')||'—'}</span></div></div>
+  ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
+async function prices(){try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(SYM.map(s=>s+'USDT'))));const j=await r.json();
+ j.forEach(t=>P[t.symbol.replace('USDT','')]=+t.lastPrice);
+ document.getElementById('prices').innerHTML=SYM.map(s=>{const t=j.find(x=>x.symbol===s+'USDT');if(!t)return'';const c=+t.priceChangePercent;
+  return `<div class="pc"><small>${s}</small><b>${fmt(+t.lastPrice)}</b><span class="${c>=0?'g':'r'}">${c>=0?'+':''}${c.toFixed(2)}%</span></div>`}).join('');
+ document.getElementById('upd').textContent='atualizado '+new Date().toLocaleTimeString('pt-BR');renderSetups()}catch(e){document.getElementById('upd').textContent='erro ao buscar preços, tentando de novo…'}}
+fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
+ document.getElementById('dt').textContent=`Último fechamento: ${br(d.fechamento)} · Discord: ${br(d.discord)} · site gerado ${d.gerado} (Brasília)`;
+ document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
+ if(d.fechamento){const b='relatorios/'+d.fechamento+'/';document.getElementById('ffech').src=b+'resumo.html';document.getElementById('fechlk').innerHTML=`<a class="lk" href="${b}resumo.html" target="_blank">Abrir em tela cheia</a>`+(d.historico.find(h=>h.data===d.fechamento)?.pdf?`<a class="lk" href="${b}resumo.pdf">PDF</a>`:'')}
+ if(d.discord){const b='relatorios/'+d.discord+'/';document.getElementById('fdisc').src=b+'discord.html';document.getElementById('disclk').innerHTML=`<a class="lk" href="${b}discord.html" target="_blank">Abrir em tela cheia</a>`}
+ document.getElementById('placar').innerHTML=md(d.placar_md||'Sem placar.');
+ document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
+  return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
+ renderSetups()});
+prices();setInterval(prices,10000);
+</script></body></html>

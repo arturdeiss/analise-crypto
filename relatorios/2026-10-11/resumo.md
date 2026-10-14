@@ -8,16 +8,16 @@
 
 | Ativo | Preço | Tendência | Divergências (MC B) | Setup principal | Tendência maior | Status |
 |---|---|---|---|---|---|---|
-| BTC | ~83.740 | No **0,5 (83.697)** da queda 86.999→80.394; lateral sob o 0,618 (84.476) | 1h Baixa ✓ (HH preço vs LH onda) + vermelho recente no pico, onda ~53 OB; 4h sem Alta ✓ clara, onda ~+62 OB (bounce); 12h Baixa ✓ + verde local de bounce, onda ~−12; 1D Baixa ✓, onda ~−6; 1W Baixa ✓ no topo histórico | Sem long (12h e 1D contra). Para a posição aberta, manter o stop em **79.500** | contra (long) | Esperar – contra a tendência maior |
-| ETH | ~2.538 | Ainda na faixa de redução: 0,31 (2.505) e teto ~2.536–2.540; abaixo do 0,5 (2.566) | 1h Alta ✓ / vermelho recente, onda ~49; 4h **Alta ✓** (mantida) + onda ~+49; 12h Baixa ✓, onda ~−44; 1D Baixa ✓, onda ~−44; 1W Alta ✓ antiga + vermelho recente | Sem long (12h/1D contra). Sem short (4h Alta ✓ contra). **Reduzir ~US$ 30k** na faixa 2.500–2.536 (preço ainda colado) | contra (long) / bloqueado (short) | Esperar (gerenciar posição) |
+| BTC | ~83.740 | No **0,5 (83.697)** da queda 86.999→80.394; lateral sob o 0,618 (84.476) | 1h Baixa ✓ (HH preço vs LH onda) + vermelho recente no pico, onda ~53 OB; 4h sem Alta ✓ clara, onda ~+62 OB (bounce); 12h Baixa ✓ + verde local de bounce, onda ~−12; 1D Baixa ✓, onda ~−6; 1W Baixa ✓ no topo histórico | Sem long (12h e 1D contra). | contra (long) | Esperar – contra a tendência maior |
+| ETH | ~2.538 | Ainda na faixa de redução: 0,31 (2.505) e teto ~2.536–2.540; abaixo do 0,5 (2.566) | 1h Alta ✓ / vermelho recente, onda ~49; 4h **Alta ✓** (mantida) + onda ~+49; 12h Baixa ✓, onda ~−44; 1D Baixa ✓, onda ~−44; 1W Alta ✓ antiga + vermelho recente | Sem long (12h/1D contra). Sem short (4h Alta ✓ contra). | contra (long) / bloqueado (short) | — |
 | ZEC | ~1.280 | No **0,618 (1.281)** da queda 1.385→1.113; testa o golden pocket 1.281–1.290 | 1h vermelho recente em OB (~58), Baixa formando; 4h **Alta ✓** + verde recente + onda ~+65 OB; 12h Baixa ✓ (setembro, em grande parte cumprida) + verde de bounce, onda ~−27; 1D Baixa ✓, onda ~−40; 1W Baixa ✓ / OB | Long contra. Short no golden pocket bloqueado pela Alta ✓ do 4h | contra (long) / bloqueado (short) | Esperar – contra a tendência maior |
-| DOGE | ~0,0869 | Acima do 0,31 (0,0858); abaixo do 0,5 (0,0888) | 1h Baixa ✓ e Alta ✓, onda ~35; 4h Alta ✓/formando + vermelho fresco perto de zero, onda ~+28; 12h Baixa ✓ + verde de 09/10, onda ~−45; 1D Baixa ✓, onda ~−51; 1W Alta formando (fraca) | Long contra. Short só em 0,0905–0,0910 com confirmação — zona longe; 4h com Alta ✓ atrapalha | contra (long) / bloqueado (short) | Esperar – contra a tendência maior |
-| SUI | ~1,129 | Lateral sob o 0,5 (~1,126–1,13); acima do stop do short antigo | 1h Baixa ✓ e Alta ✓, onda ~40; 4h Alta ✓/formando + vermelho fresco no bounce, onda ~+39; 12h Baixa ✓, onda ~−14; 1D Baixa formando (fraca), onda ~0; 1W Alta formando | Short antigo já stopado. Sem ideia nova: 4h acima de zero com Alta ✓. Próximo short teórico 1,156–1,165 só com Baixa ✓ no 4h | a favor (short, teórico) | Esperar |
-| AAVE | ~172,5 | Bounce do **0,31 (168,45)** até perto do 0,5 (173,72); máx. ~172,6 — zona 177 **não tocada** | 1h Alta ✓ de fundos + verde no fundo, onda ~59 subindo; 4h Baixa ✓ antiga (cumprida), **sem Alta ✓ confirmada**, vermelho recente perto de zero, onda ~+15; 12h Baixa ✓, onda ~−15; 1D Baixa ✓, onda ~+23 caindo; 1W Alta ✓ | **Short na zona 177,0–177,9 → entrada só com confirmação no 1h**, stop 182,5, alvos 168,5 / 160. Reafirmado | a favor (short) | **Oportunidade** |
+| DOGE | ~0,0869 | Acima do 0,31 (0,0858); abaixo do 0,5 (0,0888) | 1h Baixa ✓ e Alta ✓, onda ~35; 4h Alta ✓/formando + vermelho fresco perto de zero, onda ~+28; 12h Baixa ✓ + verde de 09/10, onda ~−45; 1D Baixa ✓, onda ~−51; 1W Alta formando (fraca) | Long contra. Short só em 0,0905–0,0910 com confirmação zona longe; 4h com Alta ✓ atrapalha | contra (long) / bloqueado (short) | Esperar – contra a tendência maior |
+| SUI | ~1,129 | Lateral sob o 0,5 (~1,126–1,13); acima do stop do short antigo | 1h Baixa ✓ e Alta ✓, onda ~40; 4h Alta ✓/formando + vermelho fresco no bounce, onda ~+39; 12h Baixa ✓, onda ~−14; 1D Baixa formando (fraca), onda ~0; 1W Alta formando | Sem ideia nova: 4h acima de zero com Alta ✓. Próximo short teórico 1,156–1,165 só com Baixa ✓ no 4h | a favor (short, teórico) | Esperar |
+| AAVE | ~172,5 | Bounce do **0,31 (168,45)** até perto do 0,5 (173,72); máx. ~172,6 zona 177 **não tocada** | 1h Alta ✓ de fundos + verde no fundo, onda ~59 subindo; 4h Baixa ✓ antiga (cumprida), **sem Alta ✓ confirmada**, vermelho recente perto de zero, onda ~+15; 12h Baixa ✓, onda ~−15; 1D Baixa ✓, onda ~+23 caindo; 1W Alta ✓ | **Short na zona 177,0–177,9 → entrada só com confirmação no 1h**, stop 182,5, alvos 168,5 / 160. Reafirmado | a favor (short) | **Oportunidade** |
 | TAO | ~297,2 | Atravessou 288,6–290,4 até o **0,786 (297,9)**; máx. 298,1; stop antigo 299 intacto | 1h Baixa formando + vermelho em OB (~65), onda OB; 4h sem Alta ✓ confirmada (verde de bounce no fundo), onda ~+64 OB; 12h Baixa ✓, onda ~−11; 1D Baixa ✓ + verde recente de bounce, onda ~−16; 1W Alta formando | Zona antiga **tocada sem confirmação vermelha no 1h** → sem entrada. **Nova zona short 303,4–305,0** (0,886 / resistência) → entrada só com confirmação no 1h, stop 311, alvos 290,4 / 271,6 | a favor (short) | **Oportunidade** (níveis novos) |
-| SOL | ~111,3 | Range ~109–113, no 0,31 (110,85); máx. 24h ~112,8 — zona 114,8 **não tocada** | 1h Baixa ✓ e Alta ✓, onda ~31; 4h Baixa ✓ + verde local no fundo (bounce), **sem Alta ✓ confirmada**, MF vermelho, onda ~+18; 12h Baixa ✓ + verde de 10/10, onda ~−50; 1D Baixa ✓, onda ~−36; 1W vermelho em ~58–63 | **Short na zona de 114,8 → entrada só com confirmação no 1h**, stop 118,3, alvos 110,4 / 106,9. Reafirmado | a favor (short) | **Oportunidade** |
+| SOL | ~111,3 | Range ~109–113, no 0,31 (110,85); máx. 24h ~112,8 zona 114,8 **não tocada** | 1h Baixa ✓ e Alta ✓, onda ~31; 4h Baixa ✓ + verde local no fundo (bounce), **sem Alta ✓ confirmada**, MF vermelho, onda ~+18; 12h Baixa ✓ + verde de 10/10, onda ~−50; 1D Baixa ✓, onda ~−36; 1W vermelho em ~58–63 | **Short na zona de 114,8 → entrada só com confirmação no 1h**, stop 118,3, alvos 110,4 / 106,9. Reafirmado | a favor (short) | **Oportunidade** |
 | ONDO | ~0,521 | Bounce forte de ~0,48 até 0,521; abaixo do 0,618 teórico da perna maior | 1h vermelho em OB (~64), onda OB; 4h **Alta ✓** + vermelho fresco, onda ~+60; 12h Baixa ✓ + verde de bounce, onda ~+34; 1D Baixa ✓, onda ~+21; 1W Baixa formando / OB | Long contra no 12h/1D. Short bloqueado pela Alta ✓ do 4h | contra (long) / bloqueado (short) | Esperar – contra a tendência maior |
-| NEAR | ~5,91 | +12% no dia; premium perto de 5,95–6,00; 0,65 overhead ~6,15 | 1h Baixa ✓ (HH vs LH) + vermelho em OB (~70); 4h Baixa formando + vermelho em OB (~71), MF verde forte; 12h Baixa formando/✓ + vermelho, onda ~+54; 1D Baixa ✓ (antiga) + onda ~+56; 1W OB (~88), Baixa formando | Long contra. Short só com rejeição clara acima de 5,95–6,15, Baixa ✓ no 4h e confirmação no 1h — MF ainda verde demais para forçar | contra (long) / misto (short) | Esperar – contra a tendência maior |
+| NEAR | ~5,91 | +12% no dia; premium perto de 5,95–6,00; 0,65 overhead ~6,15 | 1h Baixa ✓ (HH vs LH) + vermelho em OB (~70); 4h Baixa formando + vermelho em OB (~71), MF verde forte; 12h Baixa formando/✓ + vermelho, onda ~+54; 1D Baixa ✓ (antiga) + onda ~+56; 1W OB (~88), Baixa formando | Long contra. Short só com rejeição clara acima de 5,95–6,15, Baixa ✓ no 4h e confirmação no 1h MF ainda verde demais para forçar | contra (long) / misto (short) | Esperar – contra a tendência maior |
 | HBAR | ~0,0942 | Acima do 0,31 (0,0930); abaixo do 0,5 (0,0963) | 1h Alta ✓ + vermelho recente, onda ~57; 4h **Alta ✓**, onda ~+36; 12h Baixa ✓, onda ~−39; 1D Baixa ✓, onda ~−27; 1W Alta formando | Long contra. Short bloqueado pela Alta ✓ do 4h | contra (long) / bloqueado (short) | Esperar – contra a tendência maior |
 
 ## Mudanças desde ontem (vs 10/10 pós-fechamento)
@@ -28,31 +28,9 @@
 - **ZEC:** subiu ao golden pocket 1.281–1.290. Short bloqueado pela Alta ✓ / OB do 4h.
 - **NEAR:** +12% até ~5,95. Baixa formando no 4h/12h no pico, mas MF verde e onda OB → Esperar, sem forçar short.
 - **ONDO:** bounce 0,495→0,521. Short ainda bloqueado pelo 4h.
-- **ETH:** ~2.538, ainda na faixa de redução. Continua reduzir ~US$ 30k.
-- **BTC:** ~83.740 no 0,5. Continua stop da posição em 79.500.
+- **ETH:** ~2.538, ainda na faixa de redução.
+- **BTC:** ~83.740 no 0,5.
 - **Vs 10/10:** as três Oportunidades short mudam para AAVE + SOL reafirmados e TAO com níveis novos; ZEC/NEAR/ONDO continuam fora do filtro limpo.
-
-### Stops: posições abertas (sem captura Quantfury nova; preços ~21h)
-
-Sem captura nova da Quantfury nesta rodada. Mantém-se a leitura anterior, atualizada com os preços de hoje:
-
-**BTC long (~US$ 4,0k a 57.855,9, stop ainda em 57.790 se não foi movido)**
-1. **Stop fixo mais seguro:** **79.500**, abaixo da mínima de 08/10 (80.394).
-2. Não use stop móvel ainda: o 12h e o 1D estão contra.
-- **Avaliação:** o que falta é tirar o stop de 57.790. Preço ~83.740 no 0,5 — bounce dentro da correção.
-
-**ETH long (~US$ 55,3k a 2.437,61, stop 2.405)**
-1. **Reduzir ~US$ 30k** entre 2.500 e 2.536 — o preço ainda está colado nessa faixa (~2.538).
-2. Stop mais seguro nos ~US$ 26k restantes: **2.390**.
-- **Avaliação:** prioridade = reduzir tamanho; short bloqueado pela Alta ✓ do 4h.
-
-**HYPE long (~US$ 25,3k a 83,98, stop 83,25)** — *sem captura TV nesta rodada.*
-1. Manter o stop em **83,25**.
-2. Se chegar a 88,9, realizar ~US$ 11k e ficar com ~US$ 14k.
-
-**AAVE short 177:** **não entrado** (zona nunca tocada).
-**TAO short 288,6:** zona tocada **sem confirmação no 1h** → **não entrado**. Usar a zona nova 303,4–305,0.
-**SOL short 114,8:** **não entrado** (zona não tocada).
 
 ## Oportunidades
 
@@ -88,15 +66,15 @@ Com ETH e HYPE comprados, um desses shorts funciona como proteção parcial. Só
 - **SOL short 114,8:** alerta já existia e continua ativo. Não recriado.
 - **TAO short NOVO:** cruzando **303,4 para cima** (zona 303,4–305,0). Stop 311, alvos 290,4 / 271,6. Mensagem: entrada só com confirmação no 1h. **Criado agora** (nome: `TAO short zona 1 - 303.4 | Stop 311 | Alvos 290.4/271.6`). Também existe um alerta genérico ativo `TAOUSDT Cruzando 304,2` — deixado intacto.
 - **TAO short antigo 288,6:** zona já atravessada sem entrada — **ignorar / desativar** se ainda estiver ativo.
-- **Ignorar se dispararem:** ONDO short 0,507 / 0,523 (4h Alta ✓ contra); AAVE short 181,95 (substituído pela zona 177); longs antigos de ETH 2.505 / ZEC 1.283 / SOL / SUI (contra a tendência maior); SUI short 1,0856 (já stopado).
+- **Ignorar se dispararem:** ONDO short 0,507 / 0,523 (4h Alta ✓ contra); AAVE short 181,95 (substituído pela zona 177); longs antigos de ETH 2.505 / ZEC 1.283 / SOL / SUI (contra a tendência maior);
 
 ## Esperar
 
-- **BTC (~83.740):** contra a tendência maior. Mantenha o stop da posição em 79.500.
-- **ETH (~2.538):** reduza ~US$ 30k agora e não compre mais. Short bloqueado pela Alta ✓ do 4h.
+- **BTC (~83.740):** contra a tendência maior.
+- **ETH (~2.538):** Short bloqueado pela Alta ✓ do 4h.
 - **ZEC (~1.280):** no golden pocket, mas short bloqueado pela Alta ✓ / OB do 4h; long contra.
 - **DOGE (~0,0869):** long contra; short longe e com Alta ✓ no 4h.
-- **SUI (~1,129):** short antigo stopado; 4h acima de zero. Nada novo.
+- **SUI (~1,129):** 4h acima de zero. Nada novo.
 - **ONDO (~0,521):** long contra; short bloqueado pelo 4h.
 - **NEAR (~5,91):** long contra; short só com rejeição limpa acima de 5,95–6,15 e Baixa ✓ no 4h.
 - **HBAR (~0,0942):** long contra; short bloqueado pelo 4h.
@@ -159,8 +137,7 @@ Setups marcados como Oportunidade ou Top 3 desde 28/09/2026, com os níveis escr
 
 *% de alvo 1 e % de stop contam só os encerrados (Alvo 1, Alvo 2 e Stop). Aberto, Não acionado, Expirado (5 dias sem tocar a entrada desde a última vez que o setup foi repetido) e Invalidado (stop antes da entrada) valem 0R e ficam fora da média. Ambíguo (alvo e stop na mesma vela de 5m) não entra nos totais.*
 
-*O TAO short de 10/10 (entrada 288,6) aparece como **Aberto** porque o preço tocou a zona; no relatório, **não houve entrada** — faltou confirmação no 1h (ponto vermelho). O setup novo de 11/10 (303,4) pedem a mesma confirmação no 1h; o placar usa a borda da zona como entrada. AAVE 177 e SOL 114,8 foram reafirmados em 11/10; o prazo de expiração conta da última reafirmação.*
-
+*no relatório, **não houve entrada** — faltou confirmação no 1h (ponto vermelho). O setup novo de 11/10 (303,4) pedem a mesma confirmação no 1h; o placar usa a borda da zona como entrada. AAVE 177 e SOL 114,8 foram reafirmados em 11/10; o prazo de expiração conta da última reafirmação.*
 
 ## Top 3
 

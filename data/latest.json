@@ -1,0 +1,49 @@
+{
+ "gerado": "14/10/2026 12:29",
+ "fechamento": "2026-10-13",
+ "discord": "2026-10-14",
+ "setups": [
+  {
+   "ativo": "AAVE",
+   "direcao": "short",
+   "zona": [
+    164.5,
+    165.5
+   ],
+   "stop": 174.5,
+   "alvos": [
+    150.4,
+    141.6
+   ],
+   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10)"
+  },
+  {
+   "ativo": "TAO",
+   "direcao": "short",
+   "zona": [
+    287.0,
+    290.0
+   ],
+   "stop": 299.0,
+   "alvos": [
+    272.0,
+    262.0
+   ],
+   "setup": "Short na zona 287–290 → confirmação 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303–305"
+  },
+  {
+   "ativo": "SOL",
+   "direcao": "short",
+   "zona": [
+    108.7,
+    110.6
+   ],
+   "stop": 112.5,
+   "alvos": [
+    104.4,
+    98.2
+   ],
+   "setup": "Short na zona 108,7–110,6 → confirmação 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Zona tocada sem gatilho; secundária 114,8"
+  }
+ ]
+}

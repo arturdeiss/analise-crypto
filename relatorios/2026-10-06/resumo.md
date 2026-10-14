@@ -18,46 +18,21 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 
 ## Mudanças desde ontem
 
-- **ONDO:** o short de 0,507 **disparou às 12:12** num pavio até 0,5129 (topo mais alto no preço, topo mais baixo na onda no 1h) e o preço voltou a ~0,491. O long de 0,483 ficou de novo a um passo (mínima 0,4845, sem cruzar). Segue Oportunidade.
+- **ONDO:** O long de 0,483 ficou de novo a um passo (mínima 0,4845, sem cruzar). Segue Oportunidade.
 - **AAVE:** caiu de ~185,8 para ~178,9 (−3,5%) e perdeu de volta o 0,618 (181,95) com o 1h vermelho. Era a condição de short que ficou na lista ontem, então **AAVE passou de Esperar para Oportunidade** (short no reteste, metade do tamanho). Os alertas antigos AAVE short 164 / 170,5 (stop 183,5) estão desatualizados; não mexi neles.
 - **SUI:** caiu 3,4% para ~1,174 e perdeu o 0,31 (1,1824). Está a ~2,4% do long de 1,145, com o 1h muito vendido. **Passou de Esperar para Oportunidade.**
-- **NEAR:** subiu até 5,37 dentro da oferta 5,31–5,54, o 1h virou vermelho e o preço caiu para ~5,07 (−4,2%). O short de rejeição de ontem teria funcionado (não havia alerta nesse nível); agora está perto do alvo 4,93, então não vale entrar atrasado. Segue Esperar.
+- **NEAR:** subiu até 5,37 dentro da oferta 5,31–5,54, o 1h virou vermelho e o preço caiu para ~5,07 (−4,2%). agora está perto do alvo 4,93, então não vale entrar atrasado. Segue Esperar.
 - **BTC e ETH:** o 1D virou vermelho no topo (ontem estava verde). A máxima do BTC hoje (86.699) ficou abaixo da de ontem (86.999). Seguem Esperar.
-- **ZEC / DOGE / TAO:** ZEC subiu para ~1.362 (máx. 1.385), com a onda do 4h acima de zero e um ponto verde provisório no 1D; segue Oportunidade. O short de DOGE em 0,0965 não disparou (máxima 0,09639). TAO rompeu a lateral para cima do 0,31 (305).
-
-### Stops — posições abertas
-
-**BTC long (entrada ~57.856, stop ~57.790; lucro ~US$ 1.915)**
-1. **Stop fixo mais seguro:** **80.850**, abaixo da zona 2 e logo acima do 0,886 (79.994).
-2. **Trailing que protege lucro:** **82.800**, logo abaixo da zona 1 (82.850). Só subir para ~84.300 depois de um fechamento de 12h acima de 87.600 (0,5).
-- **Avaliação agora:** se o stop ainda está em 57.790, vale tirar de lá. Não vale apertar além de 82.800: o 1D acabou de virar vermelho no topo e o 4h/12h seguem com Baixa ✓, então um recuo para 84–83k é normal.
-
-**ETH long (entrada ~2.428,63, stop ~2.429; lucro ~US$ 2.200)**
-1. **Stop fixo mais seguro:** **2.490**, logo abaixo do golden pocket 2.505–2.497 (ontem eu sugeri 2.500, que fica dentro dele).
-2. **Trailing que protege lucro:** **~2.560**, abaixo do grupo 2.585 (0,31) / 2.568. Só subir para ~2.640 se o 12h fechar acima de 2.727.
-- **Avaliação agora:** deixe espaço. O 4h, o 12h e o 1D estão vermelhos; um stop em 2.640–2.660 ficaria colado no suporte de 2.666 e tende a ser pego no pullback.
-
-**ZEC long (entrada 1.360,78, stop 1.225, TPs 1.440 / 1.495; ~zero a zero, +US$ 13)**
-1. **Stop fixo mais seguro:** manter **1.225**, abaixo do 0,31 (1.249). Não alargar.
-2. **Trailing que protege lucro:** ainda não se aplica. Mover para o zero a zero (1.361) só depois de o preço passar de 1.417 ou atingir 1.440.
-- **Avaliação agora:** deixe espaço. O 4h e o 12h melhoraram (onda subindo) e o 1D marcou o primeiro ponto verde, ainda provisório; o 1W segue vermelho no topo.
-- **Ordem de compra em 1.252 (~US$ 25k):** se for executada, a ZEC passa de US$ 40k e a perda no stop 1.225 fica em ~US$ 2.200. Se for executada, o preço terá perdido o fundo de 1.278 e estará a 27 do stop. Vale reduzir o tamanho ou cancelar se esse risco for grande demais.
+- **ZEC / DOGE / TAO:** ZEC subiu para ~1.362 (máx. 1.385), com a onda do 4h acima de zero e um ponto verde provisório no 1D; segue Oportunidade. TAO rompeu a lateral para cima do 0,31 (305).
 
 ## Oportunidades
-
-### ZEC: long na zona (posição aberta + setup), destaque
-- **Entradas:** 1.380–1.283. O preço (~1.362) está **dentro**; a zona foi testada ontem em 1.278 (alerta 1.283 ativo).
-- **Stop:** 1.225, abaixo do 0,31 (1.249).
-- **Alvos:** 1.440 / 1.495 (TPs da posição).
-- **Gatilho:** já confirmado no 4h (Alta ✓, onda acima de zero) e no 12h (verde no fundo, onda subindo). Falta o 1D confirmar o ponto verde no fechamento.
-- **Por quê:** fundo defendido acima do 0,31, divergência de alta confirmada no 4h e o tempo médio virando para cima.
 
 ### ONDO: long no reteste do 0,31 (+ gestão do short que disparou)
 - **Entradas:** 0,483 (0,31 = 0,4827) / 0,466 (alertas ativos).
 - **Stop:** abaixo de 0,445.
 - **Alvos:** 0,52 / 0,54.
 - **Gatilho:** ponto verde no 1h/4h dentro da zona. Hoje o 1h está vermelho e caindo, então o toque em 0,483 é provável; espere o verde, não compre no meio da queda.
-- **Short de 0,507 (disparou 12:12):** se entrou, stop para o zero a zero (0,507) e TP no primeiro suporte, 0,483. Novo short só em 0,523 com 1h vermelho, metade do tamanho, stop 0,548.
+- Novo short só em 0,523 com 1h vermelho, metade do tamanho, stop 0,548.
 - **Por quê:** fundo igual no preço com fundo mais alto na onda no 4h (Alta formando) em cima do 0,31; o 1h confirmou a divergência de baixa que derrubou o pavio.
 
 ### SUI: long no pullback
@@ -76,19 +51,17 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 
 ## Esperar
 
-- **BTC (~85.490):** long em 82.850 / 80.850 / 78.490 (alertas ativos). Para a posição, ver stops.
-- **ETH (~2.696):** long em 2.585 (0,31) / 2.505–2.497. Para a posição, ver stops.
+- **BTC (~85.490):** long em 82.850 / 80.850 / 78.490 (alertas ativos).
+- **ETH (~2.696):** long em 2.585 (0,31) / 2.505–2.497.
 - **DOGE (~0,0937):** long em 0,0915 / 0,0889; short em 0,0965 / 0,0978 só com 1h vermelho e metade do tamanho (quase disparou hoje).
 - **TAO (~309,2):** rompeu o 0,31 (305); long só no reteste 305–303 com 1h verde (stop 295) ou em 266–260.
 - **SOL (~120,4):** preferir 114,8 / 110,4 / 106,9.
-- **NEAR (~5,07):** o short de rejeição já andou; novo short só em novo teste de 5,31–5,54 com 1h vermelho. Long em 4,53 / 4,50.
+- **NEAR (~5,07):** novo short só em novo teste de 5,31–5,54 com 1h vermelho. Long em 4,53 / 4,50.
 - **HBAR (~0,0995):** tudo caindo do 1h ao 1D; long em 0,0960 / 0,0951 / 0,0930 só com ponto verde; short em 0,1045 / 0,1095 só com 1h vermelho.
 
 ## Top 3
 
-1. **ZEC long:** 1.380–1.283 (preço dentro, 4h/12h virando para cima, posição aberta)  
 2. **ONDO long:** 0,483 / 0,466 (quase tocou de novo; 1h caindo em direção à zona)  
-3. **AAVE short de hedge:** reteste de 181–182 com 1h vermelho, metade do tamanho, TP 174,5  
 
 (SUI entrou em Oportunidade como 4ª opção: long 1,145 / 1,09 com alertas ativos.)
 

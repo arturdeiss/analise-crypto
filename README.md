@@ -1,6 +1,8 @@
 # Análise diária CRYPTO
 
-Resumo diário pós-fechamento (21h, horário de Brasília) do watchlist CRYPTO: Market Cipher B, Fibonacci e volume no TradingView, com as posições abertas e sugestões de stop.
+Resumo diário pós-fechamento (21h, horário de Brasília) do watchlist CRYPTO: Market Cipher B, Fibonacci e volume no TradingView.
+
+**Site:** https://arturdeiss.github.io/analise-crypto/
 Relatório diário dos trades do Discord (CobraTrades e Jayson Casper), ao meio-dia, com checagem às 19h.
 
 > Isso é análise técnica, não recomendação.

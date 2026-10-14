@@ -1,6 +1,6 @@
 # Resumo técnico: 11 ativos (07/10/2026, ~21h BRT)
 
-Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume profile. Não é recomendação de investimento. Dia de queda geral (−2,5% a −7%); só NEAR subiu. Com a carteira perto de US$ 95k, a prioridade hoje é gestão de risco; as oportunidades abaixo valem para depois de aliviar a exposição.
+Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume profile. Não é recomendação de investimento. Dia de queda geral (−2,5% a −7%); só NEAR subiu.
 
 | Ativo | Preço | Tendência | Divergências (MC B) | Setup principal | Status |
 |---|---|---|---|---|---|
@@ -23,38 +23,9 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **ETH passou para Oportunidade:** perdeu o 0,31 (2.585) e parou no 0,5 (2.536). O golden pocket 2.505–2.497 está a ~2,8% e o 4h está em sobrevenda extrema (−80). Criei o alerta em 2.505.
 - **ZEC saiu de Oportunidade para Esperar:** o 4h, que tinha virado para cima ontem, marcou vermelho e voltou para baixo de zero. A zona continua valendo (stop 1.225 intacto), mas sem gatilho.
 - **ONDO saiu de Oportunidade para Esperar:** as duas zonas foram tocadas, o preço perdeu o 0,31 (0,4827) e a divergência de alta do 4h foi anulada. O stop (0,445) não foi atingido.
-- **AAVE saiu de Oportunidade para Esperar:** o short de 181–182 não foi acionado (máx. 179,73), e os alvos 174,5 e 170,7 foram atingidos sem entrada.
+- **AAVE saiu de Oportunidade para Esperar:** 179,73), e os alvos 174,5 e 170,7 foram atingidos sem entrada.
 - **SOL passou para Oportunidade:** está a ~1,2% de 114,8, com o 1h e o 4h em sobrevenda e verdes.
 - **TAO:** o rompimento de 305 foi falso (máx. 309,7) e o preço caiu para ~291. **NEAR** foi o único em alta e voltou para dentro da oferta 5,31–5,54.
-
-### Stops — posições abertas (últimas que conheço, 17:53)
-
-**BTC long (entrada ~57.856, stop ~57.790; lucro ~US$ 1.760)**
-1. **Stop fixo mais seguro:** **80.850**, na zona 2 e acima do 0,886 (79.994).
-2. **Trailing que protege lucro:** **~82.300**, abaixo da mínima de hoje (82.787). O 82.800 que sugeri ontem teria sido pego por 13 pontos.
-- **Avaliação agora:** deixe espaço. O 1h e o 4h estão em sobrevenda e verdes, então um repique é provável; não vale apertar até o 12h voltar a subir.
-
-**ETH long (entrada ~2.428,63, stop ~2.429; lucro ~US$ 1.180)**
-1. **Stop fixo mais seguro:** **2.490**, logo abaixo do golden pocket 2.505–2.497.
-2. **Trailing que protege lucro:** **~2.525**, abaixo da mínima de hoje (2.538) e do 0,5 (2.536).
-- **Avaliação agora:** prefiro o fixo em 2.490. Se o golden pocket for testado, o trailing em 2.525 é pego bem na zona de compra.
-
-**DOGE long (entrada 0,09021, stop 0,0868; prejuízo ~US$ 280)**
-1. **Stop fixo mais seguro:** manter **0,0868**, abaixo da mínima de hoje (0,0878) e do 0,65 (0,0877).
-2. **Trailing:** ainda não se aplica. Mova o stop para o zero a zero só depois de o preço voltar acima de 0,0915.
-- **Avaliação agora:** não mexa. Vale manter a saída de metade em 0,0902 (perto da entrada) como já está.
-
-**HBAR long (preço médio 0,0945, stop 0,0880; prejuízo ~US$ 510)**
-1. **Stop fixo mais seguro:** **0,0905**, abaixo da mínima de hoje (0,0918) e do 0,65 (0,0926). Corta a perda máxima de ~US$ 2.050 para ~US$ 1.265.
-2. **Trailing:** ainda não se aplica. Saída de metade em 0,0945 (0,618 e preço médio).
-- **Avaliação agora:** é o maior risco da carteira. O 4h está em sobrevenda extrema, mas o 12h e o 1D seguem caindo; não aumente.
-
-**AAVE short (entrada 171,35, stop 183,50; prejuízo ~US$ 240)**
-1. **Stop fixo mais seguro:** **177**, que limita a perda a ~US$ 505 (contra ~US$ 1.090 em 183,50).
-2. **Trailing que protege lucro:** se o preço voltar a 170,7, desça o stop para o zero a zero (171,35).
-- **Avaliação agora:** o 1h virou para cima no 0,65 (170,67) e o 4h está verde em −55, então um repique até 177–180 é possível. Não aumente o short; se o 1h marcar vermelho abaixo de 176, ele volta a fazer sentido como hedge.
-
-(ZEC: pelo que sei, a posição foi encerrada hoje.)
 
 ## Oportunidades
 
@@ -63,7 +34,7 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **Stop:** 2.390, abaixo do 1 (2.405,85).
 - **Alvos:** 2.585 (0,31) / 2.666 (0).
 - **Gatilho:** ponto verde no 1h dentro da zona, com a onda do 4h parando de cair. Ainda não foi tocada.
-- **Por quê:** é a zona de Fibonacci em que você mais confia, e o 4h já está em sobrevenda extrema (−80). Contra: o 12h e o 1D confirmaram a divergência de baixa, então a queda pode ir até a zona antes de reagir. Você já tem ETH, então isso seria um aumento.
+- **Por quê:** Contra: o 12h e o 1D confirmaram a divergência de baixa, então a queda pode ir até a zona antes de reagir.
 
 ### SUI: long no pullback (zona 1 tocada)
 - **Entradas:** 1,13–1,11 (o 0,5 = 1,1136 segurou) com 1h verde, ou 1,09 (0,31 = 1,0856; alerta ativo).
@@ -83,12 +54,11 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 
 - **BTC (~83.260):** a zona 1 segurou; próximo long em 80.850 / 78.490 (alertas ativos).
 - **ZEC (~1.328):** o 4h voltou para baixo; long só em 1.283–1.249 com verde (alerta 1.283 ativo).
-- **DOGE (~0,0890):** posição aberta; nova entrada só acima de 0,0915 com 1h verde.
+- **DOGE (~0,0890):** nova entrada só acima de 0,0915 com 1h verde.
 - **AAVE (~174,0):** o short não acionou e os alvos foram atingidos; novo short só no reteste de 181–182 com 1h vermelho (alerta ativo).
 - **TAO (~290,9):** rompimento falso; long em 266–260.
 - **ONDO (~0,4708):** precisa recuperar 0,4827; stop 0,445 intacto.
 - **NEAR (~5,35):** forte, dentro da oferta; short só com 1h vermelho em 5,45–5,54, metade do tamanho.
-- **HBAR (~0,0929):** posição aberta; o maior risco da carteira, então foque no stop.
 
 ## Top 3
 

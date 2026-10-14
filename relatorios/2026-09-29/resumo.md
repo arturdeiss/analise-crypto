@@ -16,8 +16,8 @@
 
 ## Mudanças desde ontem
 - **Repique seletivo vs 28/09 ~21h:** AAVE ~149 → **~164** (chegou na entrada short); NEAR ~4,83 → **~4,93** (retestou 0,5 = 4,926); BTC ~83.500 → ~83.552 (lateral). **Caíram:** ZEC ~1.484 → **~1.416** (aproxima 1.380); SUI ~1,157 → **~1,147** (ainda no GP); SOL ~118,6 → ~118,7 (lateral); DOGE ~0,0939 → ~0,0935; ETH ~2.690 → ~2.672; TAO ~306,6 → **~298,8** (perdeu 305 de novo); ONDO ~0,526 → **~0,4995** (embaixo do 0,31 = 0,5018).
-- **AAVE short virou execução:** preço sentado em **164** (fib 0,31 = 163,86 / borda VAH). Artur fechou a posição anterior (~370 lucro); estrutura Baixa ✓ 1h–1D **intacta** — setup short reabre como oportunidade fresca. Confluência 0,618–0,65 = 167,31–170,67 ainda acima.
-- **SOL: Oportunidade → Esperar.** Artur prefere zona mais profunda; 4h mostra **0,786 = 110,42** e **0,886 = 103,68**. 117,9 já perfurada sem confirmação sólida 4h/12h; vermelhos 12h/1h e Baixa ✓ 4h–1D pedem **110,4 / 106,9**.
+- **AAVE short virou execução:** preço sentado em **164** (fib 0,31 = 163,86 / borda VAH). estrutura Baixa ✓ 1h–1D **intacta** — setup short reabre como oportunidade fresca. Confluência 0,618–0,65 = 167,31–170,67 ainda acima.
+- 4h mostra **0,786 = 110,42** e **0,886 = 103,68**. 117,9 já perfurada sem confirmação sólida 4h/12h; vermelhos 12h/1h e Baixa ✓ 4h–1D pedem **110,4 / 106,9**.
 - **DOGE:** preferência migra para **0,0915 / 0,0889** (cluster 4h ~0,0915–0,0883); 0,0931 tocada de novo sem gatilho 12h/1D limpo.
 - **ONDO:** melhor entrada mapeada **0,483–0,466** (0,31 secundário = 0,4827); 0,512 passou. Preço ~0,4995 no 0,31 = 0,5018 com Baixa ✓ 4h–1D — preferir o fundo.
 - **HBAR entrou no CRYPTO:** preferido **0,0960–0,0926** (GP ~0,0987–0,0958 / 0,886–1 ≈ 0,097–0,093); alertas 0,0960/0,0930 já existem. Preço ~0,1015 ainda acima — **Esperar**.
@@ -34,7 +34,7 @@ São ordens limitadas: só valem se o preço chegar à zona **e** o gatilho do M
 - **Stop:** 183,5
 - **Alvos:** 135 (2,0R), 122 (2,8R), 112 (3,4R)
 - **Gatilho:** ponto vermelho no 1h/4h **na zona** + MF 4h virando negativo. 1h e 4h já mostram vermelho; preço **já está** em 164.
-- **Por quê:** confluência 0,31 = 163,86 + VAH ~166 + GP 0,618–0,65 = 167,31–170,67 + HVN ~171. Baixa ✓ 1h–1D intacta após o bounce de ~144. Posição anterior fechada; este é um reteste fresco da zona short — não perseguir se romper e segurar acima de 170,5–183,5.
+- **Por quê:** confluência 0,31 = 163,86 + VAH ~166 + GP 0,618–0,65 = 167,31–170,67 + HVN ~171. Baixa ✓ 1h–1D intacta após o bounce de ~144. este é um reteste fresco da zona short — não perseguir se romper e segurar acima de 170,5–183,5.
 
 **2. SUI: LONG (confiança média-baixa)**
 
@@ -58,7 +58,7 @@ São ordens limitadas: só valem se o preço chegar à zona **e** o gatilho do M
 - **Stop:** 0,0868
 - **Alvos:** 0,0992 / 0,1022 / 0,1072
 - **Gatilho:** verde 4h/12h + MF 4h > 0. 4h já teve verde no fundo; 12h/1D ainda Baixa ✓.
-- **Por quê:** cluster de suporte 4h ~0,0915–0,0883; 0,5 = 0,09314 tocada sem confirmação alta. Artur pediu zona mais profunda — **0,0915/0,0889** alinhadas ao chart.
+- **Por quê:** cluster de suporte 4h ~0,0915–0,0883; 0,5 = 0,09314 tocada sem confirmação alta.
 
 **5. NEAR: LONG no pullback (confiança média-baixa)**
 

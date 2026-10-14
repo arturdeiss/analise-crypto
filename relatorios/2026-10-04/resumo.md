@@ -22,45 +22,14 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **BTC:** subiu de ~84,7k para ~86,4k, ~4% acima da zona 1 e perto do alvo 87.400. **Passou de Oportunidade para Esperar.** O 1h virou vermelho no topo. Os 3 alertas (82.850 / 80.850 / 78.490) estão ativos; a zona 1 foi recriada.
 - **DOGE:** subiu de ~0,0928 para ~0,0958 **sem tocar 0,0915**. **Passou de Oportunidade para Esperar.** As pontas 12h/1D viraram verdes. Os alertas seguem ativos.
 - **SUI:** subiu de ~1,18 para ~1,21, ~5% acima de 1,145. **Passou de Oportunidade para Esperar.** As pontas 1h/4h/1D estão vermelhas, então um pullback à zona é possível (alertas ativos).
-- **ZEC:** subiu de ~1.305 para ~1.346, ainda dentro de 1.380–1.283. A ponta do 12h virou verde no fundo e a Alta formando do 4h ganhou força. Segue Oportunidade; a posição está perto da entrada (~−US$ 277).
+- **ZEC:** subiu de ~1.305 para ~1.346, ainda dentro de 1.380–1.283. A ponta do 12h virou verde no fundo e a Alta formando do 4h ganhou força. Segue Oportunidade;
 - **AAVE:** caiu de ~181,6 para ~178,3, ainda na zona 174–182, com 1h a 1D vermelhos. Mantém Oportunidade de short (metade do tamanho).
 - **ETH:** subiu de ~2.687 para ~2.723, encostando na extensão −0,236 (2.727). A Baixa do 12h passou de formando para ✓ e as pontas 1h a 12h estão vermelhas. Segue Esperar.
-- **NEAR:** o short de 4,861 foi **estopado no zero a zero (BE)** hoje e não há posição. O preço está em ~4,90, no 0,5 (4,926). Segue Esperar.
-- **TAO / SOL / HBAR:** sem mudança de classificação (Esperar) e níveis iguais. O alerta TAO short 302,5 disparou em 03/10 (não há posição registrada).
+- **NEAR:** O preço está em ~4,90, no 0,5 (4,926). Segue Esperar.
+- **TAO / SOL / HBAR:** sem mudança de classificação (Esperar) e níveis iguais.
 - Prints com problema: **HBAR 4h** (é 1h) e **NEAR 1D** (é 1W) foram descartados; SOL 12h e NEAR 12h saíram esmaecidos (leitura com baixa confiança).
 
-### Stops — posições abertas
-
-**BTC long (entrada ~57.856, stop ~57.790; lucro ~US$ 1.980)**
-1. **Stop fixo mais seguro:** **80.850**, abaixo da zona 2 e do suporte estrutural. Trava a maior parte do lucro sem apertar.
-2. **Trailing que protege lucro:** **82.800**, logo abaixo da zona 1 (82.850). Só subir para ~84.300 (abaixo das demandas de 1h/4h em 84,4–85k) depois de um fechamento de 12h acima de 87.400.
-- **Avaliação agora:** vale tirar o stop de 57.790 hoje, porque a diferença para 80.850 é enorme. Não vale apertar além de 82.800: o 1h está vermelho no topo e há Baixa ✓ no 4h/12h/1D, então um pullback até 84–85k é normal e um trailing curto tiraria você do swing.
-
-**ETH long (entrada ~2.428,63, stop ~2.429, talvez ~2.500 sem confirmação; lucro ~US$ 2.427)**
-1. **Stop fixo mais seguro:** **2.500**, acima da entrada e abaixo da zona 2.585.
-2. **Trailing que protege lucro:** **~2.570**, abaixo do 0,31 (2.585). Só subir para ~2.640 (abaixo do 0 = 2.666) se o 12h fechar acima de 2.727.
-- **Avaliação agora:** o preço está na extensão −0,236, com Baixa ✓ no 4h/12h e pontas vermelhas, e um reteste de 2.666/2.585 é provável. Confirme o 2.500 e deixe espaço; subir para 2.640 agora tende a ser estopado no pullback.
-
-**ZEC long (entrada 1.360,78, stop 1.225, TPs 1.440/1.495; ~−US$ 277)**
-1. **Stop fixo mais seguro:** manter **1.225**, abaixo do 0,31 (1.249). Não alargar.
-2. **Trailing que protege lucro:** **ainda não se aplica**, porque a posição está levemente negativa. Mover para o zero a zero (1.361) só depois de o preço passar de 1.417 ou atingir o TP 1.440.
-- **Avaliação agora:** deixe espaço. O 4h e o 12h mostram fundo (pontas verdes, Alta formando no 4h), mas o 1D/1W ainda estão vermelhos. Não adicionar sem uma ponta verde clara no 12h.
-
-**HYPE long (fora da watchlist, só stops; entrada 91,26, stop 84,40, alvo 94; preço ~90,34, ~−US$ 52)**
-1. **Stop fixo mais seguro:** manter **84,40**.
-2. **Trailing que protege lucro:** mover para o zero a zero (~91,3) só depois de o preço passar de 93.
-- **Avaliação agora:** não mexer. A posição está perto da entrada, e subir o stop agora só aumentaria a chance de estopar no ruído.
-
-*NEAR: o short de 4,861 foi estopado no zero a zero em 04/10, e não há posição.*
-
 ## Oportunidades
-
-### ZEC: long na zona (posição aberta + setup), destaque
-- **Entradas:** 1.380–1.283. O preço (~1.346) está **dentro**; o 0,31 (1.249) fica logo abaixo.
-- **Stop:** 1.225 (o da posição aberta), abaixo do 0,31.
-- **Alvos:** 1.440 / 1.495 (TPs da posição) e o reteste de 1.375–1.417.
-- **Gatilho:** a ponta 4h e 12h já está verde no fundo. Falta a confirmação do 12h (onda subindo acima do fundo). O 1D/1W ainda estão vermelhos, então evitar adicionar com força se o 1.249 for perdido.
-- **Por quê:** é o único ativo com preço na zona e sinal de fundo no tempo médio.
 
 ### ONDO: long no reteste do 0,31
 - **Entradas:** 0,483 (0,31 = 0,4827) / 0,466, nos alertas de cruzamento para baixo.
@@ -78,8 +47,8 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 
 ## Esperar
 
-- **BTC (~86.421):** long em 82.850 / 80.850 / 78.490 (alertas ativos). Não perseguir perto do alvo 87.400. Para a posição aberta, ver stops.
-- **ETH (~2.723):** long em 2.585 (0,31) / 2.500. Está na extensão −0,236 com pontas vermelhas. Para a posição aberta, ver stops.
+- **BTC (~86.421):** long em 82.850 / 80.850 / 78.490 (alertas ativos). Não perseguir perto do alvo 87.400.
+- **ETH (~2.723):** long em 2.585 (0,31) / 2.500. Está na extensão −0,236 com pontas vermelhas.
 - **DOGE (~0,0958):** long em 0,0915 / 0,0889. Subiu sem tocar a zona; esperar o retorno.
 - **SUI (~1,21):** long em 1,145 / 1,09. As pontas vermelhas podem trazer o pullback; não perseguir.
 - **TAO (~303):** preferir 267–261 (0,31 ≈ 266).
@@ -89,7 +58,6 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 
 ## Top 3
 
-1. **ZEC long:** 1.380–1.283 (preço dentro + posição aberta)  
 2. **ONDO long:** 0,483 / 0,466 (perto; criar alertas)  
 3. **AAVE short:** reteste 170,5 / 164 (metade do tamanho, regras do bull market)  
 

@@ -9,10 +9,10 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 | ZEC | ~1.340 | Correção na zona preferida | 1h verde fundo; 4h vermelho; 12h Baixa ✓; 1D Baixa ✓ + vermelho; 1W Baixa ✓ + vermelho | Long 1.380–1.283 (preço **dentro**), stop < 1.250 | **Oportunidade** |
 | DOGE | ~0,0943 | Lateral no 0,5 | 1h verde; 4h Baixa + vermelho; 12h Baixa ✓; 1D Baixa ✓ + vermelho; 1W Alta formando | Long 0,0915 / 0,0889, stop 0,0868 | **Oportunidade** |
 | SUI | ~1,18 | No 0,31 12h / alívio LTF | 1h–12h verde + Baixa ✓ hist. 12h; 1D Baixa ✓ + vermelho; 1W verde | Long 1,145 / 1,09, stop 1,015; short 1,33–1,42 só com vermelho | **Oportunidade** |
-| AAVE | ~172,8 | Empurrão LTF rumo 174–182 | 1h–1W verde (alívio); 4h/12h/1D Baixa ✓ (topo mais alto no preço, topo mais baixo na onda) | Short reteste 164 / 170,5 (aguardar falha 174–182 + vermelho), stop 183,5, alvos 135 / 122 / 112 — short aberta ~167,95 submersa | Esperar |
+| AAVE | ~172,8 | Empurrão LTF rumo 174–182 | 1h–1W verde (alívio); 4h/12h/1D Baixa ✓ (topo mais alto no preço, topo mais baixo na onda) | Short reteste 164 / 170,5 (aguardar falha 174–182 + vermelho), stop 183,5, alvos 135 / 122 / 112 short aberta ~167,95 submersa | Esperar |
 | TAO | ~304 | Correção no 0,31 local | 1h verde; 4h–1D Baixa ✓ + vermelho; 12h Baixa ✓; 1W onda ↑ | Long preferido 267–261 (0,31 ≈ 265,5) | Esperar |
 | SOL | ~118,5 | No 0,618 local / pressão | 1h/4h verde; 12h Baixa ✓; 1D Baixa + vermelho; 1W onda ↑ | Long preferido 110,4 / 106,9 (não 117,9) | Esperar |
-| ONDO | ~0,498 | Acima da entrada / correção | 1h/4h verde + Alta formando 4h; 12h/1D Baixa ✓ + vermelho; 1W onda ↑ | Long preferido 0,483–0,466, stop < 0,445 — posição aberta desde 0,4830 | Esperar |
+| ONDO | ~0,498 | Acima da entrada / correção | 1h/4h verde + Alta formando 4h; 12h/1D Baixa ✓ + vermelho; 1W onda ↑ | Long preferido 0,483–0,466, stop < 0,445 | Esperar |
 | NEAR | ~4,82 | Pullback após pump | 1h verde; 4h–1D Baixa ✓ + vermelho; 12h Baixa ✓; 1W vermelho | Long preferido 4,53 (alertas 4,50/4,65) | Esperar |
 | HBAR | ~0,103 | Correção acima da zona | 1h verde; 4h–1D Baixa + vermelho; 12h Baixa ✓; 1W Alta formando | Long 0,0960–0,0926, stop < 0,0900, alvos 0,1115 / 0,1190 | Esperar |
 
@@ -28,19 +28,6 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **ETH / TAO / SOL / HBAR:** sem mudança de classificação (Esperar); níveis iguais.
 - Níveis de alerta preferidos **não mudaram** (mesmos setups). Alertas antigos não devem ser apagados. **Novo contexto:** ZEC agora acionável na zona já alertada 1.380–1.283.
 
-### Stops — posições abertas
-
-**ONDO long (entrada 0,4830, ~US$40k)**
-1. **Stop fixo mais seguro:** subir de ~0,4815 para **0,490–0,492** (abaixo da consolidação 0,482–0,516, trava pequena proteção após o arrego do topo 0,5133).
-2. **Trailing que protege lucro:** após rompimento e hold acima de **~0,505**, arrastar stop para ~0,496; se não segurar 0,505, **deixar espaço** e não apertar demais — subir cedo demais limita o caminho a 0,52/0,54.
-- **Avaliação agora:** preço ~+3% da entrada (ainda < ~5% favorável). Preferir **fixar 0,490–0,492** e **não apertar trailing agressivo** até hold > 0,505.
-
-**AAVE short (médio ~167,95, stop 178) — se ainda aberta**
-1. **Stop fixo mais seguro (estrutural):** **183,5** (acima do fib 181,95 / premium) — dá folga ao empurrão 174–182.
-2. **Stop mais curto (limita perda):** **175,5–176** (corta se falhar a rejeição em 174,48).
-- **Trailing:** só faz sentido **depois** de voltar abaixo de ~164 e recuperar lucro; até lá não “trailar” para cima. Alvos de escala mantidos **157,5 / 151,7** se o preço reverter.
-- **Avaliação agora:** com tips verdes e alvo 174–182, ou **folga até 183,5** ou **corta em 175,5–176** — não apertar stop em 178 se a ideia é sobreviver ao spike.
-
 ## Oportunidades
 
 ### ZEC — Long na zona preferida (novo)
@@ -48,7 +35,7 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **Stop:** abaixo de 1.283 / estrutural < 1.250.
 - **Alvos:** reteste 1.375–1.417 / extensão local.
 - **Gatilho:** tip verde 4h/12h; HTF ainda Baixa ✓ + vermelho — evitar chase se romper 1.375 sem alívio.
-- **Por quê:** maior mudança do dia. Preço entrou na faixa Artur; confluência = zona + LTF verde fundo; HTF ainda pressiona (pode aprofundar a 1.283).
+- **Por quê:** maior mudança do dia. confluência = zona + LTF verde fundo; HTF ainda pressiona (pode aprofundar a 1.283).
 
 ### SUI — Long no / perto do 0,31
 - **Entradas:** 1,145 / 1,09 (cruzamento para baixo).
@@ -77,7 +64,7 @@ Análise técnica com Market Cipher B, Fibonacci (0,31 / golden pocket) e volume
 - **AAVE (~173):** short 164/170,5 só em **reteste falho 174–182 com vermelho**; tips verdes agora. Short aberta: ver stops acima.
 - **TAO (~304):** preferir 267–261 (0,31 ≈ 265,5); ainda longe.
 - **SOL (~118,5):** preferir 110,4 / 106,9; não 117,9.
-- **ONDO (~0,498):** preferido 0,483–0,466; posição aberta desde 0,4830 — add só no reteste; ver stops.
+- **ONDO (~0,498):** preferido 0,483–0,466; ver stops.
 - **NEAR (~4,82):** preferir 4,53 (4,50/4,65); aproximando após pump.
 - **HBAR (~0,103):** preferido 0,0960–0,0926, stop < 0,0900, alvos 0,1115 / 0,1190.
 

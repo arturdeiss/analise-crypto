@@ -2,23 +2,23 @@
 
 **Relatório pós-fechamento.** As velas de 1D de 13/10 fecharam às 21h BRT; as capturas são de ~21:00–21:35 BRT e os preços abaixo são da Binance às ~23:30 BRT. Regras de sempre: nada vira Oportunidade se o 4h, o 12h ou o 1D tiver divergência confirmada contra; a zona só dispara o alerta e a entrada espera o fechamento de 1h com ponto e a onda cruzando no extremo, com o 4h a favor; o tempo gráfico maior manda.
 
-**Leitura do mercado pelo tempo gráfico maior:** dia de **repique dentro da correção**. Depois do dump de 12/10, quase tudo devolveu uma parte (BTC +1,6%, ETH +2,1%, ZEC +4%, SUI +2%, AAVE +2%, TAO +2%, SOL +1%, NEAR −1%, ONDO e HBAR de lado). O 12h e o 1D continuam com a divergência de baixa confirmada na maior parte do watchlist; o repique veio com a onda do 4h saindo da sobrevenda, não com reversão nos tempos maiores. **Nenhum long passa no filtro.** As três zonas short de ontem continuam válidas: **SOL chegou a 109,07 (dentro da zona 108,7–110,6) mas sem confirmação no 1h**; AAVE (máx 163,1) e TAO (máx 285,1) pararam logo abaixo das zonas.
+**Leitura do mercado pelo tempo gráfico maior:** dia de **repique dentro da correção**. Depois do dump de 12/10, quase tudo devolveu uma parte (BTC +1,6%, ETH +2,1%, ZEC +4%, SUI +2%, AAVE +2%, TAO +2%, SOL +1%, NEAR −1%, ONDO e HBAR de lado). O 12h e o 1D continuam com a divergência de baixa confirmada na maior parte do watchlist; o repique veio com a onda do 4h saindo da sobrevenda, não com reversão nos tempos maiores. AAVE (máx 163,1) e TAO (máx 285,1) pararam logo abaixo das zonas.
 
 *Divergências do 12h e do 1D seguem a leitura do TradingView (crops). Preços ~23:30 BRT. ATR 4h da Binance (14 períodos).*
 
 | Ativo | Preço | Tendência | Divergências (MC B) | Setup principal | Tendência maior | Status |
 |---|---|---|---|---|---|---|
-| BTC | ~83.330 | Repique de 81.034 até 84.168; abaixo da zona de rejeição 83,1–84,4k; ATR 4h ~885 | 1h onda no meio/alto + vermelho; 4h Alta formando (saindo da OS); 12h Baixa ✓; 1D Baixa ✓ + vermelho; 1W Baixa ✓ | Sem long novo (12h/1D contra). Short só em rejeição 84,4–85,6k com confirmação 1h e 4h virando — sem zona limpa agora. Posição: long antigo US$ 4k, stop 57.790 | contra (long) | Esperar – contra a tendência maior |
-| ETH | ~2.506 | Repique de 2.409 a 2.538; no teto 2.505–2.536; ATR 4h ~39 | 1h onda alta + vermelho no topo; 4h Alta ✓/formando + verde (**bloqueia short**); 12h Baixa ✓; 1D Baixa ✓; 1W Baixa ✓ | Sem long novo; short bloqueado pelo 4h. Posição: long US$ 64,2k, stop 2.390 (risco ~US$ 1.150) | contra (long) / bloqueado (short) | Esperar (gerenciar posição) |
+| BTC | ~83.330 | Repique de 81.034 até 84.168; abaixo da zona de rejeição 83,1–84,4k; ATR 4h ~885 | 1h onda no meio/alto + vermelho; 4h Alta formando (saindo da OS); 12h Baixa ✓; 1D Baixa ✓ + vermelho; 1W Baixa ✓ | Sem long novo (12h/1D contra). Short só em rejeição 84,4–85,6k com confirmação 1h e 4h virando sem zona limpa agora. | contra (long) | Esperar – contra a tendência maior |
+| ETH | ~2.506 | Repique de 2.409 a 2.538; no teto 2.505–2.536; ATR 4h ~39 | 1h onda alta + vermelho no topo; 4h Alta ✓/formando + verde (**bloqueia short**); 12h Baixa ✓; 1D Baixa ✓; 1W Baixa ✓ | Sem long novo; short bloqueado pelo 4h. | contra (long) / bloqueado (short) | — |
 | ZEC | ~1.270 | Repique forte de 1.123; testando 0,31 major (~1.249–1.280) | 1h alto + vermelho; 4h Alta ✓/formando + verde (**bloqueia short**); 12h Baixa ✓ (cumprida em parte); 1D Baixa ✓; 1W Baixa ✓ | Long contra. Short só rejeição 1.280–1.350 com Baixa ✓ no 4h | contra (long) / bloqueado (short) | Esperar |
 | DOGE | ~0,0846 | Lateral no discount 0,080–0,088 | 1h neutro; 4h Alta ✓/formando (**bloqueia short**); 12h Baixa ✓; 1D Alta formando; 1W Alta formando | Long contra 12h; short longe (0,0905–0,094) e bloqueado | contra / bloqueado | Esperar |
 | SUI | ~1,057 | Repique de 0,9935; abaixo da zona 1,059–1,085 | 1h alto; 4h Alta formando + verde; 12h Baixa residual + verde fundo; 1D Baixa formando; 1W sem div clara | Short teórico 1,059–1,085 só com Baixa ✓ no 4h | misto | Esperar |
 | AAVE | ~161,2 | Repique de 151,9 a 163,1; **parou abaixo da zona 164,5**; ATR 4h ~4,1 | 1h onda alta + verde/vermelho no topo; 4h Alta formando (não ✓), saindo da OS; 12h Baixa ✓ + vermelho; 1D Baixa ✓ + vermelho; 1W vermelho/exaustão | **Short na zona 164,5–165,5 → entrada só com confirmação no 1h**, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10) | a favor (short) | **Oportunidade** |
 | TAO | ~280,2 | Repique de 262,1 a 285,1; **parou abaixo da zona 287**; ATR 4h ~8,7 | 1h alto; 4h Alta formando (não ✓) + verde; 12h Baixa ✓ + vermelho; 1D Baixa ✓ + vermelho; 1W sem ✓ nova | **Short na zona 287–290 → confirmação 1h**, stop 299, alvos 272 / 262 (mantido). Secundária 303–305 | a favor (short) | **Oportunidade** |
 | SOL | ~107,4 | Repique de 101,69 a **109,07 (tocou a zona)**, recuou; ATR 4h ~2,35 | 1h vermelho no topo, onda virando; 4h Alta formando (não ✓) + verde, MF vermelho; 12h Baixa ✓; 1D Baixa ✓ + vermelho; 1W verde fraco | **Short na zona 108,7–110,6 → confirmação 1h**, stop 112,5, alvos 104,4 / 98,2 (mantido). Zona tocada sem gatilho; secundária 114,8 | a favor (short) | **Oportunidade** |
-| ONDO | ~0,469 | Lateral no GP local 0,454–0,489 | 1h neutro; 4h Alta ✓/formando (**bloqueia short**); 12h Baixa ✓; 1D Baixa ✓; 1W verde | Sem posição; short novo bloqueado pelo 4h | bloqueado | Esperar |
-| NEAR | ~5,134 | Repique fraco de 4,89; no 0,5 (~5,15); resistência 5,37–5,47; ATR 4h ~0,25 | 1h verde de repique, onda no meio; 4h onda ainda caindo do pico, sem ponto verde; 12h Baixa formando; 1D Baixa ✓; 1W Baixa formando | Posição: long US$ 30k (média 5,027), stop 4,870, alvo 6,000 — risco ~US$ 940 (acima do teto). Long contra o 1D | contra (long aberto) | Esperar (gerenciar posição) |
-| HBAR | ~0,0871 | Perto da mínima 0,0842; abaixo de 0,0930–0,0960 | 1h neutro; 4h Alta formando no fundo; 12h Baixa ✓; 1D Baixa ✓; 1W Baixa | Long contra; short só rejeição 0,0930–0,0960 com 4h limpo — longe | contra (long) | Esperar |
+| ONDO | ~0,469 | Lateral no GP local 0,454–0,489 | 1h neutro; 4h Alta ✓/formando (**bloqueia short**); 12h Baixa ✓; 1D Baixa ✓; 1W verde | short novo bloqueado pelo 4h | bloqueado | Esperar |
+| NEAR | ~5,134 | Repique fraco de 4,89; no 0,5 (~5,15); resistência 5,37–5,47; ATR 4h ~0,25 | 1h verde de repique, onda no meio; 4h onda ainda caindo do pico, sem ponto verde; 12h Baixa formando; 1D Baixa ✓; 1W Baixa formando | Long contra o 1D | contra (long aberto) | — |
+| HBAR | ~0,0871 | Perto da mínima 0,0842; abaixo de 0,0930–0,0960 | 1h neutro; 4h Alta formando no fundo; 12h Baixa ✓; 1D Baixa ✓; 1W Baixa | Long contra; short só rejeição 0,0930–0,0960 com 4h limpo longe | contra (long) | Esperar |
 
 ## Mudanças desde ontem (vs 12/10 pós-fechamento)
 
@@ -27,36 +27,8 @@
 - **AAVE / TAO:** chegaram a ~1% das zonas (163,1 vs 164,5; 285,1 vs 287) e recuaram. Zonas mantidas.
 - **BTC:** testou 84.168, encostando na zona de rejeição 83,1–84,4k; fechou o dia em 83.169.
 - **ETH:** voltou para o teto 2.505–2.536; 4h segue com Alta ✓ e bloqueia short.
-- **NEAR:** devolveu quase todo o lucro do long; preço colado na entrada.
+- **NEAR:** preço colado na entrada.
 - **HBAR** entra no watchlist (só Esperar).
-
-### Posições abertas (Quantfury, última leitura 00:58 BRT de 13/10 — não relidas hoje)
-
-| Posição | Tamanho | Entrada média | Preço agora | Stop | Alvo | Risco até o stop |
-|---|---|---|---|---|---|---|
-| NEAR long | US$ 30k | 5,027 | 5,134 | 4,870 | 6,000 (posição toda) | ~US$ 940 |
-| ETH long | US$ 64,2k | 2.433,43 | 2.506 | 2.390 | sem alvo | ~US$ 1.150 |
-| BTC long (antigo) | US$ 4k | 57.856 | 83.330 | 57.790 | sem alvo | ~US$ 5 |
-
-- **P&L aberto estimado (preço de agora):** NEAR ~+US$ 640; ETH ~+US$ 1.910; BTC ~+US$ 1.760.
-- **⚠️ Risco acima do teto de US$ 500:** NEAR (~US$ 940) e ETH (~US$ 1.150). Os dois são longs correlacionados contra o 12h/1D: se caírem juntos até o stop, a perda passa de **US$ 2,1k**.
-
-**NEAR long (US$ 30k, média 5,027)**
-1. Stop fixo **4,870** (abaixo da mínima 4,89).
-2. Stop móvel: para a entrada (~5,03) após fechamento de 4h acima de 5,15–5,20; para 5,15 após fechamento de 4h acima de 5,40.
-3. **Mover agora?** Não — o 4h ainda não fechou acima de 5,20.
-- **Avaliação:** para o risco cair para ~US$ 500 com o mesmo stop, a posição teria de ser ~US$ 16k (reduzir ~US$ 14k, de preferência no repique 5,15–5,20). Sem add. Se perder 4,89 num fechamento de 4h, o cenário de alta morre.
-
-**ETH long (US$ 64,2k, média 2.433,43)**
-1. Stop fixo **2.390**.
-2. Stop móvel: para a entrada (~2.435) após fechamento de 4h acima de 2.540; depois 2x ATR do 4h (~80) abaixo do preço.
-3. **Mover agora?** Não (você preferiu não subir o stop do ETH). Alternativa técnica: 2.405, logo abaixo da mínima 2.409, reduziria o risco para ~US$ 750.
-- **Avaliação:** maior risco da carteira; preço no teto 2.505–2.536 com 12h/1D contra — bom lugar para realizar uma parte.
-
-**BTC long antigo (US$ 4k, média 57.856)**
-1. Stop **57.790** (praticamente na entrada).
-2. Stop móvel: sem mudança.
-3. **Mover agora?** Não.
 
 ## Oportunidades
 
@@ -86,7 +58,7 @@ Todas são short a favor do 12h e do 1D, **mantidas de 12/10**. Regras: no máxi
 Com ETH e NEAR comprados, um desses shorts funciona como proteção parcial contra a correção. Só um por vez.
 
 **Alertas no TradingView (criados):** os três alertas das zonas (AAVE 164,5 / TAO 287 / SOL 108,7) foram criados em 12/10 e continuam armados até 12/12 (SL/TP no nome, disparo único, app + pop-up + e-mail). Novo hoje:
-- **SOLUSDT short — reteste (criado):** cruzando **110,6 para cima** (topo da zona). Stop 112,5, alvos 104,4 / 98,2. Mensagem: entrada só com confirmação no 1h; perto do stop, reduzir tamanho.
+- **SOLUSDT short — reteste (criado):** cruzando **110,6 para cima** (topo da zona). Stop 112,5, alvos 104,4 / 98,2. Mensagem: entrada só com confirmação no 1h;
 - **NEARUSDT long — stop móvel (criado):** cruzando **5,20 para cima**. Mensagem: se o 4h fechar acima, subir stop para 5,03 (entrada); SL atual 4,87, TP 6,00.
 - **NEARUSDT long — perda do suporte (criado):** cruzando **4,89 para baixo**. Mensagem: SL 4,87 perto; TP 6,00.
 - **Manter:** AAVE 164,5 e 177; TAO 287 e 303,4; SOL 108,7 e 114,8.
@@ -95,12 +67,11 @@ Com ETH e NEAR comprados, um desses shorts funciona como proteção parcial cont
 ## Esperar
 
 - **BTC (~83.330):** contra a tendência maior; short só em rejeição limpa acima de 84,4k.
-- **ETH (~2.506):** long de US$ 64,2k, stop 2.390; short bloqueado pelo 4h.
+- **ETH (~2.506):** short bloqueado pelo 4h.
 - **ZEC (~1.270):** testando resistência; short bloqueado pelo 4h.
 - **DOGE (~0,0846):** sem setup.
 - **SUI (~1,057):** short teórico 1,059–1,085 só com Baixa ✓ no 4h.
 - **ONDO (~0,469):** short bloqueado pelo 4h.
-- **NEAR (~5,134):** long de US$ 30k contra o 1D, stop 4,870.
 - **HBAR (~0,0871):** sem setup.
 
 ## Divergências (todas, por tempo gráfico)
