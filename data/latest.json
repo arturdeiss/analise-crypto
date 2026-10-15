@@ -1,5 +1,5 @@
 {
- "gerado": "15/10/2026 12:26",
+ "gerado": "15/10/2026 13:32",
  "fechamento": "2026-10-14",
  "discord": "2026-10-15",
  "setups": [
@@ -15,7 +15,8 @@
     150.4,
     141.6
    ],
-   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10). Zona a ~6,7% do preço"
+   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10). Zona a ~6,7% do preço",
+   "id": "20261012-AAVE-short"
   },
   {
    "ativo": "TAO",
@@ -29,7 +30,8 @@
     272.0,
     262.0
    ],
-   "setup": "Short na zona 287–290 → confirmação no 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303,4–305. Zona a ~6% do preço"
+   "setup": "Short na zona 287–290 → confirmação no 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303,4–305. Zona a ~6% do preço",
+   "id": "20261012-TAO-short"
   },
   {
    "ativo": "SOL",
@@ -43,18 +45,23 @@
     104.4,
     98.2
    ],
-   "setup": "Short na zona 108,7–110,6 → confirmação no 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Secundária 114,8"
+   "setup": "Short na zona 108,7–110,6 → confirmação no 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Secundária 114,8",
+   "id": "20261012-SOL-short"
   },
   {
    "ativo": "NEAR",
    "direcao": "short",
-   "zona": null,
+   "zona": [
+    5.1,
+    5.19
+   ],
    "stop": 5.4,
    "alvos": [
     4.9,
     4.665
    ],
-   "setup": "Short no repique até 5,10–5,19 → confirmação no 1h, stop 5,40, alvos 4,90 / 4,665 / 4,495 (novo)"
+   "setup": "Short no repique até 5,10–5,19 → confirmação no 1h, stop 5,40, alvos 4,90 / 4,665 / 4,495 (novo)",
+   "id": "20261014-NEAR-short"
   }
  ]
 }

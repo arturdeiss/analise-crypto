@@ -1,5 +1,5 @@
 {
- "gerado": "15/10/2026 12:26",
+ "gerado": "15/10/2026 13:32",
  "fechamento": "2026-10-14",
  "titulo": "Resumo técnico: 11 ativos (14/10/2026, pós-fechamento, ~21h30 BRT)",
  "discord": "2026-10-15",
@@ -16,7 +16,8 @@
     150.4,
     141.6
    ],
-   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10). Zona a ~6,7% do preço"
+   "setup": "Short na zona 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6 (mantido de 12/10). Zona a ~6,7% do preço",
+   "id": "20261012-AAVE-short"
   },
   {
    "ativo": "TAO",
@@ -30,7 +31,8 @@
     272.0,
     262.0
    ],
-   "setup": "Short na zona 287–290 → confirmação no 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303,4–305. Zona a ~6% do preço"
+   "setup": "Short na zona 287–290 → confirmação no 1h, stop 299, alvos 272 / 262 (mantido). Secundária 303,4–305. Zona a ~6% do preço",
+   "id": "20261012-TAO-short"
   },
   {
    "ativo": "SOL",
@@ -44,18 +46,23 @@
     104.4,
     98.2
    ],
-   "setup": "Short na zona 108,7–110,6 → confirmação no 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Secundária 114,8"
+   "setup": "Short na zona 108,7–110,6 → confirmação no 1h, stop 112,5, alvos 104,4 / 98,2 (mantido). Secundária 114,8",
+   "id": "20261012-SOL-short"
   },
   {
    "ativo": "NEAR",
    "direcao": "short",
-   "zona": null,
+   "zona": [
+    5.1,
+    5.19
+   ],
    "stop": 5.4,
    "alvos": [
     4.9,
     4.665
    ],
-   "setup": "Short no repique até 5,10–5,19 → confirmação no 1h, stop 5,40, alvos 4,90 / 4,665 / 4,495 (novo)"
+   "setup": "Short no repique até 5,10–5,19 → confirmação no 1h, stop 5,40, alvos 4,90 / 4,665 / 4,495 (novo)",
+   "id": "20261014-NEAR-short"
   }
  ],
  "placar_md": "Setups marcados como Oportunidade ou Top 3 desde 28/09/2026, com os níveis escritos no dia. Preços da Binance (velas de 1h, e de 5m quando há empate) até 14/10 21:30 (Brasília). A tabela mostra os setups ativos e os dos últimos 7 dias; os mais antigos entram só no resumo.\n\n| Data | Ativo | Direção | Entrada | Stop | Alvo 1 | Tendência maior | Situação hoje | Resultado R |\n|---|---|---|---|---|---|---|---|---|\n| 28/09 | BTC | long | 82.850 | 75.700 | 87.400 | contra | Aberto | 0R |\n| 07/10 | ETH | long | 2.505 | 2.390 | 2.585 | contra | Aberto | 0R |\n| 08/10 | SOL | short | 114,8 | 118,3 | 110,4 | a favor | Não acionado | 0R |\n| 08/10 | SUI | short | 1,0856 | 1,125 | 1,04 | a favor | Stop | -1,00R |\n| 10/10 | AAVE | short | 177 | 182,5 | 168,5 | a favor | Não acionado | 0R |\n| 10/10 | TAO | short | 288,6 | 299 | 271,6 | a favor | Stop | -1,00R |\n| 11/10 | TAO | short | 303,4 | 311 | 290,4 | a favor | Não acionado | 0R |\n| 12/10 | AAVE | short | 164,5 | 174,5 | 150,4 | a favor | Não acionado | 0R |\n| 12/10 | SOL | short | 108,7 | 112,5 | 104,4 | a favor | Alvo 1 | +1,13R |\n| 12/10 | TAO | short | 287 | 299 | 272 | a favor | Não acionado | 0R |\n| 13/10 | TAO | short | 287 | 305 | 272 | a favor | Não acionado | 0R |\n| 14/10 | NEAR | short | 5,15 | 5,4 | 4,9 | a favor | Não acionado | 0R |\n\n**Resumo (todos os setups desde 28/09):**\n\n- Total no registro: 32 (Não acionado: 7; Aberto: 2; Alvo 1: 2; Alvo 2: 1; Stop: 15; Expirado: 3; Invalidado: 2)\n- Geral: 20 acionados (18 encerrados, 2 abertos); alvo 1: 17%; stop: 83%; R médio por setup: -0,65R; soma: -11,70R\n- A favor do 12h/1D: 5 acionados (5 encerrados, 0 abertos); alvo 1: 20%; stop: 80%; R médio por setup: -0,57R; soma: -2,87R\n- Contra o 12h/1D: 12 acionados (10 encerrados, 2 abertos); alvo 1: 10%; stop: 90%; R médio por setup: -0,77R; soma: -7,75R\n- Misto (só um dos dois contra): 3 acionados (3 encerrados, 0 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,36R; soma: -1,09R\n\n*% de alvo 1 e % de stop contam só os encerrados (Alvo 1, Alvo 2 e Stop). Aberto, Não acionado, Expirado (5 dias sem tocar a entrada desde a última vez que o setup foi repetido) e Invalidado (stop antes da entrada) valem 0R e ficam fora da média. Ambíguo (alvo e stop na mesma vela de 5m) não entra nos totais.*\n\n***Não houve entrada pelo relatório** — faltou a confirmação no 1h. A linha \"13/10 TAO short 287 / stop 305\" foi registrada pela rotina interrompida de 13/10; o setup válido continua com stop 299 (linha de 12/10, reafirmada hoje). SOL, TAO e AAVE foram reafirmados hoje com os mesmos níveis; NEAR é linha nova.*",

@@ -68,12 +68,14 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 #placar{background:none;box-shadow:none;padding:0}.pp{display:none}.pp.on{display:block}#pd td:last-child{min-width:280px}#pd td{white-space:nowrap}#pd td:last-child{white-space:normal}#placar h3{font-size:17px;margin:18px 0 8px}
 .sub2{display:flex;gap:6px;margin:14px 0 4px}.sub2 button{border:1px solid #cbd5e1;background:#fff;color:#334155;padding:7px 12px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer}.sub2 button.on{background:#334155;color:#fff;border-color:#334155}
 #placar .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.lchip{font-size:11px;font-weight:700;padding:2px 7px;border-radius:99px;vertical-align:middle;margin-left:4px}.lchip.p-ab{background:#dbeafe;color:#1d4ed8}.lchip.p-na,.lchip.p-ex{background:#e2e8f0;color:#475569}.lchip.p-st{background:#fee2e2;color:#b91c1c}.lchip.p-a1,.lchip.p-a2{background:#dcfce7;color:#15803d}.lchip.p-iv{background:#fef3c7;color:#92400e}
+.livelb{display:inline-block;font-size:12.5px;font-weight:600;color:#16a34a;margin:2px 0 6px}
 </style></head><body><div class="wrap">
 <header><h1>📈 Análise diária CRYPTO</h1><div class="dt" id="dt">carregando…</div></header>
 <nav><button data-t="painel" class="on">Painel ao vivo</button><button data-t="fech">Fechamento diário</button><button data-t="disc">Trades do Discord</button><button data-t="plac">Placar</button><button data-t="hist">Histórico</button></nav>
 <section class="tab on" id="painel">
  <h2>Preços ao vivo</h2><p class="sub">Binance spot, atualiza a cada 10 s · <span id="upd">—</span></p><div class="pgrid" id="prices"></div>
- <h2>Oportunidades do último fechamento</h2><p class="sub" id="opsub"></p><div class="sgrid" id="setups"></div>
+ <h2>Oportunidades do último fechamento</h2><p class="sub" id="opsub"></p><div class="livelb"></div><div class="sgrid" id="setups"></div>
 </section>
 <section class="tab" id="fech"><div id="fechlk"></div><iframe class="frame" id="ffech" loading="lazy"></iframe></section>
 <section class="tab" id="disc"><div id="disclk"></div><iframe class="frame" id="fdisc" loading="lazy"></iframe></section>
@@ -81,6 +83,58 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 <section class="tab" id="hist"><h2>Histórico</h2><div class="hl" id="hl"></div></section>
 <footer>Isso é análise técnica, não recomendação.</footer></div>
 <script>
+// ---- placar ao vivo: mesmas regras de placar.py avaliar() ----
+const H=3600000,M5=300000,KAPI='https://data-api.binance.vision/api/v3/klines';let L=null,LV={},LT=null;const K5={};
+async function kl(sym,iv,ini,fim){const step=iv==='1h'?H:M5;let out=[],t=ini;while(t<fim){const r=await fetch(`${KAPI}?symbol=${sym}&interval=${iv}&startTime=${t}&endTime=${fim-1}&limit=1000`);if(!r.ok)throw new Error('kl '+r.status);const j=await r.json();if(!j.length)break;
+ j.forEach(k=>out.push({t:k[0],h:+k[2],l:+k[3]}));t=j[j.length-1][0]+step;if(j.length<1000)break}return out}
+class Amb extends Error{}
+const toca=(v,p)=>v.l<=p&&p<=v.h, passou=(v,p,d,tp)=>d==='long'?(tp==='stop'?v.l<=p:v.h>=p):(tp==='stop'?v.h>=p:v.l<=p);
+async function avaliarJS(s,agora,K1){const res={sit:null,r:0,obs:''};if(agora<=s.ini){res.sit='Não acionado';return res}
+ const velas=K1.filter(v=>v.t>=s.ini&&v.t<=agora-1),d=s.direcao,e=s.entrada,st=s.stop,a1=s.alvo1,a2=s.alvo2,E={f:'espera'};
+ function dep(v){const hs=passou(v,st,d,'stop');
+  if(E.f==='aberto'){const h1=a1!=null&&passou(v,a1,d,'alvo'),h2=a2!=null&&passou(v,a2,d,'alvo');if(hs&&h1)throw new Amb('stop e alvo na mesma vela');
+   if(hs){E.f='fim';res.sit='Stop';res.r=-1;return true}if(h1){if(h2){E.f='fim';res.sit='Alvo 2';return true}E.f='alvo1';res.sit='Alvo 1';return a2==null}return false}
+  if(E.f==='alvo1'){const h2=passou(v,a2,d,'alvo');if(hs&&h2)throw new Amb('stop e alvo 2 na mesma vela');if(h2){E.f='fim';res.sit='Alvo 2';return true}
+   if(hs){E.f='fim';res.sit='Alvo 1';res.obs='stop depois do alvo 1';return true}}return false}
+ function ev(v,pri){if(E.f==='espera'){if(v.t>=s.prazo){E.f='fim';res.sit='Expirado';return true}const im=pri&&s.ja_na_zona,g=im||toca(v,e),sa=passou(v,st,d,'stop')&&!im;
+   if(!g){if(sa){E.f='fim';res.sit='Invalidado';return true}return false}
+   const ou=passou(v,st,d,'stop')||(a1!=null&&passou(v,a1,d,'alvo'));if(ou&&!im)throw new Amb('acionamento e saída na mesma vela');E.f='aberto';if(im&&ou)return dep(v);return false}
+  return dep(v)}
+ for(let i=0;i<velas.length;i++){const v=velas[i],sv=[{...E},{...res}];
+  try{if(ev(v,i===0))break}catch(x){if(!(x instanceof Amb))throw x;Object.assign(E,sv[0]);Object.assign(res,sv[1]);
+   const ck=s.ativo+v.t;const sub=K5[ck]||(K5[ck]=await kl(s.ativo,'5m',v.t,Math.min(v.t+H,agora)));let term=false;
+   for(let j=0;j<sub.length;j++){try{if(ev(sub[j],i===0&&j===0)){term=true;break}}catch(y){if(!(y instanceof Amb))throw y;
+     if(E.f==='alvo1'){E.f='fim';res.sit='Alvo 1';res.obs='alvo 2 e stop na mesma vela de 5m'}else{E.f='fim';res.sit='Ambíguo';res.obs=y.message+' (5m)'}term=true;break}}
+   if(term)break}}
+ if(res.sit==null||E.f==='espera'||E.f==='aberto'){if(E.f==='espera')res.sit=agora>=s.prazo?'Expirado':'Não acionado';else if(E.f==='aberto')res.sit='Aberto'}
+ if(res.sit==='Alvo 1'||res.sit==='Alvo 2')res.r=Math.abs((res.sit==='Alvo 1'?a1:a2)-e)/Math.abs(e-st);return res}
+async function aval(s,agora,K1){if(s.cancel){const r0=await avaliarJS(s,Math.min(s.cancel,agora),K1);if(['Não acionado','Expirado','Invalidado'].includes(r0.sit))return{sit:'Cancelado',r:0,obs:r0.sit}}return avaliarJS(s,agora,K1)}
+const PLC={'aberto':'ab','não acionado':'na','expirado':'ex','stop':'st','alvo 1':'a1','alvo 2':'a2','invalidado':'iv','ambíguo':'ex','cancelado':'ex'};
+const fr=r=>(r>0?'+':'')+r.toFixed(2).replace('.',',')+'R',pc=(a,b)=>b?Math.round(100*a/b)+'%':'—';
+function resumo(ls){const ac=ls.filter(x=>['Aberto','Alvo 1','Alvo 2','Stop'].includes(x.v.sit)),en=ac.filter(x=>x.v.sit!=='Aberto'),al=en.filter(x=>x.v.sit.startsWith('Alvo')).length,stp=en.filter(x=>x.v.sit==='Stop').length,so=en.reduce((a,x)=>a+x.v.r,0);
+ return{so,a1:pc(al,en.length),stp:pc(stp,en.length),txt:`${ac.length} acionados (${en.length} encerrados, ${ac.length-en.length} abertos); alvo 1: ${pc(al,en.length)}; stop: ${pc(stp,en.length)}; R médio por setup: ${en.length?fr(so/en.length):'—'}; soma: ${en.length?fr(so):'0,00R'}`}}
+const ORD=['Não acionado','Aberto','Alvo 1','Alvo 2','Stop','Expirado','Invalidado','Cancelado','Ambíguo'];
+function pintaBloco(box,ls,grupos){ // tabela(s), total e cards de resumo dentro de box
+ box.querySelectorAll('table.plc').forEach(tb=>{let h=tb.closest('.tw').previousElementSibling;while(h&&h.tagName!=='H3')h=h.previousElementSibling;const au=h?(/cobra/i.test(h.textContent)?'Cobra':'Jayson'):null;
+  tb.querySelectorAll('tr').forEach(tr=>{const td=tr.querySelectorAll('td');if(td.length<8)return;const dir=/short/.test(td[2].textContent)?'short':'long',k=`${td[0].textContent}|${td[1].textContent}|${dir}|${td[3].textContent}`;
+   const x=ls.find(x=>x.key===k&&(!au||x.autor===au));if(!x)return;const hd=[...tb.querySelectorAll('th')].map(t=>t.textContent.toLowerCase());const iS=hd.findIndex(t=>t.startsWith('situa')),iR=hd.findIndex(t=>t.startsWith('resultado'));
+   let sit=x.v.sit;if(x.v.obs&&(sit==='Ambíguo'||sit==='Alvo 1'))sit+=` (${x.v.obs})`;const lv=!x.final;
+   td[iS].innerHTML=`<span class="chip p-${PLC[x.v.sit.toLowerCase()]||'na'}">${sit}</span>${lv&&x.v.sit!==x.sit?' <small class="mut">(era '+x.sit+')</small>':''}`;
+   const enc=['Alvo 1','Alvo 2','Stop'].includes(x.v.sit);td[iR].className=enc?(x.v.r>0?'g':'r'):'mut';td[iR].innerHTML=`<b>${enc?fr(x.v.r):x.v.sit==='Ambíguo'?'—':'0R'}</b>`})});
+ const li=[...box.querySelectorAll('li')].find(l=>/Total no registro/.test(l.textContent));if(li){const c={};ls.forEach(x=>c[x.v.sit]=(c[x.v.sit]||0)+1);li.textContent=`Total no registro: ${ls.length} (${ORD.filter(k=>c[k]).map(k=>k+': '+c[k]).join('; ')})`}
+ box.querySelectorAll('.sc').forEach(sc=>{const lb=sc.querySelector('small').textContent,g=grupos(lb);if(!g)return;const r=resumo(g.filter(x=>x.v.sit!=='Ambíguo'));
+  sc.innerHTML=`<small>${lb}</small><b class="${r.so<0?'r':'g'}">${fr(r.so).replace('+0,00','0,00')}</b><span>alvo 1 ${r.a1} · stop ${r.stp}</span><p>${r.txt}</p>`})}
+async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc],pend=all.filter(x=>!x.final),K={};
+ try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora)}
+  for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs}:await aval(x,agora,K[x.ativo]);LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs})}
+ const lab=LT?`ao vivo, atualizado ${LT.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'ao vivo indisponível, mostrando o cálculo do servidor';
+ document.querySelectorAll('.livelb').forEach(e=>e.textContent='● '+lab);
+ const tf={'Geral':()=>true,'A favor':x=>x.tend==='a favor','Contra':x=>x.tend==='contra','Misto':x=>x.tend==='misto'};
+ pintaBloco(document.getElementById('pb'),L.bot,lb=>{const k=Object.keys(tf).find(k=>lb.startsWith(k));return k?L.bot.filter(tf[k]):null});
+ const pd=document.getElementById('pd');pd.querySelectorAll('h3').forEach(h=>{const au=/cobra/i.test(h.textContent)?'Cobra':'Jayson',ls=L.dc.filter(x=>x.autor===au);
+  const blk=document.createElement('div');let n=h.nextElementSibling;const nodes=[];while(n&&n.tagName!=='H3'){nodes.push(n);n=n.nextElementSibling}
+  const fake={querySelectorAll:q=>nodes.flatMap(e=>[...(e.matches(q)?[e]:[]),...e.querySelectorAll(q)])};pintaBloco(fake,ls,lb=>lb==='Geral'?ls:null)});
+ L.bot.forEach(x=>LV[x.id]=x.v);renderSetups()}
 const SYM=['BTC','ETH','SOL','AAVE','TAO','NEAR','ONDO','SUI','DOGE','ZEC','HBAR'];
 let D=null, P={};
 const fmt=v=>{if(v==null)return'—';const a=Math.abs(v),d=a>=1000?0:a>=100?1:a>=1?3:5;return v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})};
@@ -98,13 +152,18 @@ function md(s){const E=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');const inl
 function renderSetups(){const el=document.getElementById('setups');if(!D)return;
  if(!D.setups.length){el.innerHTML='<div class="box">Nenhuma Oportunidade no último fechamento.</div>';return}
  el.innerHTML=D.setups.map(s=>{const p=P[s.ativo];let st='<span class="mut">aguardando preço…</span>',bar='';
+  if(p&&!s.zona)st=`Preço ${fmt(p)}`;
   if(p&&s.zona){const [a,b]=[Math.min(...s.zona),Math.max(...s.zona)];let dist,txt;
    if(p>=a&&p<=b){txt='<b class="g">DENTRO DA ZONA</b> — esperar confirmação no 1h';dist=0}
    else{const ed=s.direcao==='short'?a:b;dist=(ed-p)/p*100;txt=`Falta <b>${dist>0?'+':''}${dist.toFixed(2)}%</b> até a zona (${fmt(ed)})`}
    if(s.stop&&((s.direcao==='short'&&p>=s.stop)||(s.direcao==='long'&&p<=s.stop)))txt='<b class="r">Passou do stop — setup invalidado</b>';
    const w=Math.max(4,100-Math.min(100,Math.abs(dist)*12)),c=Math.abs(dist)<2?'#16a34a':Math.abs(dist)<6?'#f59e0b':'#94a3b8';
    st=`Preço ${fmt(p)} · ${txt}`;bar=`<div class="bar"><i style="width:${w}%;background:${c}"></i></div>`}
-  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo}</span><span class="bd">${s.direcao.toUpperCase()}</span></div>
+  const v=s.id&&LV[s.id];let chip='';
+  if(v){const m={'Aberto':['ABERTO','ab'],'Alvo 1':['ALVO 1','a1'],'Alvo 2':['ALVO 2','a2'],'Stop':['STOP','st'],'Expirado':['EXPIRADO','ex'],'Invalidado':['INVALIDADO','iv'],'Ambíguo':['AMBÍGUO','ex']}[v.sit];
+   if(m)chip=`<span class="lchip p-${m[1]}">${m[0]}</span>`;else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>'}
+  else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>';
+  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span></div>
   <div class="lv"><div><small>Zona</small>${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'}</div><div><small>Stop</small><span class="r">${fmt(s.stop)}</span></div><div><small>Alvos</small><span class="g">${s.alvos.map(fmt).join(' / ')||'—'}</span></div></div>
   ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
 async function prices(){try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(SYM.map(s=>s+'USDT'))));const j=await r.json();
@@ -117,9 +176,10 @@ fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
  if(d.fechamento){const b='relatorios/'+d.fechamento+'/';document.getElementById('ffech').src=b+'resumo.html';document.getElementById('fechlk').innerHTML=`<a class="lk" href="${b}resumo.html" target="_blank">Abrir em tela cheia</a>`+(d.historico.find(h=>h.data===d.fechamento)?.pdf?`<a class="lk" href="${b}resumo.pdf">PDF</a>`:'')}
  if(d.discord){const b='relatorios/'+d.discord+'/';document.getElementById('fdisc').src=b+'discord.html';document.getElementById('disclk').innerHTML=`<a class="lk" href="${b}discord.html" target="_blank">Abrir em tela cheia</a>`}
- document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2>'+(d.placar_dc_html||'Sem placar do Discord ainda.');
+ document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');
  document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
   return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
- renderSetups()});
+ renderSetups();
+ fetch('data/live.json?'+Date.now()).then(r=>r.json()).then(j=>{L=j;liveTick();setInterval(liveTick,60000)}).catch(()=>{})});
 prices();setInterval(prices,10000);
 </script></body></html>
