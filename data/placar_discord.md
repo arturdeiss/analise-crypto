@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Mesma regra do Placar Trader Bot: velas de 1h da Binance (5m em empate) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 15/10 12:25. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Mesma regra do Placar Trader Bot: velas de 1h da Binance (5m em empate) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 15/10 19:08. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
