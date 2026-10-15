@@ -65,7 +65,8 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 #placar .sc p{font-size:12px;color:#64748b;margin:6px 0 0}
 #placar .note{color:#64748b;font-size:13px}
 #placar code{background:#f1f5f9;padding:1px 4px;border-radius:4px;font-size:12.5px}
-#placar{background:none;box-shadow:none;padding:0}
+#placar{background:none;box-shadow:none;padding:0}.pp{display:none}.pp.on{display:block}#placar h3{font-size:17px;margin:18px 0 8px}
+.sub2{display:flex;gap:6px;margin:14px 0 4px}.sub2 button{border:1px solid #cbd5e1;background:#fff;color:#334155;padding:7px 12px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer}.sub2 button.on{background:#334155;color:#fff;border-color:#334155}
 #placar .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 </style></head><body><div class="wrap">
 <header><h1>📈 Análise diária CRYPTO</h1><div class="dt" id="dt">carregando…</div></header>
@@ -76,7 +77,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 </section>
 <section class="tab" id="fech"><div id="fechlk"></div><iframe class="frame" id="ffech" loading="lazy"></iframe></section>
 <section class="tab" id="disc"><div id="disclk"></div><iframe class="frame" id="fdisc" loading="lazy"></iframe></section>
-<section class="tab" id="plac"><h2>Placar</h2><div id="placar"></div></section>
+<section class="tab" id="plac"><div class="sub2"><button data-p="pb" class="on">Placar Trader Bot</button><button data-p="pd">Placar Discord</button></div><div id="placar"><div class="pp on" id="pb"></div><div class="pp" id="pd"></div></div></section>
 <section class="tab" id="hist"><h2>Histórico</h2><div class="hl" id="hl"></div></section>
 <footer>Isso é análise técnica, não recomendação.</footer></div>
 <script>
@@ -85,6 +86,7 @@ let D=null, P={};
 const fmt=v=>{if(v==null)return'—';const a=Math.abs(v),d=a>=1000?0:a>=100?1:a>=1?3:5;return v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})};
 const br=d=>d?d.split('-').reverse().join('/'):'—';
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,.tab').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on');location.hash=b.dataset.t});
+document.querySelectorAll('.sub2 button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.sub2 button,.pp').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on')});
 if(location.hash){const b=document.querySelector(`nav button[data-t="${location.hash.slice(1)}"]`);b&&b.click()}
 function md(s){const E=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');const inl=t=>E(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>');
  let h='',tb=null,ul=false;for(const l of s.split('\n')){const t=l.trim();
@@ -115,7 +117,7 @@ fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
  if(d.fechamento){const b='relatorios/'+d.fechamento+'/';document.getElementById('ffech').src=b+'resumo.html';document.getElementById('fechlk').innerHTML=`<a class="lk" href="${b}resumo.html" target="_blank">Abrir em tela cheia</a>`+(d.historico.find(h=>h.data===d.fechamento)?.pdf?`<a class="lk" href="${b}resumo.pdf">PDF</a>`:'')}
  if(d.discord){const b='relatorios/'+d.discord+'/';document.getElementById('fdisc').src=b+'discord.html';document.getElementById('disclk').innerHTML=`<a class="lk" href="${b}discord.html" target="_blank">Abrir em tela cheia</a>`}
- document.getElementById('placar').innerHTML=d.placar_html||md(d.placar_md||'Sem placar.');
+ document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2>'+(d.placar_dc_html||'Sem placar do Discord ainda.');
  document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
   return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
  renderSetups()});
