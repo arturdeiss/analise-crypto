@@ -158,7 +158,7 @@ function renderSetups(){const el=document.getElementById('setups');if(!D)return;
   if(p&&!s.zona)st=`Preço ${fmt(p)}`;
   if(p&&s.zona){const [a,b]=[Math.min(...s.zona),Math.max(...s.zona)];let dist,txt;
    if(p>=a&&p<=b){txt='<b class="g">DENTRO DA ZONA</b> — esperar confirmação no 1h';dist=0}
-   else{const ed=s.direcao==='short'?a:b;dist=(ed-p)/p*100;txt=`Falta <b>${dist>0?'+':''}${dist.toFixed(2)}%</b> até a zona (${fmt(ed)})`}
+   else{const ed=p>b?b:a;dist=Math.abs(ed-p)/p*100;const fav=(s.direcao==='long'&&p>b)||(s.direcao==='short'&&p<a);txt=fav?`Falta <b>${dist.toFixed(2)}%</b> até a zona (${fmt(ed)})`:`${p>b?'Acima':'Abaixo'} da zona — <b>${dist.toFixed(2)}%</b> (${fmt(ed)})`;if(fav)txt=(p>b?'Acima':'Abaixo')+' da zona · '+txt}
    if(s.stop&&((s.direcao==='short'&&p>=s.stop)||(s.direcao==='long'&&p<=s.stop)))txt='<b class="r">Passou do stop — setup invalidado</b>';
    else if(s.saiu&&!(p>=a&&p<=b))txt=(s.direcao==='short'?(p<a?'Abaixo da zona':'Acima da zona'):(p>b?'Acima da zona':'Abaixo da zona'))+` — aguardando reteste (fora de Oportunidade). Zona a ${dist>0?'+':''}${dist.toFixed(2)}%`;
    const w=Math.max(4,100-Math.min(100,Math.abs(dist)*12)),c=Math.abs(dist)<2?'#16a34a':Math.abs(dist)<6?'#f59e0b':'#94a3b8';
@@ -172,6 +172,8 @@ function renderSetups(){const el=document.getElementById('setups');if(!D)return;
   ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
 async function prices(){try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(SYM.map(s=>s+'USDT'))));const j=await r.json();
  j.forEach(t=>P[t.symbol.replace('USDT','')]=+t.lastPrice);
+ const EX=[...new Set(((D&&D.setups)||[]).map(s=>s.ativo))].filter(a=>a&&!SYM.includes(a));
+ await Promise.all(EX.map(a=>fetch('https://data-api.binance.vision/api/v3/ticker/price?symbol='+a+'USDT').then(r=>r.ok?r.json():null).then(x=>{if(x&&x.price)P[a]=+x.price}).catch(()=>{})));
  document.getElementById('prices').innerHTML=SYM.map(s=>{const t=j.find(x=>x.symbol===s+'USDT');if(!t)return'';const c=+t.priceChangePercent;
   return `<div class="pc"><small>${s}</small><b>${fmt(+t.lastPrice)}</b><span class="${c>=0?'g':'r'}">${c>=0?'+':''}${c.toFixed(2)}%</span></div>`}).join('');
  document.getElementById('upd').textContent='atualizado '+new Date().toLocaleTimeString('pt-BR');renderSetups()}catch(e){document.getElementById('upd').textContent='erro ao buscar preços, tentando de novo…'}}
