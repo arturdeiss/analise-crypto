@@ -85,8 +85,11 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 <script>
 // ---- placar ao vivo: mesmas regras de placar.py avaliar() ----
 const H=3600000,M5=300000,KAPI='https://data-api.binance.vision/api/v3/klines';let L=null,LV={},LT=null;const K5={};
-async function kl(sym,iv,ini,fim){const step=iv==='1h'?H:M5;let out=[],t=ini;while(t<fim){const r=await fetch(`${KAPI}?symbol=${sym}&interval=${iv}&startTime=${t}&endTime=${fim-1}&limit=1000`);if(!r.ok)throw new Error('kl '+r.status);const j=await r.json();if(!j.length)break;
- j.forEach(k=>out.push({t:k[0],h:+k[2],l:+k[3]}));t=j[j.length-1][0]+step;if(j.length<1000)break}return out}
+const GAPI='https://api.gateio.ws/api/v4/spot/candlesticks'; // ativos fora da Binance spot (ex.: KAS), CORS liberado
+async function klG(sym,iv,ini,fim){const step=iv==='1h'?H:M5,par=sym.replace(/USDT$/,'_USDT');let out=[],t=ini;while(t<fim){const ate=Math.min(fim-1,t+900*step);const r=await fetch(`${GAPI}?currency_pair=${par}&interval=${iv}&from=${Math.floor(t/1000)}&to=${Math.floor(ate/1000)}`);if(!r.ok)throw new Error('gate '+r.status);
+ (await r.json()).forEach(k=>{const ms=+k[0]*1000;if(ms>=ini&&ms<fim&&(!out.length||ms>out[out.length-1].t))out.push({t:ms,h:+k[3],l:+k[4],iv})});t=ate+1}return out}
+async function kl(sym,iv,ini,fim,fonte){if(fonte==='gate')return klG(sym,iv,ini,fim);const step=iv==='1h'?H:M5;let out=[],t=ini;while(t<fim){const r=await fetch(`${KAPI}?symbol=${sym}&interval=${iv}&startTime=${t}&endTime=${fim-1}&limit=1000`);if(!r.ok)throw new Error('kl '+r.status);const j=await r.json();if(!j.length)break;
+ j.forEach(k=>out.push({t:k[0],h:+k[2],l:+k[3],iv}));t=j[j.length-1][0]+step;if(j.length<1000)break}return out}
 class Amb extends Error{}
 const toca=(v,p)=>v.l<=p&&p<=v.h, passou=(v,p,d,tp)=>d==='long'?(tp==='stop'?v.l<=p:v.h>=p):(tp==='stop'?v.h>=p:v.l<=p);
 async function avaliarJS(s,agora,K1){const res={sit:null,r:0,obs:''};if(agora<=s.ini){res.sit='Não acionado';return res}
@@ -96,13 +99,13 @@ async function avaliarJS(s,agora,K1){const res={sit:null,r:0,obs:''};if(agora<=s
    if(hs){E.f='fim';res.sit='Stop';res.r=-1;return true}if(h1){if(h2){E.f='fim';res.sit='Alvo 2';return true}E.f='alvo1';res.sit='Alvo 1';return a2==null}return false}
   if(E.f==='alvo1'){const h2=passou(v,a2,d,'alvo');if(hs&&h2)throw new Amb('stop e alvo 2 na mesma vela');if(h2){E.f='fim';res.sit='Alvo 2';return true}
    if(hs){E.f='fim';res.sit='Alvo 1';res.obs='stop depois do alvo 1';return true}}return false}
- function ev(v,pri){if(E.f==='espera'){if(v.t>=s.prazo){E.f='fim';res.sit='Expirado';return true}const im=pri&&s.ja_na_zona,g=im||toca(v,e),sa=passou(v,st,d,'stop')&&!im;
+ function ev(v,pri){if(E.f==='espera'){if(v.t>=s.prazo){E.f='fim';res.sit='Expirado';return true}const tol=s.tol||0,fl=s.fill,nf=fl!=null&&v.t<=fl&&fl<v.t+(v.iv==='5m'?M5:H),im=(pri&&s.ja_na_zona)||nf,g=im||(v.l<=e*(1+tol)&&v.h>=e*(1-tol)),sa=passou(v,st,d,'stop')&&!im&&!(fl!=null&&v.t<fl);
    if(!g){if(sa){E.f='fim';res.sit='Invalidado';return true}return false}
    const ou=passou(v,st,d,'stop')||(a1!=null&&passou(v,a1,d,'alvo'));if(ou&&!im)throw new Amb('acionamento e saída na mesma vela');E.f='aberto';if(im&&ou)return dep(v);return false}
   return dep(v)}
  for(let i=0;i<velas.length;i++){const v=velas[i],sv=[{...E},{...res}];
   try{if(ev(v,i===0))break}catch(x){if(!(x instanceof Amb))throw x;Object.assign(E,sv[0]);Object.assign(res,sv[1]);
-   const ck=s.ativo+v.t;const sub=K5[ck]||(K5[ck]=await kl(s.ativo,'5m',v.t,Math.min(v.t+H,agora)));let term=false;
+   const ck=s.ativo+v.t;const sub=K5[ck]||(K5[ck]=await kl(s.ativo,'5m',v.t,Math.min(v.t+H,agora),s.fonte));let term=false;
    for(let j=0;j<sub.length;j++){try{if(ev(sub[j],i===0&&j===0)){term=true;break}}catch(y){if(!(y instanceof Amb))throw y;
      if(E.f==='alvo1'){E.f='fim';res.sit='Alvo 1';res.obs='alvo 2 e stop na mesma vela de 5m'}else{E.f='fim';res.sit='Ambíguo';res.obs=y.message+' (5m)'}term=true;break}}
    if(term)break}}
@@ -125,7 +128,7 @@ function pintaBloco(box,ls,grupos){ // tabela(s), total e cards de resumo dentro
  box.querySelectorAll('.sc').forEach(sc=>{const lb=sc.querySelector('small').textContent,g=grupos(lb);if(!g)return;const r=resumo(g.filter(x=>x.v.sit!=='Ambíguo'));
   sc.innerHTML=`<small>${lb}</small><b class="${r.so<0?'r':'g'}">${fr(r.so).replace('+0,00','0,00')}</b><span>alvo 1 ${r.a1} · stop ${r.stp}</span><p>${r.txt}</p>`})}
 async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc],pend=all.filter(x=>!x.final),K={};
- try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora)}
+ try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora,(pend.find(x=>x.ativo===sym)||{}).fonte)}
   for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs}:await aval(x,agora,K[x.ativo]);LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs})}
  const lab=LT?`ao vivo, atualizado ${LT.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'ao vivo indisponível, mostrando o cálculo do servidor';
  document.querySelectorAll('.livelb').forEach(e=>e.textContent='● '+lab);
