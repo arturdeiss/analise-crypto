@@ -167,7 +167,7 @@ function renderSetups(){const el=document.getElementById('setups');if(!D)return;
   if(v){const m={'Aberto':['ABERTO','ab'],'Alvo 1':['ALVO 1','a1'],'Alvo 2':['ALVO 2','a2'],'Stop':['STOP','st'],'Expirado':['EXPIRADO','ex'],'Invalidado':['INVALIDADO','iv'],'Ambíguo':['AMBÍGUO','ex']}[v.sit];
    if(m)chip=`<span class="lchip p-${m[1]}">${m[0]}</span>`;else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>'}
   else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>';
-  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span></div>
+  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span>${s.curto?'<span class="bd" style="background:#7c3aed;color:#fff;margin-left:4px">LONG CURTO PRAZO</span>':''}</div>
   <div class="lv"><div><small>Zona</small>${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'}</div><div><small>Stop</small><span class="r">${fmt(s.stop)}</span></div><div><small>Alvos</small><span class="g">${s.alvos.map(fmt).join(' / ')||'—'}</span></div></div>
   ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
 async function prices(){try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(SYM.map(s=>s+'USDT'))));const j=await r.json();
