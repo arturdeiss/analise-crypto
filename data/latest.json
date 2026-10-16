@@ -1,20 +1,23 @@
 {
- "gerado": "15/10/2026 22:00",
+ "gerado": "16/10/2026 08:24",
  "fechamento": "2026-10-15",
  "discord": "2026-10-15",
  "setups": [
   {
    "ativo": "AAVE",
-   "direcao": "long",
+   "direcao": "short",
    "zona": [
     164.5,
     165.5
    ],
    "stop": 174.5,
    "alvos": [
-    1.0
+    150.4,
+    141.6
    ],
-   "setup": "Zona 164,5–165,5 (stop 174,5, alvos 150,4 / 141,6) mantida só como alerta de reteste: sai de Oportunidade pela Alta ✓ do 4h"
+   "saiu": true,
+   "setup": "Zona 164,5–165,5 (stop 174,5, alvos 150,4 / 141,6) mantida só como alerta de reteste: sai de Oportunidade pela Alta ✓ do 4h",
+   "id": "20261012-AAVE-short"
   },
   {
    "ativo": "TAO",
@@ -28,12 +31,13 @@
     272.0,
     262.0
    ],
+   "saiu": false,
    "setup": "Short na zona 287–290 → entrada só com confirmação no 1h, stop 299, alvos 272 / 262 (mantido de 12/10). Secundária 303,4–305",
    "id": "20261012-TAO-short"
   },
   {
    "ativo": "SOL",
-   "direcao": "long",
+   "direcao": "short",
    "zona": [
     108.7,
     110.6
@@ -43,8 +47,9 @@
     104.4,
     98.2
    ],
+   "saiu": true,
    "setup": "Zona 108,7–110,6 (stop 112,5, alvos 104,4 / 98,2) mantida como referência; sai de Oportunidade pela Alta ✓ do 4h",
-   "id": "20261007-SOL-long"
+   "id": "20261012-SOL-short"
   }
  ]
 }

@@ -1,21 +1,24 @@
 {
- "gerado": "15/10/2026 22:00",
+ "gerado": "16/10/2026 08:24",
  "fechamento": "2026-10-15",
  "titulo": "Resumo técnico: 11 ativos (15/10/2026, pós-fechamento, ~21h30 BRT)",
  "discord": "2026-10-15",
  "setups": [
   {
    "ativo": "AAVE",
-   "direcao": "long",
+   "direcao": "short",
    "zona": [
     164.5,
     165.5
    ],
    "stop": 174.5,
    "alvos": [
-    1.0
+    150.4,
+    141.6
    ],
-   "setup": "Zona 164,5–165,5 (stop 174,5, alvos 150,4 / 141,6) mantida só como alerta de reteste: sai de Oportunidade pela Alta ✓ do 4h"
+   "saiu": true,
+   "setup": "Zona 164,5–165,5 (stop 174,5, alvos 150,4 / 141,6) mantida só como alerta de reteste: sai de Oportunidade pela Alta ✓ do 4h",
+   "id": "20261012-AAVE-short"
   },
   {
    "ativo": "TAO",
@@ -29,12 +32,13 @@
     272.0,
     262.0
    ],
+   "saiu": false,
    "setup": "Short na zona 287–290 → entrada só com confirmação no 1h, stop 299, alvos 272 / 262 (mantido de 12/10). Secundária 303,4–305",
    "id": "20261012-TAO-short"
   },
   {
    "ativo": "SOL",
-   "direcao": "long",
+   "direcao": "short",
    "zona": [
     108.7,
     110.6
@@ -44,8 +48,9 @@
     104.4,
     98.2
    ],
+   "saiu": true,
    "setup": "Zona 108,7–110,6 (stop 112,5, alvos 104,4 / 98,2) mantida como referência; sai de Oportunidade pela Alta ✓ do 4h",
-   "id": "20261007-SOL-long"
+   "id": "20261012-SOL-short"
   }
  ],
  "placar_md": "Setups marcados como Oportunidade ou Top 3 desde 28/09/2026, com os níveis escritos no dia. Preços da Binance (velas de 1h, e de 5m quando há empate) até 15/10 21:24 (Brasília). A tabela mostra os setups ativos e os dos últimos 7 dias; os mais antigos entram só no resumo.\n\n| Data | Ativo | Direção | Entrada | Stop | Alvo 1 | Tendência maior | Situação hoje | Resultado R |\n|---|---|---|---|---|---|---|---|---|\n| 28/09 | BTC | long | 82.850 | 75.700 | 87.400 | contra | Aberto | 0R |\n| 08/10 | SOL | short | 114,8 | 118,3 | 110,4 | a favor | Não acionado | 0R |\n| 10/10 | AAVE | short | 177 | 182,5 | 168,5 | a favor | Não acionado | 0R |\n| 10/10 | TAO | short | 288,6 | 299 | 271,6 | a favor | Stop | -1,00R |\n| 11/10 | TAO | short | 303,4 | 311 | 290,4 | a favor | Não acionado | 0R |\n| 12/10 | AAVE | short | 164,5 | 174,5 | 150,4 | a favor | Não acionado | 0R |\n| 12/10 | SOL | short | 108,7 | 112,5 | 104,4 | a favor | Alvo 1 | +1,13R |\n| 12/10 | TAO | short | 287 | 299 | 272 | a favor | Não acionado | 0R |\n| 13/10 | TAO | short | 287 | 305 | 272 | a favor | Não acionado | 0R |\n| 14/10 | NEAR | short | 5,15 | 5,4 | 4,9 | a favor | Stop | -1,00R |\n\n**Resumo (todos os setups desde 28/09):**\n\n- Total no registro: 32 (Não acionado: 6; Aberto: 1; Alvo 1: 2; Alvo 2: 1; Stop: 17; Expirado: 3; Invalidado: 2)\n- Geral: 21 acionados (20 encerrados, 1 abertos); alvo 1: 15%; stop: 85%; R médio por setup: -0,69R; soma: -13,70R\n- A favor do 12h/1D: 6 acionados (6 encerrados, 0 abertos); alvo 1: 17%; stop: 83%; R médio por setup: -0,64R; soma: -3,87R\n- Contra o 12h/1D: 12 acionados (11 encerrados, 1 abertos); alvo 1: 9%; stop: 91%; R médio por setup: -0,80R; soma: -8,75R\n- Misto (só um dos dois contra): 3 acionados (3 encerrados, 0 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,36R; soma: -1,09R\n\n*% de alvo 1 e % de stop contam só os encerrados (Alvo 1, Alvo 2 e Stop). Aberto, Não acionado, Expirado (5 dias sem tocar a entrada desde a última vez que o setup foi repetido) e Invalidado (stop antes da entrada) valem 0R e ficam fora da média. Ambíguo (alvo e stop na mesma vela de 5m) não entra nos totais.*\n\n***Pelo relatório não haveria entrada**: o 1h não imprimiu ponto vermelho antes do stop. entra no resumo. TAO foi reafirmado hoje com os mesmos níveis (conta uma vez, na linha de 12/10).*",
