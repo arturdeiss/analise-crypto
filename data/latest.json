@@ -1,6 +1,6 @@
 {
- "gerado": "16/10/2026 19:30",
- "fechamento": "2026-10-15",
+ "gerado": "16/10/2026 21:42",
+ "fechamento": "2026-10-16",
  "discord": "2026-10-16",
  "setups": [
   {
@@ -15,25 +15,9 @@
     150.4,
     141.6
    ],
-   "saiu": true,
-   "setup": "Zona 164,5–165,5 (stop 174,5, alvos 150,4 / 141,6) mantida só como alerta de reteste: sai de Oportunidade pela Alta ✓ do 4h",
-   "id": "20261012-AAVE-short"
-  },
-  {
-   "ativo": "TAO",
-   "direcao": "short",
-   "zona": [
-    287.0,
-    290.0
-   ],
-   "stop": 299.0,
-   "alvos": [
-    272.0,
-    262.0
-   ],
    "saiu": false,
-   "setup": "Short na zona 287–290 → entrada só com confirmação no 1h, stop 299, alvos 272 / 262 (mantido de 12/10). Secundária 303,4–305",
-   "id": "20261012-TAO-short"
+   "setup": "Short no reteste de 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6. Hoje a zona foi tocada sem confirmação (o 1h das 08h fechou em 164,35 com ponto verde)",
+   "id": "20261012-AAVE-short"
   },
   {
    "ativo": "SOL",
@@ -47,8 +31,8 @@
     104.4,
     98.2
    ],
-   "saiu": true,
-   "setup": "Zona 108,7–110,6 (stop 112,5, alvos 104,4 / 98,2) mantida como referência; sai de Oportunidade pela Alta ✓ do 4h",
+   "saiu": false,
+   "setup": "Short em 108,7–110,6, stop 112,5, alvos 104,4 / 98,2, não tocado. Vira Oportunidade se o preço passar de ~109,1 (aí a Alta do 4h fica cumprida) e o 1h confirmar",
    "id": "20261012-SOL-short"
   },
   {
