@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 16/10 19:26. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 17/10 12:25. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -16,8 +16,9 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 15/10 | KAS | long | 0,034811 | 0,03332 | — | — | Aberto | 0R | Relatou fill em 15/10 11h14; realizou 10% às 12h06. Alvo não postado |
 | 16/10 | BTC | long | 79.128 | 77.537 | 93.604 | — | Não acionado | 0R | — |
 | 16/10 | SOL | long | 99,77 | 95,67 | 105,7 | — | Não acionado | 0R | — |
+| 17/10 | LINK | long | 11,509 | 10,737 | 19,156 | — | Não acionado | 0R | — |
 
-- Total no registro: 10 (Não acionado: 6; Aberto: 2; Alvo 1: 1; Stop: 1)
+- Total no registro: 11 (Não acionado: 7; Aberto: 2; Alvo 1: 1; Stop: 1)
 - Geral: 4 acionados (2 encerrados, 2 abertos); alvo 1: 50%; stop: 50%; R médio por setup: +0,08R; soma: +0,17R
 
 ## Placar Jayson Casper

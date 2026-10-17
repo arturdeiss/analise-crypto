@@ -1,7 +1,7 @@
 {
- "gerado": "17/10/2026 10:05",
+ "gerado": "17/10/2026 12:29",
  "fechamento": "2026-10-16",
- "discord": "2026-10-16",
+ "discord": "2026-10-17",
  "setups": [
   {
    "ativo": "AAVE",
@@ -66,23 +66,6 @@
    "saiu": false,
    "setup": "Long curto prazo: golden pocket local 268.4–269.5, stop curto 263 (abaixo do 0.786), alvo 291. Entrada só com bolinha verde no 1h.",
    "id": "20261016-TAO-long-cp",
-   "curto": true,
-   "inicio": "2026-10-16T13:30"
-  },
-  {
-   "ativo": "LINK",
-   "direcao": "long",
-   "zona": [
-    12.15,
-    12.19
-   ],
-   "stop": 11.99,
-   "alvos": [
-    12.78
-   ],
-   "saiu": false,
-   "setup": "Long curto prazo: golden pocket local 12.15–12.19, stop curto 11.99 (abaixo do 0.786), alvo 12.78. Entrada só com bolinha verde no 1h.",
-   "id": "20261016-LINK-long-cp",
    "curto": true,
    "inicio": "2026-10-16T13:30"
   },
