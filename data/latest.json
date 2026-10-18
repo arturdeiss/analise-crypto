@@ -1,7 +1,7 @@
 {
- "gerado": "17/10/2026 21:48",
+ "gerado": "18/10/2026 19:22",
  "fechamento": "2026-10-17",
- "discord": "2026-10-17",
+ "discord": "2026-10-18",
  "setups": [
   {
    "ativo": "AAVE",
@@ -34,23 +34,6 @@
    "saiu": false,
    "setup": "Short em 108,7–110,6, stop 112,5, alvos 104,4 / 98,2, US$ 12k (~US$ 420), não tocado (~5% acima). Vira Oportunidade se o preço passar de ~109,1 e o 1h confirmar",
    "id": "20261012-SOL-short"
-  },
-  {
-   "ativo": "ETH",
-   "direcao": "long",
-   "zona": [
-    2380,
-    2385
-   ],
-   "stop": 2350,
-   "alvos": [
-    2494
-   ],
-   "saiu": false,
-   "setup": "Long curto prazo: golden pocket local 2380–2385, stop curto 2350 (abaixo do 0.786), alvo 2494. Entrada só com bolinha verde no 1h.",
-   "id": "20261016-ETH-long-cp",
-   "curto": true,
-   "inicio": "2026-10-16T13:30"
   },
   {
    "ativo": "BTC",
