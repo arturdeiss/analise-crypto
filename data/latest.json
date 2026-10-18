@@ -1,6 +1,6 @@
 {
- "gerado": "17/10/2026 19:27",
- "fechamento": "2026-10-16",
+ "gerado": "17/10/2026 21:48",
+ "fechamento": "2026-10-17",
  "discord": "2026-10-17",
  "setups": [
   {
@@ -10,13 +10,13 @@
     164.5,
     165.5
    ],
-   "stop": 174.5,
+   "stop": 161.0,
    "alvos": [
     150.4,
-    141.6
+    147.1
    ],
-   "saiu": false,
-   "setup": "Short no reteste de 164,5–165,5 → entrada só com confirmação no 1h, stop 174,5, alvos 150,4 / 141,6. Hoje a zona foi tocada sem confirmação (o 1h das 08h fechou em 164,35 com ponto verde)",
+   "saiu": true,
+   "setup": "Short em 156,5–157,4 → entrada só com confirmação no 1h, stop 161, alvos 150,4 / 147,1, US$ 12k (risco ~US$ 345). A zona 164,5–165,5 sai de Oportunidade e fica só como referência",
    "id": "20261012-AAVE-short"
   },
   {
@@ -32,7 +32,7 @@
     98.2
    ],
    "saiu": false,
-   "setup": "Short em 108,7–110,6, stop 112,5, alvos 104,4 / 98,2, não tocado. Vira Oportunidade se o preço passar de ~109,1 (aí a Alta do 4h fica cumprida) e o 1h confirmar",
+   "setup": "Short em 108,7–110,6, stop 112,5, alvos 104,4 / 98,2, US$ 12k (~US$ 420), não tocado (~5% acima). Vira Oportunidade se o preço passar de ~109,1 e o 1h confirmar",
    "id": "20261012-SOL-short"
   },
   {
