@@ -28,6 +28,18 @@ th{background:#0f172a;color:#fff;text-align:left;padding:6px 8px;white-space:now
 .hl a{display:flex;justify-content:space-between;background:#fff;border-radius:10px;padding:10px 14px;margin:6px 0;box-shadow:0 1px 3px #0002;color:#1e293b;text-decoration:none}
 .hl a span{font-size:12.5px;color:#64748b}
 footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-weight:600}
+.alertbar{background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 1px 3px #0002;margin:10px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.alertbar button{border:0;background:#0f172a;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;min-height:48px}
+.alertbar button.off{background:#fff;color:#334155;border:1px solid #cbd5e1}
+.alertbar span{font-size:13px;color:#475569;flex:1;min-width:180px}
+#alertLog{display:none;background:#fef3c7;border:1px solid #f59e0b;color:#92400e;border-radius:10px;padding:10px 14px;margin:8px 0;font-size:13.5px}
+#alertLog.show{display:block}
+.card.inzone{outline:3px solid #16a34a;outline-offset:2px}
+.card.hitstop{outline:3px solid #dc2626;outline-offset:2px}
+.card.hitalvo{outline:3px solid #f59e0b;outline-offset:2px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}100%{box-shadow:0 0 0 14px rgba(22,163,74,0)}}
+.card.flash{animation:pulse .7s ease-out 4}
+@media(max-width:640px){.alertbar button{width:100%}}
 #placar header h1{margin:0 0 4px;font-size:22px}
 #placar h3{font-size:16px;margin:12px 0 6px}
 #placar .sub{color:#64748b;margin:0 0 10px;font-size:13.5px}
@@ -74,6 +86,8 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 <header><h1>📈 Análise diária CRYPTO</h1><div class="dt" id="dt">carregando…</div></header>
 <nav><button data-t="painel" class="on">Painel ao vivo</button><button data-t="fech">Fechamento diário</button><button data-t="disc">Trades do Discord</button><button data-t="plac">Placar</button><button data-t="hist">Histórico</button></nav>
 <section class="tab on" id="painel">
+ <div class="alertbar"><button id="btnAlert" type="button">🔔 Ativar notificações</button><span id="alertStatus">Alertas desligados neste aparelho. Ative para apitar e receber notificação quando o preço entrar na zona, bater o stop ou o alvo — só funciona com esta página aberta.</span></div>
+ <div id="alertLog" role="alert"></div>
  <h2>Preços ao vivo</h2><p class="sub">Binance spot, atualiza a cada 10 s · <span id="upd">—</span></p><div class="pgrid" id="prices"></div>
  <h2>Oportunidades do último fechamento</h2><p class="sub" id="opsub"></p><div class="livelb"></div><div class="sgrid" id="setups"></div>
 </section>
@@ -170,13 +184,55 @@ function renderSetups(){const el=document.getElementById('setups');if(!D)return;
   return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span>${s.curto?'<span class="bd" style="background:#7c3aed;color:#fff;margin-left:4px">LONG CURTO PRAZO</span>':''}</div>
   <div class="lv"><div><small>Zona</small>${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'}</div><div><small>Stop</small><span class="r">${fmt(s.stop)}</span></div><div><small>Alvos</small><span class="g">${s.alvos.map(fmt).join(' / ')||'—'}</span></div></div>
   ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
+// ---- Alertas no navegador (Fase 1, camada do site) ----
+// Funciona só com a página aberta. Estado por setup fica no localStorage
+// deste aparelho/navegador: só apita/notifica na TRANSIÇÃO (fora->zona,
+// ->stop, ->alvo). Recarregar a página não repete o alerta.
+const ALERT_KEY='analise_alertas_v1';
+let ALERTS={enabled:false,states:{}};
+try{const s=JSON.parse(localStorage.getItem(ALERT_KEY));if(s&&typeof s==='object')ALERTS={enabled:!!s.enabled,states:s.states||{}}}catch(e){}
+let AC=null; // AudioContext (criado no toque do botão, exigência do navegador)
+function saveAlerts(){try{localStorage.setItem(ALERT_KEY,JSON.stringify(ALERTS))}catch(e){}}
+function setupKey(s){return s.id||(s.ativo+'|'+s.direcao+'|'+(s.zona?s.zona.join('-'):'')+'|'+(s.stop||''))}
+function estadoAlerta(s,p){ // 'zona'|'stop'|'alvo'|'fora'|null (puro, testável)
+ if(p==null||!s.zona||!s.zona.length)return null;
+ const a=Math.min(...s.zona),b=Math.max(...s.zona),alvo=s.alvos&&s.alvos.length?s.alvos[0]:null;
+ if(s.stop!=null&&((s.direcao==='long'&&p<=s.stop)||(s.direcao==='short'&&p>=s.stop)))return'stop';
+ if(alvo!=null&&((s.direcao==='long'&&p>=alvo)||(s.direcao==='short'&&p<=alvo)))return'alvo';
+ if(p>=a&&p<=b)return'zona';return'fora'}
+function beep(tipo){if(!ALERTS.enabled)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();
+ const notas=tipo==='stop'?[220,220]:tipo==='alvo'?[1046,1046,1046]:[880,880];let t0=AC.currentTime;
+ notas.forEach((f,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;o.type='sine';g.gain.setValueAtTime(.18,t0+i*.22);g.gain.exponentialRampToValueAtTime(.001,t0+i*.22+.18);o.connect(g);g.connect(AC.destination);o.start(t0+i*.22);o.stop(t0+i*.22+.2)})}catch(e){}}
+function showAlertLog(msg){const el=document.getElementById('alertLog');if(!el)return;el.textContent='🔔 '+msg+' · '+new Date().toLocaleTimeString('pt-BR');el.classList.add('show')}
+function fireAlert(s,curr,p){const nome=s.ativo+' '+s.direcao.toUpperCase(),preco=fmt(p);
+ const txt=curr==='zona'?nome+': preço ENTROU NA ZONA ('+preco+'). Esperar confirmação no 1h.':curr==='stop'?nome+': preço bateu o STOP ('+preco+'). Setup invalidado/encerrado.':nome+': preço bateu o ALVO 1 ('+preco+'). Reavaliar realização.';
+ showAlertLog(txt);beep(curr);
+ if(ALERTS.enabled&&'Notification'in window&&Notification.permission==='granted'){try{new Notification('📈 Análise CRYPTO — '+nome,{body:txt,tag:setupKey(s)+':'+curr})}catch(e){}}}
+function checkAlerts(){if(!D||!D.setups)return;const cards=document.querySelectorAll('#setups .card');
+ D.setups.forEach((s,i)=>{const p=P[s.ativo];const curr=estadoAlerta(s,p);if(!curr)return;const k=setupKey(s),prev=ALERTS.states[k];
+  const card=cards[i];if(card){card.classList.toggle('inzone',curr==='zona');card.classList.toggle('hitstop',curr==='stop');card.classList.toggle('hitalvo',curr==='alvo')}
+  if(prev===undefined){ALERTS.states[k]=curr;saveAlerts();return} // 1ª leitura neste aparelho: só marca, não apita
+  if(prev!==curr){ALERTS.states[k]=curr;saveAlerts();
+   if(curr!=='fora'){if(card){card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash')}fireAlert(s,curr,p)}}})}
+function alertStatusTxt(){const el=document.getElementById('alertStatus'),btn=document.getElementById('btnAlert');if(!el||!btn)return;
+ if(!('Notification'in window)){el.textContent='Este navegador não suporta notificação de site (no iPhone, o Safari só notifica site instalado na tela inicial). O apito e o destaque no card continuam valendo com a página aberta, se ativados.';btn.textContent=ALERTS.enabled?'🔕 Desativar apito':'🔔 Ativar apito'}
+ else if(ALERTS.enabled&&Notification.permission==='granted'){el.textContent='✅ Notificações ativadas neste aparelho. Mantenha esta aba aberta (pode ficar em segundo plano).';btn.textContent='🔕 Desativar notificações';btn.classList.add('off')}
+ else if(ALERTS.enabled&&Notification.permission==='denied'){el.textContent='⚠️ Notificação foi bloqueada neste navegador. Libere em: cadeado/configurações do site → Notificações → Permitir. O destaque no card continua.';btn.textContent='🔕 Desativar notificações';btn.classList.add('off')}
+ else{el.textContent='Alertas desligados neste aparelho. Ative para apitar e receber notificação quando o preço entrar na zona, bater o stop ou o alvo — só funciona com esta página aberta.';btn.textContent='🔔 Ativar notificações';btn.classList.remove('off')}}
+document.addEventListener('DOMContentLoaded',()=>{});
+function initAlertBtn(){const btn=document.getElementById('btnAlert');if(!btn)return;alertStatusTxt();
+ btn.onclick=async()=>{if(ALERTS.enabled){ALERTS.enabled=false;saveAlerts();alertStatusTxt();showAlertLog('Alertas desligados neste aparelho.');return}
+  ALERTS.enabled=true;saveAlerts();try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')await AC.resume()}catch(e){}
+  if('Notification'in window&&Notification.permission==='default'){try{await Notification.requestPermission()}catch(e){}}
+  alertStatusTxt();beep('zona');showAlertLog('Alertas ativados. Teste de som feito — você vai ouvir este apito ao entrar na zona/stop/alvo.');
+  if('Notification'in window&&Notification.permission==='granted'){try{new Notification('📈 Análise CRYPTO',{body:'Notificações ativadas. Mantenha esta aba aberta.',tag:'analise-teste'})}catch(e){}}}};
 async function prices(){try{const r=await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols='+encodeURIComponent(JSON.stringify(SYM.map(s=>s+'USDT'))));const j=await r.json();
  j.forEach(t=>P[t.symbol.replace('USDT','')]=+t.lastPrice);
  const EX=[...new Set(((D&&D.setups)||[]).map(s=>s.ativo))].filter(a=>a&&!SYM.includes(a));
  await Promise.all(EX.map(a=>fetch('https://data-api.binance.vision/api/v3/ticker/price?symbol='+a+'USDT').then(r=>r.ok?r.json():null).then(x=>{if(x&&x.price)P[a]=+x.price}).catch(()=>{})));
  document.getElementById('prices').innerHTML=SYM.map(s=>{const t=j.find(x=>x.symbol===s+'USDT');if(!t)return'';const c=+t.priceChangePercent;
   return `<div class="pc"><small>${s}</small><b>${fmt(+t.lastPrice)}</b><span class="${c>=0?'g':'r'}">${c>=0?'+':''}${c.toFixed(2)}%</span></div>`}).join('');
- document.getElementById('upd').textContent='atualizado '+new Date().toLocaleTimeString('pt-BR');renderSetups()}catch(e){document.getElementById('upd').textContent='erro ao buscar preços, tentando de novo…'}}
+ document.getElementById('upd').textContent='atualizado '+new Date().toLocaleTimeString('pt-BR');renderSetups();checkAlerts()}catch(e){document.getElementById('upd').textContent='erro ao buscar preços, tentando de novo…'}}
 fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('dt').textContent=`Último fechamento: ${br(d.fechamento)} · Discord: ${br(d.discord)} · site gerado ${d.gerado} (Brasília)`;
  document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
@@ -185,7 +241,7 @@ fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');
  document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
   return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
- renderSetups();
+ renderSetups();initAlertBtn();
  fetch('data/live.json?'+Date.now()).then(r=>r.json()).then(j=>{L=j;liveTick();setInterval(liveTick,60000)}).catch(()=>{})});
 prices();setInterval(prices,10000);
 </script></body></html>
