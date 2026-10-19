@@ -1,7 +1,7 @@
 {
- "gerado": "18/10/2026 21:50",
+ "gerado": "19/10/2026 12:46",
  "fechamento": "2026-10-18",
- "discord": "2026-10-18",
+ "discord": "2026-10-19",
  "setups": [
   {
    "ativo": "AAVE",
@@ -50,23 +50,6 @@
    "saiu": true,
    "setup": "Short em 0,4518–0,4538 → entrada só com confirmação no 1h, stop 0,4640, alvos 0,4338 / 0,4221, US$ 12k (risco ~US$ 324). A zona 0,4721–0,4750 fica só como referência (zona 2, Esperar)",
    "id": "20261018-ONDO-short"
-  },
-  {
-   "ativo": "BTC",
-   "direcao": "long",
-   "zona": [
-    80900,
-    81000
-   ],
-   "stop": 80400,
-   "alvos": [
-    82940
-   ],
-   "saiu": false,
-   "setup": "Long curto prazo: golden pocket local 80900–81000, stop curto 80400 (abaixo do 0.786), alvo 82940. Entrada só com bolinha verde no 1h.",
-   "id": "20261016-BTC-long-cp",
-   "curto": true,
-   "inicio": "2026-10-16T13:30"
   }
  ]
 }
