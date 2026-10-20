@@ -1,40 +1,8 @@
 {
- "gerado": "19/10/2026 19:31",
- "fechamento": "2026-10-18",
+ "gerado": "19/10/2026 22:07",
+ "fechamento": "2026-10-19",
  "discord": "2026-10-19",
  "setups": [
-  {
-   "ativo": "AAVE",
-   "direcao": "short",
-   "zona": [
-    156.5,
-    157.4
-   ],
-   "stop": 161.0,
-   "alvos": [
-    150.4,
-    147.1
-   ],
-   "saiu": true,
-   "setup": "Short em 156,5–157,4, stop 161, alvos 150,4 / 147,1 (US$ 12k, risco ~US$ 345): sai de Oportunidade e fica como referência, com o alerta armado, porque não foi acionado e os dois alvos já foram vistos. A zona 164,5–165,5 (stop 174,5) segue como referência secundária",
-   "id": "20261017-AAVE-short"
-  },
-  {
-   "ativo": "SOL",
-   "direcao": "short",
-   "zona": [
-    108.7,
-    110.6
-   ],
-   "stop": 112.5,
-   "alvos": [
-    104.4,
-    98.2
-   ],
-   "saiu": false,
-   "setup": "Short em 108,7–110,6, stop 112,5, alvos 104,4 / 98,2, US$ 12k (~US$ 420), não tocado (~4,3% acima). Vira Oportunidade se passar de ~109,1 com confirmação no 1h e sem Alta ✓ nova no 12h",
-   "id": "20261012-SOL-short"
-  },
   {
    "ativo": "ONDO",
    "direcao": "short",
@@ -48,7 +16,7 @@
     0.4221
    ],
    "saiu": true,
-   "setup": "Short em 0,4518–0,4538 → entrada só com confirmação no 1h, stop 0,4640, alvos 0,4338 / 0,4221, US$ 12k (risco ~US$ 324). A zona 0,4721–0,4750 fica só como referência (zona 2, Esperar)",
+   "setup": "Short em 0,4518–0,4538 → entrada só com confirmação no 1h, stop 0,4640, alvos 0,4338 / 0,4221, US$ 12k (risco ~US$ 324), não tocado (~4,1% acima). A zona 0,4721–0,4750 fica só como referência (zona 2, Esperar)",
    "id": "20261018-ONDO-short"
   }
  ]
