@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 20/10 19:33. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 21/10 12:15. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -19,10 +19,10 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 17/10 | LINK | long | 11,509 | 10,737 | 19,156 | — | Não acionado | 0R | — |
 | 18/10 | AAVE | long | 129,94 | 112,41 | 255,48 | — | Não acionado | 0R | — |
 | 18/10 | LINK | long | 11,31 | 10,78 | 12,125 | 14 | Não acionado | 0R | — |
-| 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Aberto | 0R | — |
+| 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Stop | -1,00R | — |
 
-- Total no registro: 14 (Não acionado: 9; Aberto: 3; Alvo 1: 1; Stop: 1)
-- Geral: 5 acionados (2 encerrados, 3 abertos); alvo 1: 50%; stop: 50%; R médio por setup: +0,08R; soma: +0,17R
+- Total no registro: 14 (Não acionado: 9; Aberto: 2; Alvo 1: 1; Stop: 2)
+- Geral: 5 acionados (3 encerrados, 2 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,28R; soma: -0,83R
 
 ## Placar Jayson Casper
 
@@ -30,8 +30,8 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 |---|---|---|---|---|---|---|---|---|---|
 | 12/10 | BTC | long | 81.900 | 80.600 | 87.300 | — | Stop | -1,00R | Entrou 2× em 12/10 (20h08 e 21h35) com stops mais curtos e foi estopado nas duas: pequena perda |
 | 12/10 | BTC | short | 83.317 | 83.616 | 81.650 | — | Stop | -1,00R | Não comentou; o alvo bateu antes da entrada (setup vencido) |
-| 12/10 | BTC | short | 84.300 | 86.500 | 75.000 | — | Não acionado | 0R | — |
-| 12/10 | BTC | short | 84.900 | 90.000 | 69.667 | 68.357 | Não acionado | 0R | — |
+| 12/10 | BTC | short | 84.300 | 86.500 | 75.000 | — | Aberto | 0R | — |
+| 12/10 | BTC | short | 84.900 | 90.000 | 69.667 | 68.357 | Aberto | 0R | — |
 | 13/10 | BTC | long | 80.300 | 77.500 | 88.000 | — | Aberto | 0R | — |
 | 14/10 | BTC | long | 81.595 | 81.200 | 86.500 | — | Stop | -1,00R | 2ª zona do mesmo gráfico; às 11h20 disse que ia ficar de fora |
 | 14/10 | BTC | long | 82.200 | 81.200 | 86.500 | — | Stop | -1,00R | Ficou de fora às 11h20: confirmação "muito duvidosa" |
@@ -39,8 +39,10 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 19/10 | BTC | long | 77.743 | 75.185 | 86.821 | — | Não acionado | 0R | — |
 | 19/10 | BTC | long | 79.656 | 78.937 | 86.718 | — | Não acionado | 0R | — |
 | 19/10 | BTC | short | 85.568 | 87.346 | 69.262 | — | Não acionado | 0R | — |
+| 21/10 | BTC | short | 84.565 | 85.592 | 79.641 | 79.240 | Aberto | 0R | — |
+| 21/10 | BTC | short | 87.500 | 90.034 | 69.262 | — | Não acionado | 0R | — |
 
-- Total no registro: 11 (Não acionado: 5; Aberto: 1; Stop: 4; Cancelado: 1)
-- Geral: 5 acionados (4 encerrados, 1 abertos); alvo 1: 0%; stop: 100%; R médio por setup: -1,00R; soma: -4,00R
+- Total no registro: 13 (Não acionado: 4; Aberto: 4; Stop: 4; Cancelado: 1)
+- Geral: 8 acionados (4 encerrados, 4 abertos); alvo 1: 0%; stop: 100%; R médio por setup: -1,00R; soma: -4,00R
 
 *Sem alvo postado, o trade fica Aberto até o stop. Cancelado = o autor desistiu ou disse que a ordem foi front-runada antes da entrada (0R). Ativos sem par spot na Binance nem na Gate.io (S&P) e trades sem níveis (APT) ficam de fora.*
