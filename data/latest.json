@@ -1,14 +1,14 @@
 {
- "gerado": "20/10/2026 19:48",
- "fechamento": "2026-10-19",
+ "gerado": "20/10/2026 21:31",
+ "fechamento": "2026-10-20",
  "discord": "2026-10-20",
  "setups": [
   {
    "ativo": "ONDO",
    "direcao": "short",
    "zona": [
-    0.4721,
-    0.475
+    0.4518,
+    0.4538
    ],
    "stop": 0.464,
    "alvos": [
@@ -16,8 +16,24 @@
     0.4221
    ],
    "saiu": true,
-   "setup": "Short em 0,4518–0,4538 → entrada só com confirmação no 1h, stop 0,4640, alvos 0,4338 / 0,4221, US$ 12k (risco ~US$ 324), não tocado (~4,1% acima). A zona 0,4721–0,4750 fica só como referência (zona 2, Esperar)",
+   "setup": "O short 0,4518–0,4538 (stop 0,4640, alvos 0,4338 / 0,4221, US$ 12k) sai da lista de Oportunidades: foi tocado sem confirmação (4h para cima), o preço já passou do 0,65 e a condição de saída aconteceu. Zona 2 em 0,4721–0,4750 (stop 0,4890, alvos 0,4660 / 0,4417–0,4395) só como referência (~4,1% acima, alvo 1 de só ~0,5R)",
    "id": "20261018-ONDO-short"
+  },
+  {
+   "ativo": "ONDO",
+   "direcao": "long",
+   "zona": [
+    0.483,
+    0.483
+   ],
+   "stop": 0.445,
+   "alvos": [
+    0.52,
+    0.54
+   ],
+   "saiu": false,
+   "setup": "sim (12h)",
+   "id": "20261004-ONDO-long"
   }
  ]
 }
