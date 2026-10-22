@@ -166,9 +166,14 @@ function md(s){const E=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');const inl
  if(/^[-*] /.test(t)){if(!ul){h+='<ul>';ul=true}h+='<li>'+inl(t.slice(2))+'</li>';continue}if(ul){h+='</ul>';ul=false}
  if(/^\d+\. /.test(t)){h+='<p>'+inl(t)+'</p>';continue} if(t)h+='<p>'+inl(t)+'</p>'}
  if(tb)h+='</table></div>';if(ul)h+='</ul>';return h}
+const FECHADOS=['Stop','Alvo 2','Expirado','Invalidado','Cancelado','Ambíguo'];
+function encerrado(s){const v=s.id&&LV[s.id];if(v&&FECHADOS.includes(v.sit))return v.sit;const p=P[s.ativo];
+ if(p!=null&&s.stop!=null&&((s.direcao==='short'&&p>=s.stop)||(s.direcao==='long'&&p<=s.stop)))return'Stop';return null}
 function renderSetups(){const el=document.getElementById('setups');if(!D)return;
- if(!D.setups.length){el.innerHTML='<div class="box">Nenhuma Oportunidade no último fechamento.</div>';return}
- el.innerHTML=D.setups.map(s=>{const p=P[s.ativo];let st='<span class="mut">aguardando preço…</span>',bar='';
+ const abertos=D.setups.filter(s=>!encerrado(s)),fech=D.setups.filter(s=>encerrado(s));
+ const encH=fech.length?`<details class="box" style="grid-column:1/-1"><summary>Encerrados (${fech.length}) — fora de Oportunidades</summary><ul>${fech.map(s=>`<li>${s.ativo} ${s.direcao.toUpperCase()} · zona ${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'} · stop ${fmt(s.stop)} · <b>${encerrado(s).toUpperCase()}</b></li>`).join('')}</ul></details>`:'';
+ if(!abertos.length){el.innerHTML='<div class="box" style="grid-column:1/-1">Nenhuma oportunidade aberta no momento.</div>'+encH;return}
+ el.innerHTML=abertos.map(s=>{const p=P[s.ativo];let st='<span class="mut">aguardando preço…</span>',bar='';
   if(p&&!s.zona)st=`Preço ${fmt(p)}`;
   if(p&&s.zona){const [a,b]=[Math.min(...s.zona),Math.max(...s.zona)];let dist,txt;
    if(p>=a&&p<=b){txt='<b class="g">DENTRO DA ZONA</b> — esperar confirmação no 1h';dist=0}
@@ -181,9 +186,9 @@ function renderSetups(){const el=document.getElementById('setups');if(!D)return;
   if(v){const m={'Aberto':['ABERTO','ab'],'Alvo 1':['ALVO 1','a1'],'Alvo 2':['ALVO 2','a2'],'Stop':['STOP','st'],'Expirado':['EXPIRADO','ex'],'Invalidado':['INVALIDADO','iv'],'Ambíguo':['AMBÍGUO','ex']}[v.sit];
    if(m)chip=`<span class="lchip p-${m[1]}">${m[0]}</span>`;else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>'}
   else if(p&&s.zona&&p>=Math.min(...s.zona)&&p<=Math.max(...s.zona))chip='<span class="lchip p-ab">DENTRO DA ZONA</span>';
-  return `<div class="card ${s.direcao}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span>${s.curto?'<span class="bd" style="background:#7c3aed;color:#fff;margin-left:4px">LONG CURTO PRAZO</span>':''}</div>
+  return `<div class="card ${s.direcao}" data-k="${setupKey(s).replace(/"/g,'')}"><div class="top"><span class="nm">${s.ativo} ${chip}</span><span class="bd">${s.direcao.toUpperCase()}</span>${s.curto?'<span class="bd" style="background:#7c3aed;color:#fff;margin-left:4px">LONG CURTO PRAZO</span>':''}</div>
   <div class="lv"><div><small>Zona</small>${s.zona?fmt(Math.min(...s.zona))+'–'+fmt(Math.max(...s.zona)):'—'}</div><div><small>Stop</small><span class="r">${fmt(s.stop)}</span></div><div><small>Alvos</small><span class="g">${s.alvos.map(fmt).join(' / ')||'—'}</span></div></div>
-  ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')}
+  ${bar}<div class="st">${st}</div><div class="note">${s.setup.replace(/</g,'&lt;')}</div></div>`}).join('')+encH}
 // ---- Alertas no navegador (Fase 1, camada do site) ----
 // Funciona só com a página aberta. Estado por setup fica no localStorage
 // deste aparelho/navegador: só apita/notifica na TRANSIÇÃO (fora->zona,
@@ -208,9 +213,9 @@ function fireAlert(s,curr,p){const nome=s.ativo+' '+s.direcao.toUpperCase(),prec
  const txt=curr==='zona'?nome+': preço ENTROU NA ZONA ('+preco+'). Esperar confirmação no 1h.':curr==='stop'?nome+': preço bateu o STOP ('+preco+'). Setup invalidado/encerrado.':nome+': preço bateu o ALVO 1 ('+preco+'). Reavaliar realização.';
  showAlertLog(txt);beep(curr);
  if(ALERTS.enabled&&'Notification'in window&&Notification.permission==='granted'){try{new Notification('📈 Análise CRYPTO — '+nome,{body:txt,tag:setupKey(s)+':'+curr})}catch(e){}}}
-function checkAlerts(){if(!D||!D.setups)return;const cards=document.querySelectorAll('#setups .card');
+function checkAlerts(){if(!D||!D.setups)return;const cards=[...document.querySelectorAll('#setups .card')];
  D.setups.forEach((s,i)=>{const p=P[s.ativo];const curr=estadoAlerta(s,p);if(!curr)return;const k=setupKey(s),prev=ALERTS.states[k];
-  const card=cards[i];if(card){card.classList.toggle('inzone',curr==='zona');card.classList.toggle('hitstop',curr==='stop');card.classList.toggle('hitalvo',curr==='alvo')}
+  const card=cards.find(c=>c.dataset.k===k.replace(/"/g,''));if(card){card.classList.toggle('inzone',curr==='zona');card.classList.toggle('hitstop',curr==='stop');card.classList.toggle('hitalvo',curr==='alvo')}
   if(prev===undefined){ALERTS.states[k]=curr;saveAlerts();return} // 1ª leitura neste aparelho: só marca, não apita
   if(prev!==curr){ALERTS.states[k]=curr;saveAlerts();
    if(curr!=='fora'){if(card){card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash')}fireAlert(s,curr,p)}}})}
