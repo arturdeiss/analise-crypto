@@ -79,6 +79,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 #placar code{background:#f1f5f9;padding:1px 4px;border-radius:4px;font-size:12.5px}
 #placar{background:none;box-shadow:none;padding:0}.pp{display:none}.pp.on{display:block}#pd td:last-child{min-width:280px}#pd td{white-space:nowrap}#pd td:last-child{white-space:normal}#placar h3{font-size:17px;margin:18px 0 8px}
 .sub2{display:flex;gap:6px;margin:14px 0 4px}.sub2 button{border:1px solid #cbd5e1;background:#fff;color:#334155;padding:7px 12px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer}.sub2 button.on{background:#334155;color:#fff;border-color:#334155}
+#placar details.enc{margin:10px 0 18px;border:1px solid #8883;border-radius:10px;padding:8px 10px}#placar details.enc summary{cursor:pointer;font-weight:600;padding:6px 0;font-size:15px}#placar details.enc .tw{margin-top:8px}
 #placar .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .lchip{font-size:11px;font-weight:700;padding:2px 7px;border-radius:99px;vertical-align:middle;margin-left:4px}.lchip.p-ab{background:#dbeafe;color:#1d4ed8}.lchip.p-na,.lchip.p-ex{background:#e2e8f0;color:#475569}.lchip.p-st{background:#fee2e2;color:#b91c1c}.lchip.p-a1,.lchip.p-a2{background:#dcfce7;color:#15803d}.lchip.p-iv{background:#fef3c7;color:#92400e}
 .livelb{display:inline-block;font-size:12.5px;font-weight:600;color:#16a34a;margin:2px 0 6px}
@@ -141,6 +142,16 @@ function pintaBloco(box,ls,grupos){ // tabela(s), total e cards de resumo dentro
  const li=[...box.querySelectorAll('li')].find(l=>/Total no registro/.test(l.textContent));if(li){const c={};ls.forEach(x=>c[x.v.sit]=(c[x.v.sit]||0)+1);li.textContent=`Total no registro: ${ls.length} (${ORD.filter(k=>c[k]).map(k=>k+': '+c[k]).join('; ')})`}
  box.querySelectorAll('.sc').forEach(sc=>{const lb=sc.querySelector('small').textContent,g=grupos(lb);if(!g)return;const r=resumo(g.filter(x=>x.v.sit!=='Ambíguo'));
   sc.innerHTML=`<small>${lb}</small><b class="${r.so<0?'r':'g'}">${fr(r.so).replace('+0,00','0,00')}</b><span>alvo 1 ${r.a1} · stop ${r.stp}</span><p>${r.txt}</p>`})}
+
+const ENCS=['Stop','Alvo 2','Expirado','Invalidado','Cancelado'];
+function splitEnc(box){ // move setups encerrados p/ drill-down <details> abaixo de cada tabela (idempotente)
+ box.querySelectorAll('table.plc').forEach(tb=>{if(tb.closest('details.enc'))return;const tw=tb.closest('.tw')||tb;
+  let dt=tw.nextElementSibling;if(!(dt&&dt.matches('details.enc'))){dt=document.createElement('details');dt.className='enc';
+   const t2=tb.cloneNode(false),hr=tb.querySelector('tr');dt.innerHTML='<summary></summary><div class="tw"></div>';dt.querySelector('.tw').appendChild(t2);if(hr)t2.appendChild(hr.cloneNode(true));tw.after(dt)}
+  const t2=dt.querySelector('table'),hd=[...tb.querySelectorAll('th')].map(t=>t.textContent.toLowerCase()),iS=hd.findIndex(t=>t.startsWith('situa'));if(iS<0)return;
+  const rows=[...tb.querySelectorAll('tr'),...t2.querySelectorAll('tr')].filter(tr=>tr.querySelectorAll('td').length>iS);
+  rows.forEach(tr=>{const st=tr.querySelectorAll('td')[iS].textContent.trim(),fim=ENCS.some(k=>st.startsWith(k));const dst=fim?t2:tb;const par=dst.tBodies[0]||dst;if(tr.parentNode!==par)par.appendChild(tr)});
+  const n=[...t2.querySelectorAll('tr')].filter(tr=>tr.querySelector('td')).length;dt.querySelector('summary').textContent=`Encerrados (${n}) — toque para abrir`;dt.style.display=n?'':'none'})}
 async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc],pend=all.filter(x=>!x.final),K={};
  try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora,(pend.find(x=>x.ativo===sym)||{}).fonte)}
   for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs}:await aval(x,agora,K[x.ativo]);LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs})}
@@ -151,6 +162,7 @@ async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L
  const pd=document.getElementById('pd');pd.querySelectorAll('h3').forEach(h=>{const au=/cobra/i.test(h.textContent)?'Cobra':'Jayson',ls=L.dc.filter(x=>x.autor===au);
   const blk=document.createElement('div');let n=h.nextElementSibling;const nodes=[];while(n&&n.tagName!=='H3'){nodes.push(n);n=n.nextElementSibling}
   const fake={querySelectorAll:q=>nodes.flatMap(e=>[...(e.matches(q)?[e]:[]),...e.querySelectorAll(q)])};pintaBloco(fake,ls,lb=>lb==='Geral'?ls:null)});
+ splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));
  L.bot.forEach(x=>LV[x.id]=x.v);renderSetups()}
 const SYM=['BTC','ETH','SOL','AAVE','TAO','NEAR','ONDO','SUI','DOGE','ZEC','HBAR'];
 let D=null, P={};
@@ -243,7 +255,7 @@ fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
  if(d.fechamento){const b='relatorios/'+d.fechamento+'/';document.getElementById('ffech').src=b+'resumo.html';document.getElementById('fechlk').innerHTML=`<a class="lk" href="${b}resumo.html" target="_blank">Abrir em tela cheia</a>`+(d.historico.find(h=>h.data===d.fechamento)?.pdf?`<a class="lk" href="${b}resumo.pdf">PDF</a>`:'')}
  if(d.discord){const b='relatorios/'+d.discord+'/';document.getElementById('fdisc').src=b+'discord.html';document.getElementById('disclk').innerHTML=`<a class="lk" href="${b}discord.html" target="_blank">Abrir em tela cheia</a>`}
- document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');
+ document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));
  document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
   return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
  renderSetups();initAlertBtn();
