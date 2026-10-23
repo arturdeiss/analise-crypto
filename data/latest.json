@@ -1,23 +1,23 @@
 {
- "gerado": "22/10/2026 19:31",
- "fechamento": "2026-10-21",
+ "gerado": "22/10/2026 22:11",
+ "fechamento": "2026-10-22",
  "discord": "2026-10-22",
  "setups": [
   {
    "ativo": "BTC",
    "direcao": "short",
    "zona": [
-    84740.0,
-    84900.0
+    82850.0,
+    83500.0
    ],
-   "stop": 85900.0,
+   "stop": 84600.0,
    "alvos": [
-    83500.0,
-    82850.0
+    80940.0,
+    79800.0
    ],
    "saiu": false,
-   "setup": "Short no reteste de 84.740–84.900 (níveis novos: do 0,65 até a máxima do dia), stop 85.900 (acima do 0,786, em 85.770), alvos 83.500 (POC) / 82.850 (linha 1 do Fibo), US$ 12k (risco ~US$ 164), alvo 1 ≈ 1,07R. A zona antiga, 84.000–84.350, foi ultrapassada, e a entrada com ela não foi confirmada: quando o 1h deu vermelho às 14h, o 4h ainda subia. Sem long (12h/1D contra)",
-   "id": "20261021-BTC-short"
+   "setup": "Short no reteste de 82.850–83.500 (níveis novos: linha 1 do Fibo até o POC do VP), stop 84.600 (acima da máxima 84.377 e do nPOC 84.513), alvos 80.940 (mínima do dia) / 79.800 (fundo do Fibo 87.396→79.800), US$ 12k (risco ~US$ 253), alvo 1 ≈ 1,09R. A zona de ontem (84.740–84.900) não foi tocada e os dois alvos bateram sem entrada. Sem long (1D contra)",
+   "id": "20261022-BTC-short"
   },
   {
    "ativo": "SOL",
@@ -31,8 +31,8 @@
     104.4,
     98.2
    ],
-   "saiu": false,
-   "setup": "Short em 108,7–110,6 (mesmos níveis; o 0,65 do gráfico fica em 108,74), stop 112,5, alvos 104,4 (≈ 0,5 do gráfico, 104,35) / 98,2, US$ 12k (risco ~US$ 420), alvo 1 ≈ 1,13R. Tocado sem entrada confirmada: o 1h deu vermelho às 15h com fechamento abaixo da zona, e o 4h só virou às 21h. A zona não foi ultrapassada",
+   "saiu": true,
+   "setup": "O short 108,7–110,6 (stop 112,5, alvos 104,4 / 98,2) sai de Oportunidade: o alvo 1 bateu sem reteste, e a zona fica ~5% acima, só como referência. O 0 do gráfico (107,44) e a VAL (~107,9) são a resistência mais próxima",
    "id": "20261021-SOL-short"
   }
  ]
