@@ -1,39 +1,23 @@
 {
- "gerado": "23/10/2026 19:28",
- "fechamento": "2026-10-22",
+ "gerado": "23/10/2026 21:20",
+ "fechamento": "2026-10-23",
  "discord": "2026-10-23",
  "setups": [
   {
    "ativo": "BTC",
    "direcao": "short",
    "zona": [
-    82850.0,
-    83500.0
+    82300.0,
+    82850.0
    ],
-   "stop": 84600.0,
+   "stop": 83700.0,
    "alvos": [
-    80940.0,
+    80550.0,
     79800.0
    ],
    "saiu": false,
-   "setup": "Short no reteste de 82.850–83.500 (níveis novos: linha 1 do Fibo até o POC do VP), stop 84.600 (acima da máxima 84.377 e do nPOC 84.513), alvos 80.940 (mínima do dia) / 79.800 (fundo do Fibo 87.396→79.800), US$ 12k (risco ~US$ 253), alvo 1 ≈ 1,09R. A zona de ontem (84.740–84.900) não foi tocada e os dois alvos bateram sem entrada. Sem long (1D contra)",
-   "id": "20261022-BTC-short"
-  },
-  {
-   "ativo": "SOL",
-   "direcao": "short",
-   "zona": [
-    108.7,
-    110.6
-   ],
-   "stop": 112.5,
-   "alvos": [
-    104.4,
-    98.2
-   ],
-   "saiu": true,
-   "setup": "O short 108,7–110,6 (stop 112,5, alvos 104,4 / 98,2) sai de Oportunidade: o alvo 1 bateu sem reteste, e a zona fica ~5% acima, só como referência. O 0 do gráfico (107,44) e a VAL (~107,9) são a resistência mais próxima",
-   "id": "20261021-SOL-short"
+   "setup": "Short no reteste de 82.300–82.850 (linhas tracejadas do gráfico; acima da caixa de oferta 81.750–82.000 e da máxima do dia), stop 83.700 (acima do 0,31 do gráfico em 83.543 e do POC em ~83.547), alvos 80.550 (mínima do dia) / 79.800 (fundo do Fibo 87.396→79.800), US$ 12k (risco ~US$ 204), alvo 1 ≈ 1,25R. Sem long (1D contra)",
+   "id": "20261023-BTC-short"
   }
  ]
 }
