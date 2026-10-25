@@ -1,23 +1,6 @@
 {
- "gerado": "24/10/2026 19:27",
- "fechamento": "2026-10-23",
+ "gerado": "24/10/2026 22:03",
+ "fechamento": "2026-10-24",
  "discord": "2026-10-24",
- "setups": [
-  {
-   "ativo": "BTC",
-   "direcao": "short",
-   "zona": [
-    82300.0,
-    82850.0
-   ],
-   "stop": 83700.0,
-   "alvos": [
-    80550.0,
-    79800.0
-   ],
-   "saiu": false,
-   "setup": "Short no reteste de 82.300–82.850 (linhas tracejadas do gráfico; acima da caixa de oferta 81.750–82.000 e da máxima do dia), stop 83.700 (acima do 0,31 do gráfico em 83.543 e do POC em ~83.547), alvos 80.550 (mínima do dia) / 79.800 (fundo do Fibo 87.396→79.800), US$ 12k (risco ~US$ 204), alvo 1 ≈ 1,25R. Sem long (1D contra)",
-   "id": "20261023-BTC-short"
-  }
- ]
+ "setups": []
 }
