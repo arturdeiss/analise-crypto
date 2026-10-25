@@ -1,0 +1,58 @@
+# Trades do Discord – 25/10/2026 (12:00 BRT)
+
+Preços: BTC 80.793, ETH 2.347, SOL 101,72, LINK 11,43, QNT 186,89, AAVE 136,56, APT 0,7020, ASTER 0,7085, KAS 0,0358, XRP 1,301
+
+## CobraTrades (#VIP-trades, Adaśko VIP e vip-cobra-updates)
+
+| Status | Trade | Entrada | Stop | Alvos | Nota |
+|---|---|---|---|---|---|
+| 🟢 Posição aberta | XRP short (cobra-trade-ideas, 4h) — stop na entrada | 1,380 | 1,380 | 1,169 | Sem post novo; o canal não aparece na categoria. Stop na entrada 1,3801, alvo 1,1691. XRP ~1,301, ~5,7% a favor. Trade sem risco. |
+| 🔴 Estopou | BTC hedge short (20/10) — ESTOPOU 21/10 | 83.112 | ≈ 84.262 | 81.219 / 80.707 / 79.845 / 78.213 | Encerrado em 21/10 (estopado às 11h43). Canal não aparece mais. |
+| 🔴 Estopou | LINK long — ordem limite CANCELADA pelo Cobra | 11,31 | 10,78 | 12,12 / 14,00 / 16,70 | Ordem limite retirada pelo Cobra em 24/10 (canal 🔴). Sem post novo desde 24/10 13h54 ("0.41 seems to be holding"). LINK ~11,43. O alerta antigo COBRA LINK 11,31 perdeu o sentido. |
+| 🟠 Ordem limite pendente | AAVE long (ideia 18/10 13:35) | 129,94 | ≈ 112,41 | 255,48 | O canal do AAVE não aparece na categoria; não dá para saber se a ideia foi cancelada. AAVE ~136,6, entrada -4,8% abaixo. Alerta COBRA AAVE ≈129,94 existe; pode ter perdido o sentido. |
+| 🟢 Posição aberta | QNT scalp — QNT recuperou | 189,46 | não postado | não postado | O canal do QNT não aparece na categoria. Scalp de 19/10 em 189,46, sem stop/alvo postados. O QNT subiu de ~177 para ~186,9 (máx. 24h 188), agora só ~1,4% abaixo da entrada. |
+| 🟠 Ordem limite pendente | BTC long — plano de 24/10 | 78.590 (50%) / 78.247 (50%) | 76.401 | 80.500 / 89.000 | Plano de 24/10: entrada 1 em 78.590 (linha mediana) e entrada 2 em 78.247 (no 0,31), metade em cada; SL 76.401, TP1 80.500, TP2 89.000. Sem post novo. BTC ~80.793; entrada 1 a -2,7% (mínima desde ontem 19h 80.088, não acionou). Contra o 1D (Baixa ✓). Alertas COBRA 78.590 e 78.247 já existem. |
+| 🟢 Posição aberta | SOL long 2 — aberto desde 24/10 | 99,77 | 95,67 | 105,70 | Executado em 24/10 às 11h18 em 99,77 (stop 95,67, TP1 105,7). Post novo hoje às 02h52: "I am calling for green candle tomorrow" (com imagem, sem níveis em texto). SOL ~101,7, +2,0% a favor (máx. desde ontem 19h 102,77). Contra o 1D. |
+| 🟢 Posição aberta | ETH long 2 — stop na entrada provavelmente batido | 2.317 | 2.317 | 2.415 / 2.852 | Sem post novo desde 24/10 07h58. O ETH caiu até 2.282,5 ontem, abaixo do stop na entrada 2.317, então o long original deve ter saído no 0 a 0 (canal ainda 🟢, sem confirmação). ETH ~2.347. A adição em 2.391,68, se feita, está ~1,9% no prejuízo. |
+| 🔴 Estopou | SOL long — estopou no 0 a 0 | 101,37 | 101,37 | 110,70 | Encerrado em 22/10 (estopou no 0 a 0). Canal não aparece mais. |
+| 🟢 Posição aberta | KAS (Kaspa) — parcial de ~15% feita, resto aberto | 0,0348 | 0,0348 | 0,0391 | Sem post novo. Restante com stop na entrada 0,0348; KAS ~0,0358 (Gate), mínima 24h 0,0351, ~2,8% acima do stop. |
+| 🟠 Ordem limite pendente | S&P short | 8.049 | 8.291 | não postado | Ordem antiga (13/08), sem atualização. |
+| 🟢 Posição aberta | S&P short macro | adições 7.860 / 7.645 | 8.332 | não postado | Sem atualização desde 17/09. Continua 🟢. |
+| ⚪ Sem níveis | APT (Aptos, spot) | - | - | não postado | Sem post novo sobre o APT. Zonas de 21/10: compra ≈0,52–0,63, recarga ≈0,70–0,78, realização ≈0,88–0,99. APT ~0,702, no fundo da zona de recarga. |
+| 🟠 Ordem limite pendente | ASTER short (Adaśko) | 1,205 | 1,300 | não postado | Os canais aster-short e sol-short do Adaśko não aparecem mais na categoria (só adaśko-updates, vídeos, charts e Ethereum). Ordem de 05/09; não dá para saber se foi cancelada. ASTER ~0,709. |
+| 🟠 Ordem limite pendente | SOL short (Adaśko) | 133,00 | 140,00 | não postado | O canal não aparece mais na categoria do Adaśko. Ordem de 25/09; não dá para saber se foi cancelada. SOL ~101,7, entrada ~31% acima. |
+
+## Jayson Casper (#jayson-btc-ta)
+
+| Status | Trade | Entrada | Stop | Alvos | Nota |
+|---|---|---|---|---|---|
+| 🔴 Estopou | Long de 22/10 11:02 — stop provavelmente batido | mercado; 1º long 10:08 em 81.650,3 (fechado 10:53), reentrou 11:02 | ≈ 80.600 | 83.980 | Sem post novo do Jayson desde 23/10. O stop ≈80,6k foi atingido em 23/10 (BTC caiu até 79.833), então esse long deve ter sido estopado; ele não confirmou. As próximas áreas que ele citou são os longs ≈79.656 e ≈77.743. |
+| 🟢 Posição aberta | Short de 21/10 16:01 — parcial realizada | mercado, BTC ≈84.260–84.380 | não postado (sugeriu proteger ao realizar o TP1) | TP1 na caixa ≈82.668–83.125 / resto até 50.000 | Sem post novo. Parcial realizada em 22/10 (≈81,9k); segura o resto até 50k. BTC ~80.793, ~4,2% a favor. A favor do 1D (Baixa ✓). |
+| 📐 Plano no gráfico | Short 1 do VWAP (22/10 10:11, 30m) | 82.300 | ≈ 82.700 | 80.747 | Sem post novo. Entrada ≈82.300 não acionada; BTC ~80.793, entrada +1,9% acima. A favor do 1D. Alerta JAYSON 82.300 já existe. |
+| 📐 Plano no gráfico | Short 2, reteste de 83k (22/10 10:13, 1h) | 83.200 | ≈ 84.360 | 76.050 | Sem post novo. Entrada ≈83.200, stop ≈84.360, alvo ≈76.050. Entrada +3,0% acima. A favor do 1D. Alerta JAYSON 83.200 já existe. |
+| 📐 Plano no gráfico | Short 3, o de ontem revalidado (22/10 10:15, 1h) | ≈ 84.300 – 84.670 | ≈ 85.830 | 79.700 | Sem post novo. Entrada ≈84.300–84.670, stop ≈85.830, alvo ≈79.700. A favor do 1D. Alerta JAYSON 84.300 já existe. |
+| 📐 Plano no gráfico | Short ideia 1, entrada 1 (21/10 10:21, 1h) — virou o short aberto | 84.323 | ≈ 85.096 | 79.641 / 79.240 / 77.536 | Ele entrou a mercado às 16:01 de 21/10 nessa região; o BTC caiu até 81.376 (alvo ≈79.641 ainda não). Substituído pelo Short 3 revalidado de hoje (stop ≈85.830). |
+| 📐 Plano no gráfico | Short ideia 1, entrada 2 (21/10 10:21, 1h) — virou o short aberto | 84.565 | ≈ 85.592 | 79.641 / 79.240 / 77.536 | Ele entrou a mercado às 16:01 de 21/10 nessa região; o BTC caiu até 81.376 (alvo ≈79.641 ainda não). Substituído pelo Short 3 revalidado de hoje (stop ≈85.830). |
+| 📐 Plano no gráfico | Short swing num falso rompimento (21/10 10:23, 1D) | 87.500 | ≈ 90.034 | 69.262 | Sem post novo. Entrada ≈87.500, stop ≈90.034, alvo ≈69.262. Entrada +8,3% acima. A favor do 1D. Alerta JAYSON 87.500 já existe. |
+| 🔴 Estopou | Scalp long (21/10 10:30) — alvo atingido | 83.045 | ≈ 82.696 | 84.225 | Scalp com divergência de alta no 3m e 1m. Entrada ≈83.045 e stop ≈82.696 lidos do gráfico; alvo 84.225 escrito no post (o gráfico mostra ≈84.365). O BTC chegou a 84.225 às ~11h35, então o alvo foi batido. Sem alerta (já resolvido). Ele também postou um link de gráfico ao vivo às 10:32, sem níveis. |
+| 📐 Plano no gráfico | Short 1 (19/10 10:42, 1h) | 84.218 | ≈ 85.695 | 77.414 | Antigo; a entrada ≈84.218 foi tocada em 21/10 e o BTC caiu depois, mas ele não entrou nesse nível. Substituído pelos shorts de 21–22/10. |
+| 🔴 Estopou | Long local (19/10 10:37, 12m) — alvo atingido | 81.601 | ≈ 80.625 | 84.356 | O alvo ≈84.356 foi batido em 21/10 às ~11h45 (máxima 84.798). A zona de entrada foi tocada em 19/10 sem bater o stop; não dá para saber se ele entrou (pedia divergência de alta no 12m/6m/3m). |
+| 🟢 Posição aberta | Long no 0,618 com CDW (19/10, 4h) — entrada tocada | 79.656 | ≈ 78.937 | 86.718 | Sem post novo. O BTC passou pela entrada ≈79.656 ontem (mínima 79.221) sem bater o stop ≈78.937 e está em ~80.793 (+1,4%). Ele não confirmou se entrou. Alvo ≈86.718. Contra o 1D (Baixa ✓). |
+| 📐 Plano no gráfico | Long 1 (19/10 10:25, 4h) | 77.743 | ≈ 75.185 | 86.821 | Segunda área de interesse do Jayson. Entrada ≈77.743, stop ≈75.185, alvo ≈86.821. BTC ~80.793, entrada -3,8% abaixo. Contra o 1D. Alerta JAYSON ≈77.743 já existe. |
+| 📐 Plano no gráfico | Short swing (19/10 10:43) | 85.568 | ≈ 87.346 | 69.262 | Sem post novo; substituído pelo short swing de 21/10 (≈87.500). BTC ~81,9k. |
+| 🟢 Posição aberta | Long 80.250 — sem atualização | 80.250 | ≈ 77.500 | 88.000 | Sem post sobre esse long (80.250, de 15/10). BTC ~80.793, ~0,7% acima da entrada; stop ≈77.500 não foi batido. Não dá para saber se segue aberto. |
+| 📐 Plano no gráfico | Long alternativo (12/10) | ≈ 80.200 – 80.300 | ≈ 77.500 | 88.000 | Zona onde ele entrou (80.250). |
+| 📐 Plano no gráfico | Short scalp (14/10, vencido) | 83.100 | 83.440 | 81.700 | Front-runado; sem mudança. |
+| 📐 Plano no gráfico | Short 4h (12/10) | 84.300 | ≈ 85.100 – 85.600 | 75.000 | Plano antigo; o BTC passou por 84.300 em 21/10 e caiu depois (mínima 79.833 hoje). |
+| 🔴 Estopou | Long principal 12/10 (encerrado) | ≈ 81.100 – 81.900 | ≈ 80.600 | ≈ 87.300 – 87.500 | Histórico; encerrado em 12/10. |
+
+## Leitura conjunta
+
+- Noite e manhã calmas: desde ontem às 19h o BTC ficou entre 80.088 e 81.034 e está em ~80.793; ETH ~2.347 (faixa 2.318–2.372), SOL ~101,7 (faixa 100,4–102,8). Nenhuma entrada pendente foi acionada.
+- Cobra: nenhuma bolinha mudou e não há trade novo nem nível novo. No sol-long-2 ele aposta num candle verde hoje; no vip-cobra-updates comentou que o open interest finalmente está caindo. O Adaśko destacou os fechamentos semanais importantes de hoje (BTC, ETH, SOL), ETF com fluxo zero no sábado e Fear & Greed neutro (45/54).
+- Os canais aster-short e sol-short do Adaśko não aparecem mais na categoria, assim como os de XRP, AAVE, QNT e BTC hedge do Cobra; não dá para saber se foram apagados ou escondidos. O QNT recuperou e está a ~1,4% da entrada do scalp.
+- Jayson: sem posts novos desde 23/10. Os shorts dele seguem a favor do 1D; o long ≈79.656 foi tocado ontem sem confirmação de entrada.
+- Pelas regras do relatório, o 1D do BTC segue com Baixa ✓ (e só Altas formando, de baixa confiança, no 12h e 1D), então os longs do Cobra e do Jayson vão contra o tempo gráfico maior e pedem confirmação no 1h/4h. O fechamento semanal de hoje às 21h é o ponto de atenção.
+- Alertas no TradingView: nenhum criado hoje, porque não há trade novo nem nível alterado. Continuam sem sentido, mas não foram apagados: COBRA LINK 11,31 (ordem cancelada), COBRA BTC long ≈79.128 (plano substituído) e talvez COBRA AAVE ≈129,94.
+
+Isso é análise técnica, não recomendação.

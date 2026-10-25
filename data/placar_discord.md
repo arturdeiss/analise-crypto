@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 24/10 19:25. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 25/10 12:10. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -8,9 +8,9 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 |---|---|---|---|---|---|---|---|---|---|
 | 12/10 | ASTER | short | 1,205 | 1,3 | — | — | Não acionado | 0R | — |
 | 12/10 | BTC | long | 82.085 | 81.114 | — | — | Stop | -1,00R | Seguiu posicionado após a mínima de 81.034 (12/10 21h50); realizou 10% e subiu o stop para a entrada em 13/10 4h35; saiu na mão em 14/10 11h00, perto de 0R |
-| 12/10 | BTC | short | 88.440 | 90.975 | 82.800 | 74.000 | Não acionado | 0R | — |
+| 12/10 | BTC | short | 88.440 | 90.975 | 82.800 | 74.000 | Expirado | 0R | — |
 | 12/10 | ETH | long | 2.317 | 2.233 | 2.415 | 2.852 | Alvo 1 | +1,17R | Relatou fill em 15/10 06h58 (mínima da Binance 2.318); TP1 2.415 batido e stop na entrada às 12h53 |
-| 12/10 | ETH | short | 2.846 | 2.948 | 2.338 | — | Não acionado | 0R | — |
+| 12/10 | ETH | short | 2.846 | 2.948 | 2.338 | — | Expirado | 0R | — |
 | 12/10 | SOL | long | 101,37 | 96,1 | 110,7 | — | Aberto | 0R | — |
 | 12/10 | SOL | short | 133 | 140 | — | — | Não acionado | 0R | — |
 | 15/10 | KAS | long | 0,034811 | 0,03332 | — | — | Aberto | 0R | Relatou fill em 15/10 11h14; realizou 10% às 12h06. Alvo não postado |
@@ -22,7 +22,7 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Stop | -1,00R | — |
 | 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Aberto | 0R | — |
 
-- Total no registro: 15 (Não acionado: 6; Aberto: 5; Alvo 1: 1; Stop: 2; Expirado: 1)
+- Total no registro: 15 (Não acionado: 4; Aberto: 5; Alvo 1: 1; Stop: 2; Expirado: 3)
 - Geral: 8 acionados (3 encerrados, 5 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,28R; soma: -0,83R
 
 ## Placar Jayson Casper
