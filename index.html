@@ -106,12 +106,15 @@ async function klG(sym,iv,ini,fim){const step=iv==='1h'?H:M5,par=sym.replace(/US
 async function kl(sym,iv,ini,fim,fonte){if(fonte==='gate')return klG(sym,iv,ini,fim);const step=iv==='1h'?H:M5;let out=[],t=ini;while(t<fim){const r=await fetch(`${KAPI}?symbol=${sym}&interval=${iv}&startTime=${t}&endTime=${fim-1}&limit=1000`);if(!r.ok)throw new Error('kl '+r.status);const j=await r.json();if(!j.length)break;
  j.forEach(k=>out.push({t:k[0],h:+k[2],l:+k[3],iv}));t=j[j.length-1][0]+step;if(j.length<1000)break}return out}
 class Amb extends Error{}
+const dmBR=ms=>{const x=new Date(ms-3*H);return String(x.getUTCDate()).padStart(2,'0')+'/'+String(x.getUTCMonth()+1).padStart(2,'0')};
 const toca=(v,p)=>v.l<=p&&p<=v.h, passou=(v,p,d,tp)=>d==='long'?(tp==='stop'?v.l<=p:v.h>=p):(tp==='stop'?v.h>=p:v.l<=p);
 async function avaliarJS(s,agora,K1){const res={sit:null,r:0,obs:''};if(agora<=s.ini){res.sit='Não acionado';return res}
  const velas=K1.filter(v=>v.t>=s.ini&&v.t<=agora-1),d=s.direcao,e=s.entrada,st=s.stop,a1=s.alvo1,a2=s.alvo2,E={f:'espera'};
  function dep(v){const hs=passou(v,st,d,'stop');
   if(E.f==='aberto'){const h1=a1!=null&&passou(v,a1,d,'alvo'),h2=a2!=null&&passou(v,a2,d,'alvo');if(hs&&h1)throw new Amb('stop e alvo na mesma vela');
-   if(hs){E.f='fim';res.sit='Stop';res.r=-1;return true}if(h1){if(h2){E.f='fim';res.sit='Alvo 2';return true}E.f='alvo1';res.sit='Alvo 1';return a2==null}return false}
+   if(hs){E.f='fim';res.sit='Stop';res.r=-1;return true}if(h1){if(h2){E.f='fim';res.sit='Alvo 2';return true}E.f='alvo1';res.sit='Alvo 1';return a2==null&&!s.pa1}return false}
+  if(E.f==='alvo1'&&s.pa1){if(res.be==null&&passou(v,e,d,'stop'))res.be=v.t;const h2=a2!=null&&passou(v,a2,d,'alvo');if(hs&&h2)throw new Amb('stop e alvo 2 na mesma vela');if(h2){E.f='fim';res.sit='Alvo 2';return true}
+   if(hs){E.f='fim';res.sit='Alvo 1';res.se=v.t;return true}return false}
   if(E.f==='alvo1'){const h2=passou(v,a2,d,'alvo');if(hs&&h2)throw new Amb('stop e alvo 2 na mesma vela');if(h2){E.f='fim';res.sit='Alvo 2';return true}
    if(hs){E.f='fim';res.sit='Alvo 1';res.obs='stop depois do alvo 1';return true}}return false}
  function ev(v,pri){if(E.f==='espera'){if(v.t>=s.prazo){E.f='fim';res.sit='Expirado';return true}const tol=s.tol||0,fl=s.fill,nf=fl!=null&&v.t<=fl&&fl<v.t+(v.iv==='5m'?M5:H),im=(pri&&s.ja_na_zona)||nf,g=im||(v.l<=e*(1+tol)&&v.h>=e*(1-tol)),sa=passou(v,st,d,'stop')&&!im&&!(fl!=null&&v.t<fl);
@@ -125,6 +128,7 @@ async function avaliarJS(s,agora,K1){const res={sit:null,r:0,obs:''};if(agora<=s
      if(E.f==='alvo1'){E.f='fim';res.sit='Alvo 1';res.obs='alvo 2 e stop na mesma vela de 5m'}else{E.f='fim';res.sit='Ambíguo';res.obs=y.message+' (5m)'}term=true;break}}
    if(term)break}}
  if(res.sit==null||E.f==='espera'||E.f==='aberto'){if(E.f==='espera')res.sit=agora>=s.prazo?'Expirado':'Não acionado';else if(E.f==='aberto')res.sit='Aberto'}
+ if(s.pa1&&res.sit==='Alvo 1'&&res.be!=null)res.obs='depois voltou à entrada em '+dmBR(res.be)+(res.se!=null?' e bateu o stop em '+dmBR(res.se):'');delete res.be;delete res.se;
  if(res.sit==='Alvo 1'||res.sit==='Alvo 2')res.r=Math.abs((res.sit==='Alvo 1'?a1:a2)-e)/Math.abs(e-st);return res}
 async function aval(s,agora,K1){if(s.cancel){const r0=await avaliarJS(s,Math.min(s.cancel,agora),K1);if(['Não acionado','Expirado','Invalidado'].includes(r0.sit))return{sit:'Cancelado',r:0,obs:r0.sit}}return avaliarJS(s,agora,K1)}
 const PLC={'aberto':'ab','não acionado':'na','expirado':'ex','stop':'st','alvo 1':'a1','alvo 2':'a2','invalidado':'iv','ambíguo':'ex','cancelado':'ex'};
@@ -150,7 +154,7 @@ function splitEnc(box){ // move setups encerrados p/ drill-down <details> abaixo
    const t2=tb.cloneNode(false),hr=tb.querySelector('tr');dt.innerHTML='<summary></summary><div class="tw"></div>';dt.querySelector('.tw').appendChild(t2);if(hr)t2.appendChild(hr.cloneNode(true));tw.after(dt)}
   const t2=dt.querySelector('table'),hd=[...tb.querySelectorAll('th')].map(t=>t.textContent.toLowerCase()),iS=hd.findIndex(t=>t.startsWith('situa'));if(iS<0)return;
   const rows=[...tb.querySelectorAll('tr'),...t2.querySelectorAll('tr')].filter(tr=>tr.querySelectorAll('td').length>iS);
-  rows.forEach(tr=>{const st=tr.querySelectorAll('td')[iS].textContent.trim(),fim=ENCS.some(k=>st.startsWith(k));const dst=fim?t2:tb;const par=dst.tBodies[0]||dst;if(tr.parentNode!==par)par.appendChild(tr)});
+  rows.forEach(tr=>{const st=tr.querySelectorAll('td')[iS].textContent.trim(),fim=ENCS.some(k=>st.startsWith(k))||/^Alvo 1 \(depois/.test(st);const dst=fim?t2:tb;const par=dst.tBodies[0]||dst;if(tr.parentNode!==par)par.appendChild(tr)});
   const n=[...t2.querySelectorAll('tr')].filter(tr=>tr.querySelector('td')).length;dt.querySelector('summary').textContent=`Encerrados (${n}) — toque para abrir`;dt.style.display=n?'':'none'})}
 async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc],pend=all.filter(x=>!x.final),K={};
  try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora,(pend.find(x=>x.ativo===sym)||{}).fonte)}
