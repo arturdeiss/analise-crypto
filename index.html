@@ -162,11 +162,11 @@ async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L
  const lab=LT?`ao vivo, atualizado ${LT.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'ao vivo indisponível, mostrando o cálculo do servidor';
  document.querySelectorAll('.livelb').forEach(e=>e.textContent='● '+lab);
  const tf={'Geral':()=>true,'A favor':x=>x.tend==='a favor','Contra':x=>x.tend==='contra','Misto':x=>x.tend==='misto'};
- pintaBloco(document.getElementById('pb'),L.bot,lb=>{const k=Object.keys(tf).find(k=>lb.startsWith(k));return k?L.bot.filter(tf[k]):null});
+ const FL=L.flips||[],BF=[...L.bot,...FL];pintaBloco(document.getElementById('pb'),BF,lb=>{if(lb.startsWith('Flips'))return FL;if(lb.startsWith('Geral'))return BF;const k=Object.keys(tf).find(k=>lb.startsWith(k));return k?L.bot.filter(tf[k]):null});
  const pd=document.getElementById('pd');pd.querySelectorAll('h3').forEach(h=>{const au=/cobra/i.test(h.textContent)?'Cobra':'Jayson',ls=L.dc.filter(x=>x.autor===au);
   const blk=document.createElement('div');let n=h.nextElementSibling;const nodes=[];while(n&&n.tagName!=='H3'){nodes.push(n);n=n.nextElementSibling}
   const fake={querySelectorAll:q=>nodes.flatMap(e=>[...(e.matches(q)?[e]:[]),...e.querySelectorAll(q)])};pintaBloco(fake,ls,lb=>lb==='Geral'?ls:null)});
- const pf=document.getElementById('pf');if(L.flips&&pf){pintaBloco(pf,L.flips,lb=>lb.startsWith('Flips')?L.flips:null)}
+ 
  splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));
  L.bot.forEach(x=>LV[x.id]=x.v);renderSetups()}
 const SYM=['BTC','ETH','SOL','AAVE','TAO','NEAR','ONDO','SUI','DOGE','ZEC','HBAR'];
