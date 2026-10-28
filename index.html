@@ -94,7 +94,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 </section>
 <section class="tab" id="fech"><div id="fechlk"></div><iframe class="frame" id="ffech" loading="lazy"></iframe></section>
 <section class="tab" id="disc"><div id="disclk"></div><iframe class="frame" id="fdisc" loading="lazy"></iframe></section>
-<section class="tab" id="plac"><div class="sub2"><button data-p="pb" class="on">Placar Trader Bot</button><button data-p="pd">Placar Discord</button></div><div id="placar"><div class="pp on" id="pb"></div><div class="pp" id="pd"></div></div></section>
+<section class="tab" id="plac"><div class="sub2"><button data-p="pb" class="on">Placar Trader Bot</button><button data-p="pd">Placar Discord</button><button data-p="pf">Flips Range deviation (1h)</button></div><div id="placar"><div class="pp on" id="pb"></div><div class="pp" id="pd"></div><div class="pp" id="pf"></div></div></section>
 <section class="tab" id="hist"><h2>Histórico</h2><div class="hl" id="hl"></div></section>
 <footer>Isso é análise técnica, não recomendação.</footer></div>
 <script>
@@ -156,7 +156,7 @@ function splitEnc(box){ // move setups encerrados p/ drill-down <details> abaixo
   const rows=[...tb.querySelectorAll('tr'),...t2.querySelectorAll('tr')].filter(tr=>tr.querySelectorAll('td').length>iS);
   rows.forEach(tr=>{const st=tr.querySelectorAll('td')[iS].textContent.trim(),fim=ENCS.some(k=>st.startsWith(k))||/^Alvo 1 \(depois/.test(st);const dst=fim?t2:tb;const par=dst.tBodies[0]||dst;if(tr.parentNode!==par)par.appendChild(tr)});
   const n=[...t2.querySelectorAll('tr')].filter(tr=>tr.querySelector('td')).length;dt.querySelector('summary').textContent=`Encerrados (${n}) — toque para abrir`;dt.style.display=n?'':'none'})}
-async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc],pend=all.filter(x=>!x.final),K={};
+async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc,...(L.flips||[])],pend=all.filter(x=>!x.final),K={};
  try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora,(pend.find(x=>x.ativo===sym)||{}).fonte)}
   for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs}:await aval(x,agora,K[x.ativo]);LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs})}
  const lab=LT?`ao vivo, atualizado ${LT.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'ao vivo indisponível, mostrando o cálculo do servidor';
@@ -166,7 +166,8 @@ async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L
  const pd=document.getElementById('pd');pd.querySelectorAll('h3').forEach(h=>{const au=/cobra/i.test(h.textContent)?'Cobra':'Jayson',ls=L.dc.filter(x=>x.autor===au);
   const blk=document.createElement('div');let n=h.nextElementSibling;const nodes=[];while(n&&n.tagName!=='H3'){nodes.push(n);n=n.nextElementSibling}
   const fake={querySelectorAll:q=>nodes.flatMap(e=>[...(e.matches(q)?[e]:[]),...e.querySelectorAll(q)])};pintaBloco(fake,ls,lb=>lb==='Geral'?ls:null)});
- splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));
+ if(L.flips){const pf=document.getElementById('pf');pintaBloco(pf,L.flips,lb=>lb.startsWith('Flips')?L.flips:null)}
+ splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));splitEnc(document.getElementById('pf'));
  L.bot.forEach(x=>LV[x.id]=x.v);renderSetups()}
 const SYM=['BTC','ETH','SOL','AAVE','TAO','NEAR','ONDO','SUI','DOGE','ZEC','HBAR'];
 let D=null, P={};
@@ -259,7 +260,7 @@ fetch('data/site.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  document.getElementById('opsub').textContent=`Do fechamento de ${br(d.fechamento)}. A zona só arma o alerta: a entrada espera confirmação no 1h.`;
  if(d.fechamento){const b='relatorios/'+d.fechamento+'/';document.getElementById('ffech').src=b+'resumo.html';document.getElementById('fechlk').innerHTML=`<a class="lk" href="${b}resumo.html" target="_blank">Abrir em tela cheia</a>`+(d.historico.find(h=>h.data===d.fechamento)?.pdf?`<a class="lk" href="${b}resumo.pdf">PDF</a>`:'')}
  if(d.discord){const b='relatorios/'+d.discord+'/';document.getElementById('fdisc').src=b+'discord.html';document.getElementById('disclk').innerHTML=`<a class="lk" href="${b}discord.html" target="_blank">Abrir em tela cheia</a>`}
- document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));
+ document.getElementById('pb').innerHTML='<h2>📊 Placar Trader Bot</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_html||md(d.placar_md||'Sem placar.'));document.getElementById('pd').innerHTML='<h2>📊 Placar Discord</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_dc_html||'Sem placar do Discord ainda.');document.getElementById('pf').innerHTML='<h2>📊 Flips Range deviation (1h)</h2><div class="livelb">● carregando ao vivo…</div>'+(d.placar_flips_html||'Nenhum flip registrado ainda.');splitEnc(document.getElementById('pb'));splitEnc(document.getElementById('pd'));splitEnc(document.getElementById('pf'));
  document.getElementById('hl').innerHTML=d.historico.map(h=>{const b='relatorios/'+h.data+'/';const l=[h.resumo?`<a href="${b}resumo.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Fechamento</a>`:'',h.discord?`<a href="${b}discord.html" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">Discord</a>`:'',h.pdf?`<a href="${b}resumo.pdf" style="display:inline;box-shadow:none;padding:0;margin:0 0 0 10px">PDF</a>`:''].join('');
   return `<div class="box" style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${br(h.data)}</b><span>${l}</span></div>`}).join('');
  renderSetups();initAlertBtn();
