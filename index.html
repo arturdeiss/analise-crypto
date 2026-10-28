@@ -137,7 +137,7 @@ function resumo(ls){const ac=ls.filter(x=>['Aberto','Alvo 1','Alvo 2','Stop'].in
  return{so,a1:pc(al,en.length),stp:pc(stp,en.length),txt:`${ac.length} acionados (${en.length} encerrados, ${ac.length-en.length} abertos); alvo 1: ${pc(al,en.length)}; stop: ${pc(stp,en.length)}; R médio por setup: ${en.length?fr(so/en.length):'—'}; soma: ${en.length?fr(so):'0,00R'}`}}
 const ORD=['Não acionado','Aberto','Alvo 1','Alvo 2','Stop','Expirado','Invalidado','Cancelado','Ambíguo'];
 function pintaBloco(box,ls,grupos){ // tabela(s), total e cards de resumo dentro de box
- box.querySelectorAll('table.plc').forEach(tb=>{let h=tb.closest('.tw').previousElementSibling;while(h&&h.tagName!=='H3')h=h.previousElementSibling;const au=h?(/cobra/i.test(h.textContent)?'Cobra':'Jayson'):null;
+ box.querySelectorAll('table.plc').forEach(tb=>{let h=tb.closest('.tw').previousElementSibling;while(h&&h.tagName!=='H3')h=h.previousElementSibling;const au=h?(/cobra/i.test(h.textContent)?'Cobra':(/jayson/i.test(h.textContent)?'Jayson':null)):null; // só os H3 do Placar Discord filtram por autor (o H3 dos flips não)
   tb.querySelectorAll('tr').forEach(tr=>{const td=tr.querySelectorAll('td');if(td.length<8)return;const dir=/short/.test(td[2].textContent)?'short':'long',k=`${td[0].textContent}|${td[1].textContent}|${dir}|${td[3].textContent}`;
    const x=ls.find(x=>x.key===k&&(!au||x.autor===au));if(!x)return;const hd=[...tb.querySelectorAll('th')].map(t=>t.textContent.toLowerCase());const iS=hd.findIndex(t=>t.startsWith('situa')),iR=hd.findIndex(t=>t.startsWith('resultado'));
    let sit=x.v.sit;if(x.v.obs&&(sit==='Ambíguo'||sit==='Alvo 1'))sit+=` (${x.v.obs})`;const lv=!x.final;
