@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 28/10 12:26. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 28/10 19:15. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -52,9 +52,9 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 28/10 | BTC | long | 74.868 | 73.161 | 87.500 | 88.765 | Não acionado | 0R | — |
 | 28/10 | BTC | long | 76.000 | 74.855 | 87.500 | — | Não acionado | 0R | — |
 | 28/10 | BTC | long | 77.000 | 74.855 | 87.500 | — | Não acionado | 0R | — |
-| 28/10 | BTC | short | 81.782 | 82.296 | 77.258 | — | Não acionado | 0R | — |
+| 28/10 | BTC | short | 81.782 | 82.296 | 77.258 | — | Aberto | 0R | — |
 
-- Total no registro: 23 (Não acionado: 11; Aberto: 5; Alvo 2: 1; Stop: 4; Cancelado: 1; Ambíguo: 1)
-- Geral: 10 acionados (5 encerrados, 5 abertos); alvo 1: 20%; stop: 80%; R médio por setup: +0,24R; soma: +1,19R
+- Total no registro: 23 (Não acionado: 10; Aberto: 6; Alvo 2: 1; Stop: 4; Cancelado: 1; Ambíguo: 1)
+- Geral: 11 acionados (5 encerrados, 6 abertos); alvo 1: 20%; stop: 80%; R médio por setup: +0,24R; soma: +1,19R
 
 *Sem alvo postado, o trade fica Aberto até o stop. Cancelado = o autor desistiu ou disse que a ordem foi front-runada antes da entrada (0R). Ativos sem par spot na Binance nem na Gate.io (S&P) e trades sem níveis (APT) ficam de fora.*
