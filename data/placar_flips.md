@@ -9,6 +9,15 @@
 | 28/10 | TAO | short | 252,7 | 256,8 | 251,05 | 248,7 | 09h–10h | Alvo 1 (depois voltou à entrada em 28/10 e bateu o stop em 28/10) | +0,40R |
 | 28/10 | SUI | short | 0,9239 | 0,9365 | 0,9185 | 0,9147 | 10h–11h | Alvo 1 (depois voltou à entrada em 28/10 e bateu o stop em 28/10) | +0,43R |
 | 28/10 | BTC | short | 80.553 | 80.950 | 80.391 | 80.002 | 12h–13h | Stop | -1,00R |
-| 28/10 | AAVE | short | 133,78 | 135,9 | 132,54 | 131,75 | 21h–22h | Aberto | 0R |
+| 28/10 | AAVE | short | 133,78 | 135,9 | 132,54 | 131,75 | 21h–22h | Alvo 2 | +0,96R |
+| 28/10 | BTC | short | 80.019,56 | 81.080 | 79.821 | 79.537 | 22h–23h | Aberto | 0R |
+| 28/10 | ETH | short | 2.314,29 | 2.352,7 | 2.294,9 | 2.281 | 22h–23h | Aberto | 0R |
+| 28/10 | SOL | short | 99,87 | 101,95 | 99,06 | 98,36 | 22h–23h | Aberto | 0R |
+| 28/10 | SUI | short | 0,9132 | 0,9372 | 0,8971 | 0,8873 | 22h–23h | Aberto | 0R |
+| 28/10 | TAO | short | 249,3 | 255,85 | 245,71 | 243,31 | 22h–23h | Aberto | 0R |
+| 28/10 | ONDO | short | 0,4065 | 0,4188 | 0,4038 | 0,3999 | 22h–23h | Alvo 1 | +0,22R |
+| 28/10 | NEAR | short | 4,486 | 4,669 | 4,434 | 4,38 | 22h–23h | Aberto | 0R |
+| 28/10 | DOGE | short | 0,07807 | 0,07958 | 0,07723 | 0,0767 | 22h–23h | Aberto | 0R |
+| 28/10 | ZEC | short | 1.256,54 | 1.294,6 | 1.240,9 | 1.229,6 | 22h–23h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 8 acionados (7 encerrados, 1 abertos); alvo 1: 86%; stop: 14%; R médio por setup: +0,42R; soma: +2,93R
+- Flips (geral, separado do Placar principal): 17 acionados (9 encerrados, 8 abertos); alvo 1: 89%; stop: 11%; R médio por setup: +0,46R; soma: +4,10R
