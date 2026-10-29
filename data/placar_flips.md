@@ -19,5 +19,6 @@
 | 28/10 | NEAR | short | 4,486 | 4,669 | 4,434 | 4,38 | 22h–23h | Alvo 1 (depois voltou à entrada em 29/10) | +0,28R |
 | 28/10 | DOGE | short | 0,07807 | 0,07958 | 0,07723 | 0,0767 | 22h–23h | Aberto | 0R |
 | 28/10 | ZEC | short | 1.256,54 | 1.294,6 | 1.240,9 | 1.229,6 | 22h–23h | Alvo 1 (depois voltou à entrada em 29/10) | +0,41R |
+| 29/10 | HBAR | long | 0,07416 | 0,0727 | 0,07494 | 0,07612 | 02h–03h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 17 acionados (14 encerrados, 3 abertos); alvo 1: 93%; stop: 7%; R médio por setup: +0,43R; soma: +6,04R
+- Flips (geral, separado do Placar principal): 18 acionados (14 encerrados, 4 abertos); alvo 1: 93%; stop: 7%; R médio por setup: +0,43R; soma: +6,04R
