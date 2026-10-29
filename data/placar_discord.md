@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 29/10 12:11. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 29/10 19:26. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -11,20 +11,20 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 12/10 | BTC | short | 88.440 | 90.975 | 82.800 | 74.000 | Expirado | 0R | — |
 | 12/10 | ETH | long | 2.317 | 2.233 | 2.415 | 2.852 | Alvo 1 | +1,17R | Relatou fill em 15/10 06h58 (mínima da Binance 2.318); TP1 2.415 batido e stop na entrada às 12h53 |
 | 12/10 | ETH | short | 2.846 | 2.948 | 2.338 | — | Expirado | 0R | — |
-| 12/10 | SOL | long | 101,37 | 96,1 | 110,7 | — | Aberto | 0R | — |
+| 12/10 | SOL | long | 101,37 | 96,1 | 110,7 | — | Stop | -1,00R | — |
 | 12/10 | SOL | short | 133 | 140 | — | — | Não acionado | 0R | — |
 | 15/10 | KAS | long | 0,034811 | 0,03332 | — | — | Aberto | 0R | Relatou fill em 15/10 11h14; realizou 10% às 12h06. Alvo não postado |
 | 16/10 | BTC | long | 79.128 | 77.537 | 93.604 | — | Expirado | 0R | — |
-| 16/10 | SOL | long | 99,77 | 95,67 | 105,7 | — | Aberto | 0R | — |
+| 16/10 | SOL | long | 99,77 | 95,67 | 105,7 | — | Stop | -1,00R | — |
 | 17/10 | LINK | long | 11,509 | 10,737 | 19,156 | — | Expirado | 0R | — |
 | 18/10 | AAVE | long | 129,94 | 112,41 | 255,48 | — | Aberto | 0R | — |
 | 18/10 | LINK | long | 11,31 | 10,78 | 12,125 | 14 | Aberto | 0R | — |
 | 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Stop | -1,00R | — |
 | 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Aberto | 0R | — |
-| 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Aberto | 0R | — |
+| 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Alvo 1 | +6,68R | — |
 
-- Total no registro: 16 (Não acionado: 2; Aberto: 7; Alvo 1: 1; Stop: 2; Expirado: 4)
-- Geral: 10 acionados (3 encerrados, 7 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,28R; soma: -0,83R
+- Total no registro: 16 (Não acionado: 2; Aberto: 4; Alvo 1: 2; Stop: 4; Expirado: 4)
+- Geral: 10 acionados (6 encerrados, 4 abertos); alvo 1: 33%; stop: 67%; R médio por setup: +0,64R; soma: +3,84R
 
 ## Placar Jayson Casper
 
@@ -39,22 +39,22 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 14/10 | BTC | long | 82.200 | 81.200 | 86.500 | — | Stop | -1,00R | Ficou de fora às 11h20: confirmação "muito duvidosa" |
 | 14/10 | BTC | short | 83.100 | 83.440 | 81.700 | — | Cancelado | 0R | Disse às 11h20 que foi front-runado |
 | 19/10 | BTC | long | 77.743 | 75.185 | 86.821 | — | Não acionado | 0R | — |
-| 19/10 | BTC | long | 79.656 | 78.937 | 86.718 | — | Aberto | 0R | — |
+| 19/10 | BTC | long | 79.656 | 78.937 | 86.718 | — | Stop | -1,00R | — |
 | 19/10 | BTC | short | 85.568 | 87.346 | 69.262 | — | Não acionado | 0R | — |
 | 21/10 | BTC | short | 84.565 | 85.592 | 79.641 | 79.240 | Alvo 2 | +5,19R | — |
 | 21/10 | BTC | short | 87.500 | 90.034 | 69.262 | — | Não acionado | 0R | — |
 | 22/10 | BTC | short | 82.300 | 82.700 | 80.747 | — | Não acionado | 0R | — |
-| 27/10 | BTC | long | 79.235 | 78.852 | 81.354 | — | Não acionado | 0R | — |
+| 27/10 | BTC | long | 79.235 | 78.852 | 81.354 | — | Ambíguo | — | — |
 | 27/10 | BTC | short | 80.955 | 81.297 | 77.529 | — | Ambíguo | — | — |
-| 27/10 | BTC | short | 81.577 | 81.903 | 77.620 | — | Aberto | 0R | — |
-| 27/10 | BTC | short | 81.960 | 82.407 | 77.620 | — | Não acionado | 0R | — |
+| 27/10 | BTC | short | 81.577 | 81.903 | 77.620 | — | Stop | -1,00R | — |
+| 27/10 | BTC | short | 81.960 | 82.407 | 77.620 | — | Aberto | 0R | — |
 | 27/10 | BTC | short | 82.629 | 83.777 | 77.620 | — | Não acionado | 0R | — |
 | 28/10 | BTC | long | 74.868 | 73.161 | 87.500 | 88.765 | Não acionado | 0R | — |
 | 28/10 | BTC | long | 76.000 | 74.855 | 87.500 | — | Não acionado | 0R | — |
 | 28/10 | BTC | long | 77.000 | 74.855 | 87.500 | — | Não acionado | 0R | — |
 | 28/10 | BTC | short | 81.782 | 82.296 | 77.258 | — | Aberto | 0R | — |
 
-- Total no registro: 23 (Não acionado: 10; Aberto: 6; Alvo 2: 1; Stop: 4; Cancelado: 1; Ambíguo: 1)
-- Geral: 11 acionados (5 encerrados, 6 abertos); alvo 1: 20%; stop: 80%; R médio por setup: +0,24R; soma: +1,19R
+- Total no registro: 23 (Não acionado: 8; Aberto: 5; Alvo 2: 1; Stop: 6; Cancelado: 1; Ambíguo: 2)
+- Geral: 12 acionados (7 encerrados, 5 abertos); alvo 1: 14%; stop: 86%; R médio por setup: -0,12R; soma: -0,81R
 
 *Sem alvo postado, o trade fica Aberto até o stop. Cancelado = o autor desistiu ou disse que a ordem foi front-runada antes da entrada (0R). Ativos sem par spot na Binance nem na Gate.io (S&P) e trades sem níveis (APT) ficam de fora.*
