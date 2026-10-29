@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 28/10 19:30. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 29/10 12:08. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -14,7 +14,7 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 12/10 | SOL | long | 101,37 | 96,1 | 110,7 | — | Aberto | 0R | — |
 | 12/10 | SOL | short | 133 | 140 | — | — | Não acionado | 0R | — |
 | 15/10 | KAS | long | 0,034811 | 0,03332 | — | — | Aberto | 0R | Relatou fill em 15/10 11h14; realizou 10% às 12h06. Alvo não postado |
-| 16/10 | BTC | long | 79.128 | 77.537 | 93.604 | — | Não acionado | 0R | — |
+| 16/10 | BTC | long | 79.128 | 77.537 | 93.604 | — | Expirado | 0R | — |
 | 16/10 | SOL | long | 99,77 | 95,67 | 105,7 | — | Aberto | 0R | — |
 | 17/10 | LINK | long | 11,509 | 10,737 | 19,156 | — | Expirado | 0R | — |
 | 18/10 | AAVE | long | 129,94 | 112,41 | 255,48 | — | Aberto | 0R | — |
@@ -23,7 +23,7 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Aberto | 0R | — |
 | 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Aberto | 0R | — |
 
-- Total no registro: 16 (Não acionado: 3; Aberto: 7; Alvo 1: 1; Stop: 2; Expirado: 3)
+- Total no registro: 16 (Não acionado: 2; Aberto: 7; Alvo 1: 1; Stop: 2; Expirado: 4)
 - Geral: 10 acionados (3 encerrados, 7 abertos); alvo 1: 33%; stop: 67%; R médio por setup: -0,28R; soma: -0,83R
 
 ## Placar Jayson Casper
