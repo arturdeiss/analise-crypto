@@ -82,7 +82,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
 #placar details.enc{margin:10px 0 18px;border:1px solid #8883;border-radius:10px;padding:8px 10px}#placar details.enc summary{cursor:pointer;font-weight:600;padding:6px 0;font-size:15px}#placar details.enc .tw{margin-top:8px}
 #placar .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .lchip{font-size:11px;font-weight:700;padding:2px 7px;border-radius:99px;vertical-align:middle;margin-left:4px}.lchip.p-ab{background:#dbeafe;color:#1d4ed8}.lchip.p-na,.lchip.p-ex{background:#e2e8f0;color:#475569}.lchip.p-st{background:#fee2e2;color:#b91c1c}.lchip.p-a1,.lchip.p-a2{background:#dcfce7;color:#15803d}.lchip.p-iv{background:#fef3c7;color:#92400e}
-.feed{max-height:430px;overflow-y:auto;padding:4px 12px}.feed .ev{display:flex;gap:10px;padding:8px 0;border-top:1px solid #e2e8f0;font-size:13.5px}.feed .ev:first-child{border-top:0}.feed .ev time{flex:0 0 92px;color:#64748b;font-size:12px;font-weight:700;padding-top:1px}.feed .ev.novo{background:#fefce8}
+.feed{max-height:430px;overflow-y:auto;padding:4px 12px}.feed .ev{display:flex;gap:10px;padding:8px 0;border-top:1px solid #e2e8f0;font-size:13.5px}.feed .ev:first-child{border-top:0}.feed .ev time{flex:0 0 104px;color:#64748b;font-size:12px;font-weight:700;padding-top:1px}.feed .ev.novo{background:#fefce8}
 .org{font-size:12px;color:#475569;margin-top:3px}.org b{color:#4338ca}.sitl{font-size:13.5px;margin-top:6px}.sitl.a1{color:#15803d}.card.aguard{border-top-style:dashed;opacity:.92}
 @media(max-width:640px){.feed .ev{flex-direction:column;gap:2px}.feed .ev time{flex:none}}
 .livelb{display:inline-block;font-size:12.5px;font-weight:600;color:#16a34a;margin:2px 0 6px}
@@ -93,7 +93,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:24px 0 30px;font-w
  <div class="alertbar"><button id="btnAlert" type="button">🔔 Ativar notificações</button><span id="alertStatus">Alertas desligados neste aparelho. Ative para apitar e receber notificação quando o preço entrar na zona, bater o stop ou o alvo — só funciona com esta página aberta.</span></div>
  <div id="alertLog" role="alert"></div>
  <h2>🟢 Trades ativos agora</h2><p class="sub">Todo trade em andamento: flips de Range deviation (1h), avisados de hora em hora, e setups do relatório das 21h. Situação recalculada ao vivo a cada 60 s com velas de 1h da Binance · <span class="livelb" style="margin:0"></span></p><div class="sgrid" id="ativos"><div class="box" style="grid-column:1/-1">carregando…</div></div>
- <h2>🕑 Últimas atualizações</h2><p class="sub">Trades abertos, alvos, volta à entrada, stops e expirações, do mais novo para o mais antigo (horário de Brasília). Atualiza sozinho.</p><div class="box feed" id="feed">carregando…</div>
+ <h2>🕑 Últimas atualizações</h2><p class="sub">Trades abertos, alvos, volta à entrada, stops e expirações, do mais novo para o mais antigo (hora e minuto de Brasília; entre parênteses, o candle de 1h em que aconteceu). Atualiza sozinho.</p><div class="box feed" id="feed">carregando…</div>
  <h2>Preços ao vivo</h2><p class="sub">Binance spot, atualiza a cada 10 s · <span id="upd">—</span></p><div class="pgrid" id="prices"></div>
  <h2>Oportunidades novas do último fechamento</h2><p class="sub" id="opsub"></p><div class="livelb"></div><div class="sgrid" id="setups"></div>
 </section>
@@ -163,7 +163,8 @@ function splitEnc(box){ // move setups encerrados p/ drill-down <details> abaixo
   const n=[...t2.querySelectorAll('tr')].filter(tr=>tr.querySelector('td')).length;dt.querySelector('summary').textContent=`Encerrados (${n}) — toque para abrir`;dt.style.display=n?'':'none'})}
 async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L.dc,...(L.flips||[])],pend=all.filter(x=>!x.final),K={};
  try{for(const sym of [...new Set(pend.map(x=>x.ativo))]){const ini=Math.min(...pend.filter(x=>x.ativo===sym).map(x=>x.ini));K[sym]=await kl(sym,'1h',ini,agora,(pend.find(x=>x.ativo===sym)||{}).fonte)}
-  for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev}:await aval(x,agora,K[x.ativo]);LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev})}
+  for(const x of all)x.v=x.final?{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev,evx:x.evx}:await aval(x,agora,K[x.ativo]);
+  for(const x of [...L.bot,...(L.flips||[])])if(!x.final){try{x.v.evx=await minutosJS(x,x.v,agora)}catch(er){x.v.evx={}}}LT=new Date()}catch(e){console.warn(e);all.forEach(x=>x.v=x.v||{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev,evx:x.evx})}
  const lab=LT?`ao vivo, atualizado ${LT.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`:'ao vivo indisponível, mostrando o cálculo do servidor';
  document.querySelectorAll('.livelb').forEach(e=>e.textContent='● '+lab);
  const tf={'Geral':()=>true,'A favor':x=>x.tend==='a favor','Contra':x=>x.tend==='contra','Misto':x=>x.tend==='misto'};
@@ -178,12 +179,30 @@ async function liveTick(){if(!L)return;const agora=Date.now(),all=[...L.bot,...L
 // ---- Trades ativos agora + Últimas atualizações (pedido 28/10: quem só olha o painel precisa ver flips, alvos e stops) ----
 const fN=v=>v==null?'—':v.toLocaleString('pt-BR',{maximumFractionDigits:8});
 const hm=ms=>{const x=new Date(ms-3*H);return String(x.getUTCHours()).padStart(2,'0')+'h'+(x.getUTCMinutes()?String(x.getUTCMinutes()).padStart(2,'0'):'')};
-const quando=ms=>dmBR(ms)+' '+hm(ms), vela=ms=>dmBR(ms)+' '+(ms%H===0?hm(ms)+'–'+hm(ms+H):hm(ms));
+const hhmm=ms=>{const x=new Date(ms-3*H);return String(x.getUTCHours()).padStart(2,'0')+':'+String(x.getUTCMinutes()).padStart(2,'0')};
+// pedido 28/10 23h: hora e minuto exatos (Brasília) em cada evento; a vela de 1h/5m fica entre parênteses
+const quando=ms=>dmBR(ms)+' '+hhmm(ms), velaR=ms=>ms%H===0?hm(ms)+'–'+hm(ms+H):hm(ms)+' (5m)';
+const exato=(x,v,k)=>{const t=(v.ev||{})[k];if(t==null)return null;const m=(v.evx||{})[k];return m!=null?m:t};
+const emT=(x,v,k)=>{const t=(v.ev||{})[k],m=exato(x,v,k);return quando(m)+(t!=null&&m!==t?' <small class="mut">(candle '+velaR(t)+')</small>':'')};
+// minuto exato: 1º candle de 1m que tocou o nível dentro da vela do evento (mesma regra de placar.minutos_exatos)
+const K1M={};
+async function minutosJS(x,v,agora){const ev=v.ev||{},sx=x.evx||{},sv=x.ev||{},out={},d=x.direcao,e=x.entrada,tol=x.tol||0;let piso=0;
+ const nv={alvo1:[x.alvo1,'alvo'],alvo2:[x.alvo2,'alvo'],be:[e,'stop'],stop:[x.stop,'stop']};
+ for(const k of ['entrada','alvo1','be','alvo2','stop','expirou']){const t=ev[k];if(t==null)continue;
+  if(sx[k]!=null&&sv[k]===t){out[k]=sx[k];piso=Math.max(piso,out[k]);continue}
+  if(k==='expirou'){out[k]=t;continue}
+  if(k==='entrada'){if(x.fill!=null&&t<=x.fill&&x.fill<t+H){out[k]=x.fill;piso=x.fill;continue}if(x.ja_na_zona&&t===x.ini){out[k]=t;piso=t;continue}}
+  const n=nv[k];if(k!=='entrada'&&(!n||n[0]==null))continue;
+  const ini=Math.floor(Math.max(t,piso)/60000)*60000,fim=Math.min(t+H,agora),ck=x.ativo+'|'+ini+'|'+fim;
+  let ws;try{ws=K1M[ck]||(K1M[ck]=await kl(x.ativo,'1m',ini,fim,x.fonte))}catch(er){continue}
+  const w=ws.find(w=>k==='entrada'?(w.l<=e*(1+tol)&&w.h>=e*(1-tol)):passou(w,n[0],d,n[1]));
+  out[k]=w?w.t:t;piso=Math.max(piso,out[k])}
+ return out}
 const nomeT=x=>`${x.ativo.replace('USDT','')} ${x.direcao.toUpperCase()}`;
 const origemT=x=>x.origem==='flip'?'Flip Range deviation 1h':(x.curto?'Long curto prazo (relatório)':'Relatório 21h');
 const rAlvo=(x,a)=>a==null?0:Math.abs(a-x.entrada)/Math.abs(x.entrada-x.stop);
 const alvosT=x=>{const l=(x.alvos&&x.alvos.length?x.alvos:[x.alvo1,x.alvo2]).filter(a=>a!=null);return l.map(fN).join(' / ')||'—'};
-function vv(x){return x.v||{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev}}
+function vv(x){return x.v||{sit:x.sit,r:x.r,obs:x.obs,ev:x.ev,evx:x.evx}}
 function ativosList(){if(!L)return null;const agora=Date.now();
  return [...L.bot,...(L.flips||[])].filter(x=>{const v=vv(x);return v.sit==='Aberto'||(v.sit==='Alvo 1'&&!v.obs)||(v.sit==='Não acionado'&&agora<x.prazo)})
   .sort((a,b)=>{const o=x=>({'Alvo 1':0,'Aberto':1,'Não acionado':2}[vv(x).sit]);return o(a)-o(b)||b.ini-a.ini})}
@@ -192,11 +211,11 @@ function renderAtivos(){const el=document.getElementById('ativos');if(!el)return
  if(!ls.length)el.innerHTML='<div class="box" style="grid-column:1/-1"><b>Nenhum trade ativo agora.</b> Os resultados dos trades já encerrados estão no <a href="#plac" onclick="document.querySelector(\'nav button[data-t=plac]\').click();return false">Placar</a> e nas Últimas atualizações abaixo.</div>';
  else el.innerHTML=ls.map(x=>{const v=vv(x),ev=v.ev||{},a=x.ativo.replace('USDT',''),p=P[a],d=x.direcao;let sit,cls='',chip;
   if(v.sit==='Não acionado'){chip='<span class="lchip p-na">AGUARDANDO ENTRADA</span>';cls=' aguard';sit=`Aguardando o preço chegar na entrada (${fN(x.entrada)}). Vale até ${quando(x.prazo)}.`}
-  else if(v.sit==='Aberto'){chip='<span class="lchip p-ab">ATIVO</span>';sit=`Ativo: ${x.origem==='flip'?'entrada a mercado no fechamento do candle, em '+quando(x.ini):'entrada acionada'+(ev.entrada?' em '+vela(ev.entrada):'')}. Buscando o Alvo 1 (${fN(x.alvo1)}); stop em ${fN(x.stop)}.`}
-  else{chip='<span class="lchip p-a1">ALVO 1 ✓</span>';sit=`<b>Alvo 1 atingido${ev.alvo1?' em '+vela(ev.alvo1):''}</b> (+${rAlvo(x,x.alvo1).toFixed(2).replace('.',',')}R garantido). Stop na entrada (${fN(x.entrada)}), buscando o Alvo 2 (${fN(x.alvo2)}).`;cls+=' a1'}
+  else if(v.sit==='Aberto'){chip='<span class="lchip p-ab">ATIVO</span>';sit=`Ativo: entrada acionada em ${x.origem==='flip'?quando(x.ini)+' <small class="mut">(a mercado no fechamento do candle '+(x.candle||'')+')</small>':(ev.entrada?emT(x,v,'entrada'):'—')}. Buscando o Alvo 1 (${fN(x.alvo1)}); stop em ${fN(x.stop)}.`}
+  else{chip='<span class="lchip p-a1">ALVO 1 ✓</span>';sit=`<b>Alvo 1 atingido${ev.alvo1?' em '+emT(x,v,'alvo1'):''}</b> (+${rAlvo(x,x.alvo1).toFixed(2).replace('.',',')}R garantido). Stop na entrada (${fN(x.entrada)}), buscando o Alvo 2 (${fN(x.alvo2)}).`;cls+=' a1'}
   let pr='';if(p!=null&&v.sit!=='Não acionado'){const m=(d==='long'?p-x.entrada:x.entrada-p)/x.entrada*100;pr=`<div class="st">Preço agora ${fmt(p)} · <b class="${m>=0?'g':'r'}">${m>=0?'+':''}${m.toFixed(2).replace('.',',')}%</b> ${m>=0?'a favor':'contra'} desde a entrada</div>`}
   else if(p!=null){const m=Math.abs(p-x.entrada)/p*100;pr=`<div class="st">Preço agora ${fmt(p)} · falta ${m.toFixed(2).replace('.',',')}% até a entrada</div>`}
-  const ab=x.origem==='flip'?`aberto em ${quando(x.ini)} (fechamento do candle ${x.candle||''})`:`publicado em ${quando(x.ini)}`;
+  const abT=x.origem==='flip'?x.ini:exato(x,v,'entrada'),ab=(x.origem==='flip'?`aberto em ${quando(x.ini)} (fechamento do candle ${x.candle||''})`:`publicado em ${quando(x.ini)}`)+(x.origem!=='flip'&&abT!=null?` · entrada em ${quando(abT)}`:'');
   return `<div class="card ${d}${cls}"><div class="top"><span class="nm">${a} ${chip}</span><span class="bd">${d.toUpperCase()}</span></div>
   <div class="org">${x.origem==='flip'?'🔁':'📋'} <b>${origemT(x)}</b> · ${ab}</div>
   <div class="lv"><div><small>Entrada</small>${fN(x.entrada)}</div><div><small>Stop</small><span class="r">${fN(x.stop)}</span></div><div><small>Alvos</small><span class="g">${alvosT(x)}</span></div></div>
@@ -204,16 +223,16 @@ function renderAtivos(){const el=document.getElementById('ativos');if(!el)return
  renderFeed()}
 function eventosT(){if(!L)return[];const out=[];
  for(const x of [...L.bot,...(L.flips||[])]){const v=vv(x),ev=v.ev||{},nm=nomeT(x),fl=x.origem==='flip',rf=r=>(r>0?'+':'')+r.toFixed(2).replace('.',',')+'R';if(v.sit==='Ambíguo')continue;
-  const add=(t,tp,txt,tl)=>{if(t!=null&&t<=Date.now())out.push({t,k:x.id+':'+tp,txt,tl:tl||vela(t),tp})};
+  const add=(t,tp,txt,tl,kk)=>{if(t==null)return;let tt=t;if(kk){const m=exato(x,v,kk);if(m!=null)tt=m;tl=quando(tt)+(m!=null&&m!==t?'<br><small class="mut">(candle '+velaR(t)+')</small>':'')}if(tt<=Date.now())out.push({t:tt,k:x.id+':'+tp,txt,tl:tl||quando(tt),tp})};
   if(fl)add(x.ini,'abriu',`🔁 <b>Novo trade: ${nm}</b> aberto em ${fN(x.entrada)} (Flip Range deviation 1h, candle ${x.candle||''}) · stop ${fN(x.stop)} · alvos ${alvosT(x)}`,quando(x.ini));
   else{add(x.ini,'pub',`📋 <b>Novo setup ${nm}</b> no ${origemT(x)}: entrada ${fN(x.entrada)} · stop ${fN(x.stop)} · alvos ${alvosT(x)}. Aguardando entrada.`,quando(x.ini));
-   add(ev.entrada,'entrada',`▶️ <b>${nm} entrou</b>: a entrada ${fN(x.entrada)} foi acionada. Trade ativo.`)}
-  add(ev.alvo1,'alvo1',`🎯 <b>${nm} bateu o Alvo 1</b> (${fN(x.alvo1)}): <b class="g">${rf(rAlvo(x,x.alvo1))}</b> garantido, stop vai para a entrada.`);
-  add(ev.alvo2,'alvo2',`🏁 <b>${nm} bateu o Alvo 2</b> (${fN(x.alvo2)}): encerrado com <b class="g">${rf(rAlvo(x,x.alvo2))}</b>.`);
-  add(ev.be,'be',`↩️ <b>${nm} voltou na entrada</b> depois do Alvo 1: encerrado com <b class="g">${rf(rAlvo(x,x.alvo1))}</b>.`);
-  if(ev.stop!=null){if(v.sit==='Stop')add(ev.stop,'stop',`❌ <b>${nm} stopou</b> em ${fN(x.stop)}: <b class="r">−1,00R</b>.`);
-   else if(v.sit==='Invalidado')add(ev.stop,'inv',`🚫 <b>${nm} invalidado</b>: bateu o stop (${fN(x.stop)}) antes de acionar a entrada. 0R.`);
-   else if(!ev.be)add(ev.stop,'stop',`⛔ <b>${nm} bateu o stop depois do Alvo 1</b>: resultado mantido em <b class="g">${rf(rAlvo(x,x.alvo1))}</b>.`)}
+   add(ev.entrada,'entrada',`▶️ <b>${nm} entrou</b>: a entrada ${fN(x.entrada)} foi acionada. Trade ativo.`,null,'entrada')}
+  add(ev.alvo1,'alvo1',`🎯 <b>${nm} bateu o Alvo 1</b> (${fN(x.alvo1)}): <b class="g">${rf(rAlvo(x,x.alvo1))}</b> garantido, stop vai para a entrada.`,null,'alvo1');
+  add(ev.alvo2,'alvo2',`🏁 <b>${nm} bateu o Alvo 2</b> (${fN(x.alvo2)}): encerrado com <b class="g">${rf(rAlvo(x,x.alvo2))}</b>.`,null,'alvo2');
+  add(ev.be,'be',`↩️ <b>${nm} voltou na entrada</b> depois do Alvo 1: encerrado com <b class="g">${rf(rAlvo(x,x.alvo1))}</b>.`,null,'be');
+  if(ev.stop!=null){if(v.sit==='Stop')add(ev.stop,'stop',`❌ <b>${nm} stopou</b> em ${fN(x.stop)}: <b class="r">−1,00R</b>.`,null,'stop');
+   else if(v.sit==='Invalidado')add(ev.stop,'inv',`🚫 <b>${nm} invalidado</b>: bateu o stop (${fN(x.stop)}) antes de acionar a entrada. 0R.`,null,'stop');
+   else if(!ev.be)add(ev.stop,'stop',`⛔ <b>${nm} bateu o stop depois do Alvo 1</b>: resultado mantido em <b class="g">${rf(rAlvo(x,x.alvo1))}</b>.`,null,'stop')}
   if(v.sit==='Expirado')add(ev.expirou||x.prazo,'exp',`⌛ <b>${nm} expirou</b> sem acionar a entrada. 0R.`,quando(ev.expirou||x.prazo))}
  return out.sort((a,b)=>b.t-a.t||(b.tp==='abriu'?-1:1)).slice(0,20)}
 const EVK='analise_eventos_v1';let EVS=null;const NOV=new Set();try{EVS=JSON.parse(localStorage.getItem(EVK))}catch(e){}
