@@ -9,5 +9,6 @@
 | 28/10 | TAO | short | 252,7 | 256,8 | 251,05 | 248,7 | 09h–10h | Alvo 1 (depois voltou à entrada em 28/10 e bateu o stop em 28/10) | +0,40R |
 | 28/10 | SUI | short | 0,9239 | 0,9365 | 0,9185 | 0,9147 | 10h–11h | Alvo 1 (depois voltou à entrada em 28/10 e bateu o stop em 28/10) | +0,43R |
 | 28/10 | BTC | short | 80.553 | 80.950 | 80.391 | 80.002 | 12h–13h | Stop | -1,00R |
+| 28/10 | AAVE | short | 133,78 | 135,9 | 132,54 | 131,75 | 21h–22h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 7 acionados (7 encerrados, 0 abertos); alvo 1: 86%; stop: 14%; R médio por setup: +0,42R; soma: +2,93R
+- Flips (geral, separado do Placar principal): 8 acionados (7 encerrados, 1 abertos); alvo 1: 86%; stop: 14%; R médio por setup: +0,42R; soma: +2,93R
