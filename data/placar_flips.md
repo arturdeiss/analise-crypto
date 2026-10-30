@@ -23,5 +23,6 @@
 | 29/10 | HBAR | long | 0,06949 | 0,0657 | 0,07091 | 0,07371 | 23h–00h | Alvo 1 | +0,37R |
 | 30/10 | BTC | long | 78.235 | 76.350 | 79.236 | 80.800 | 00h–01h | Stop | -1,00R |
 | 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Aberto | 0R |
+| 30/10 | SOL | long | 94,79 | 93,45 | 96,1 | 97,53 | 16h–17h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 21 acionados (20 encerrados, 1 abertos); alvo 1: 75%; stop: 25%; R médio por setup: +0,16R; soma: +3,24R
+- Flips (geral, separado do Placar principal): 22 acionados (20 encerrados, 2 abertos); alvo 1: 75%; stop: 25%; R médio por setup: +0,16R; soma: +3,24R
