@@ -21,7 +21,7 @@
 | 28/10 | ZEC | short | 1.256,54 | 1.294,6 | 1.240,9 | 1.229,6 | 22h–23h | Alvo 1 (depois voltou à entrada em 29/10 e bateu o stop em 29/10) | +0,41R |
 | 29/10 | HBAR | long | 0,07416 | 0,0727 | 0,07494 | 0,07612 | 02h–03h | Alvo 1 (depois voltou à entrada em 29/10 e bateu o stop em 29/10) | +0,53R |
 | 29/10 | HBAR | long | 0,06949 | 0,0657 | 0,07091 | 0,07371 | 23h–00h | Alvo 1 | +0,37R |
-| 30/10 | BTC | long | 78.235 | 76.350 | 79.236 | 80.800 | 00h–01h | Aberto | 0R |
+| 30/10 | BTC | long | 78.235 | 76.350 | 79.236 | 80.800 | 00h–01h | Stop | -1,00R |
 | 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 21 acionados (19 encerrados, 2 abertos); alvo 1: 79%; stop: 21%; R médio por setup: +0,22R; soma: +4,24R
+- Flips (geral, separado do Placar principal): 21 acionados (20 encerrados, 1 abertos); alvo 1: 75%; stop: 25%; R médio por setup: +0,16R; soma: +3,24R
