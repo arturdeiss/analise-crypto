@@ -29,6 +29,6 @@
 | 31/10 | AAVE | short | 129,85 | 132,8 | 128,54 | 126,27 | 00h–01h | Stop | -1,00R |
 | 31/10 | AAVE | short | 131,76 | 133,45 | 128,87 | 126,41 | 05h–06h | Stop | -1,00R |
 | 31/10 | AAVE | short | 135,7 | 136,75 | 130,5 | 127,11 | 12h–13h | Aberto | 0R |
-| 31/10 | ZEC | short | 1.284,84 | 1.293,5 | 1.272,49 | 1.261,99 | 12h–13h | Aberto | 0R |
+| 31/10 | ZEC | short | 1.284,84 | 1.293,5 | 1.272,49 | 1.261,99 | 12h–13h | Alvo 1 | +1,43R |
 
-- Flips (geral, separado do Placar principal): 28 acionados (25 encerrados, 3 abertos); alvo 1: 72%; stop: 28%; R médio por setup: +0,21R; soma: +5,15R
+- Flips (geral, separado do Placar principal): 28 acionados (26 encerrados, 2 abertos); alvo 1: 73%; stop: 27%; R médio por setup: +0,25R; soma: +6,57R
