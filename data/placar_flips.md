@@ -25,7 +25,7 @@
 | 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Aberto | 0R |
 | 30/10 | SOL | long | 94,79 | 93,45 | 96,1 | 97,53 | 16h–17h | Alvo 1 | +0,98R |
 | 30/10 | BTC | long | 76.722 | 76.200 | 77.565 | 78.274 | 18h–19h | Alvo 1 | +1,61R |
-| 30/10 | ONDO | short | 0,417 | 0,426 | 0,4052 | 0,3943 | 23h–00h | Alvo 1 | +1,31R |
-| 31/10 | AAVE | short | 129,85 | 132,8 | 128,54 | 126,27 | 00h–01h | Aberto | 0R |
+| 30/10 | ONDO | short | 0,417 | 0,426 | 0,4052 | 0,3943 | 23h–00h | Alvo 1 (depois voltou à entrada em 31/10) | +1,31R |
+| 31/10 | AAVE | short | 129,85 | 132,8 | 128,54 | 126,27 | 00h–01h | Stop | -1,00R |
 
-- Flips (geral, separado do Placar principal): 25 acionados (23 encerrados, 2 abertos); alvo 1: 78%; stop: 22%; R médio por setup: +0,31R; soma: +7,15R
+- Flips (geral, separado do Placar principal): 25 acionados (24 encerrados, 1 abertos); alvo 1: 75%; stop: 25%; R médio por setup: +0,26R; soma: +6,15R
