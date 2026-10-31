@@ -1,6 +1,23 @@
 {
- "gerado": "30/10/2026 21:26",
- "fechamento": "2026-10-29",
+ "gerado": "30/10/2026 22:08",
+ "fechamento": "2026-10-30",
  "discord": "2026-10-30",
- "setups": []
+ "setups": [
+  {
+   "ativo": "SOL",
+   "direcao": "short",
+   "zona": [
+    108.7,
+    108.7
+   ],
+   "stop": 109.7,
+   "alvos": [
+    104.4,
+    98.2
+   ],
+   "saiu": false,
+   "setup": "1h: sem zona (azul há ~7), na borda de baixo. 4h: <b class=b>AZUL</b>, na borda de baixo. 1D: sem zona (vermelho há ~25), abaixo",
+   "id": "20261021-SOL-short"
+  }
+ ]
 }
