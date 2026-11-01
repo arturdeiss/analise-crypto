@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 01/11 12:18. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 01/11 13:32. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -22,9 +22,11 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Stop | -1,00R | — |
 | 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Aberto | 0R | — |
 | 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Alvo 1 | +6,68R | — |
+| 01/11 | LTC | long | 55,7 | 50,2 | 60,4 | 77,3 | Aberto | 0R | — |
+| 01/11 | PEPE | short | 0,00000487 | 0,0000057 | 0,0000032 | — | Aberto | 0R | — |
 
-- Total no registro: 16 (Não acionado: 2; Aberto: 2; Alvo 1: 2; Stop: 6; Expirado: 4)
-- Geral: 10 acionados (8 encerrados, 2 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,23R; soma: +1,84R
+- Total no registro: 18 (Não acionado: 2; Aberto: 4; Alvo 1: 2; Stop: 6; Expirado: 4)
+- Geral: 12 acionados (8 encerrados, 4 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,23R; soma: +1,84R
 
 ## Placar Jayson Casper
 
