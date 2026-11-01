@@ -23,7 +23,7 @@
 | 29/10 | HBAR | long | 0,06949 | 0,0657 | 0,07091 | 0,07371 | 23h–00h | Alvo 1 | +0,37R |
 | 30/10 | BTC | long | 78.235 | 76.350 | 79.236 | 80.800 | 00h–01h | Stop | -1,00R |
 | 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Alvo 1 | +0,56R |
-| 30/10 | SOL | long | 94,79 | 93,45 | 96,1 | 97,53 | 16h–17h | Alvo 1 (depois voltou à entrada em 01/11) | +0,98R |
+| 30/10 | SOL | long | 94,79 | 93,45 | 96,1 | 97,53 | 16h–17h | Alvo 1 (depois voltou à entrada em 01/11 e bateu o stop em 01/11) | +0,98R |
 | 30/10 | BTC | long | 76.722 | 76.200 | 77.565 | 78.274 | 18h–19h | Alvo 2 | +2,97R |
 | 30/10 | ONDO | short | 0,417 | 0,426 | 0,4052 | 0,3943 | 23h–00h | Alvo 1 (depois voltou à entrada em 31/10) | +1,31R |
 | 31/10 | AAVE | short | 129,85 | 132,8 | 128,54 | 126,27 | 00h–01h | Stop | -1,00R |
@@ -32,5 +32,9 @@
 | 31/10 | ZEC | short | 1.284,84 | 1.293,5 | 1.272,49 | 1.261,99 | 12h–13h | Alvo 2 | +2,64R |
 | 01/11 | ZEC | long | 1.248,24 | 1.236,3 | 1.264,84 | 1.279,7 | 02h–03h | Stop | -1,00R |
 | 01/11 | SUI | short | 0,9053 | 0,911 | 0,9025 | 0,8986 | 06h–07h | Alvo 2 | +1,18R |
+| 01/11 | SOL | long | 94,4 | 93,55 | 94,84 | 95,5 | 18h–19h | Stop | -1,00R |
+| 01/11 | TAO | long | 233,3 | 230,8 | 234,85 | 237 | 18h–19h | Aberto | 0R |
+| 01/11 | ONDO | long | 0,4031 | 0,398 | 0,4075 | 0,4125 | 18h–19h | Aberto | 0R |
+| 01/11 | NEAR | long | 4,294 | 4,225 | 4,368 | 4,443 | 18h–19h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 30 acionados (30 encerrados, 0 abertos); alvo 1: 70%; stop: 30%; R médio por setup: +0,30R; soma: +8,88R
+- Flips (geral, separado do Placar principal): 34 acionados (31 encerrados, 3 abertos); alvo 1: 68%; stop: 32%; R médio por setup: +0,25R; soma: +7,88R
