@@ -22,7 +22,7 @@
 | 29/10 | HBAR | long | 0,07416 | 0,0727 | 0,07494 | 0,07612 | 02h–03h | Alvo 1 (depois voltou à entrada em 29/10 e bateu o stop em 29/10) | +0,53R |
 | 29/10 | HBAR | long | 0,06949 | 0,0657 | 0,07091 | 0,07371 | 23h–00h | Alvo 1 (depois voltou à entrada em 02/11) | +0,37R |
 | 30/10 | BTC | long | 78.235 | 76.350 | 79.236 | 80.800 | 00h–01h | Stop | -1,00R |
-| 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Alvo 1 | +0,56R |
+| 30/10 | ETH | long | 2.237,82 | 2.168 | 2.276,8 | 2.335,6 | 00h–01h | Alvo 1 (depois voltou à entrada em 02/11) | +0,56R |
 | 30/10 | SOL | long | 94,79 | 93,45 | 96,1 | 97,53 | 16h–17h | Alvo 1 (depois voltou à entrada em 01/11 e bateu o stop em 01/11) | +0,98R |
 | 30/10 | BTC | long | 76.722 | 76.200 | 77.565 | 78.274 | 18h–19h | Alvo 2 | +2,97R |
 | 30/10 | ONDO | short | 0,417 | 0,426 | 0,4052 | 0,3943 | 23h–00h | Alvo 2 | +2,52R |
