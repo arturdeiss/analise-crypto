@@ -37,9 +37,9 @@
 | 01/11 | ONDO | long | 0,4031 | 0,398 | 0,4075 | 0,4125 | 18h–19h | Stop | -1,00R |
 | 01/11 | NEAR | long | 4,294 | 4,225 | 4,368 | 4,443 | 18h–19h | Stop | -1,00R |
 | 02/11 | NEAR | long | 4,127 | 4,06 | 4,206 | 4,281 | 07h–08h | Stop | -1,00R |
-| 02/11 | TAO | long | 229,3 | 227,9 | 231,75 | 233,49 | 09h–10h | Aberto | 0R |
-| 02/11 | HBAR | long | 0,07092 | 0,07038 | 0,07131 | 0,07169 | 09h–10h | Alvo 1 (depois voltou à entrada em 02/11) | +0,72R |
-| 02/11 | ONDO | long | 0,3922 | 0,3883 | 0,3978 | 0,4024 | 10h–11h | Aberto | 0R |
-| 02/11 | AAVE | long | 132,23 | 130,1 | 133,79 | 135,64 | 10h–11h | Aberto | 0R |
+| 02/11 | TAO | long | 229,3 | 227,9 | 231,75 | 233,49 | 09h–10h | Stop | -1,00R |
+| 02/11 | HBAR | long | 0,07092 | 0,07038 | 0,07131 | 0,07169 | 09h–10h | Alvo 1 (depois voltou à entrada em 02/11 e bateu o stop em 02/11) | +0,72R |
+| 02/11 | ONDO | long | 0,3922 | 0,3883 | 0,3978 | 0,4024 | 10h–11h | Stop | -1,00R |
+| 02/11 | AAVE | long | 132,23 | 130,1 | 133,79 | 135,64 | 10h–11h | Stop | -1,00R |
 
-- Flips (geral, separado do Placar principal): 39 acionados (36 encerrados, 3 abertos); alvo 1: 61%; stop: 39%; R médio por setup: +0,16R; soma: +5,81R
+- Flips (geral, separado do Placar principal): 39 acionados (39 encerrados, 0 abertos); alvo 1: 56%; stop: 44%; R médio por setup: +0,07R; soma: +2,81R
