@@ -33,8 +33,8 @@
 | 01/11 | ZEC | long | 1.248,24 | 1.236,3 | 1.264,84 | 1.279,7 | 02h–03h | Stop | -1,00R |
 | 01/11 | SUI | short | 0,9053 | 0,911 | 0,9025 | 0,8986 | 06h–07h | Alvo 2 | +1,18R |
 | 01/11 | SOL | long | 94,4 | 93,55 | 94,84 | 95,5 | 18h–19h | Stop | -1,00R |
-| 01/11 | TAO | long | 233,3 | 230,8 | 234,85 | 237 | 18h–19h | Aberto | 0R |
-| 01/11 | ONDO | long | 0,4031 | 0,398 | 0,4075 | 0,4125 | 18h–19h | Aberto | 0R |
-| 01/11 | NEAR | long | 4,294 | 4,225 | 4,368 | 4,443 | 18h–19h | Aberto | 0R |
+| 01/11 | TAO | long | 233,3 | 230,8 | 234,85 | 237 | 18h–19h | Stop | -1,00R |
+| 01/11 | ONDO | long | 0,4031 | 0,398 | 0,4075 | 0,4125 | 18h–19h | Stop | -1,00R |
+| 01/11 | NEAR | long | 4,294 | 4,225 | 4,368 | 4,443 | 18h–19h | Stop | -1,00R |
 
-- Flips (geral, separado do Placar principal): 34 acionados (31 encerrados, 3 abertos); alvo 1: 68%; stop: 32%; R médio por setup: +0,25R; soma: +7,88R
+- Flips (geral, separado do Placar principal): 34 acionados (34 encerrados, 0 abertos); alvo 1: 62%; stop: 38%; R médio por setup: +0,14R; soma: +4,88R
