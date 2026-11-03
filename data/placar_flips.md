@@ -50,6 +50,6 @@
 | 03/11 | ONDO | long | 0,3827 | 0,3806 | 0,3838 | 0,3858 | 02h–03h | Alvo 1 (depois voltou à entrada em 03/11 e bateu o stop em 03/11) | +0,52R |
 | 03/11 | ONDO | long | 0,3826 | 0,38055 | 0,38349 | 0,3852 | 04h–05h | Stop | -1,00R |
 | 03/11 | NEAR | long | 3,784 | 3,7535 | 3,8154 | 3,8525 | 04h–05h | Stop | -1,00R |
-| 03/11 | ETH | short | 2.292,91 | 2.309,92 | 2.287,97 | 2.275,07 | 15h–16h | Aberto | 0R |
+| 03/11 | ETH | short | 2.292,91 | 2.309,92 | 2.287,97 | 2.275,07 | 15h–16h | Alvo 1 | +0,29R |
 
-- Flips (geral, separado do Placar principal): 49 acionados (48 encerrados, 1 abertos); alvo 1: 50%; stop: 50%; R médio por setup: -0,04R; soma: -2,11R
+- Flips (geral, separado do Placar principal): 49 acionados (49 encerrados, 0 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,04R; soma: -1,82R
