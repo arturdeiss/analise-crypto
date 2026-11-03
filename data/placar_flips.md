@@ -42,11 +42,13 @@
 | 02/11 | ONDO | long | 0,3922 | 0,3883 | 0,3978 | 0,4024 | 10h–11h | Stop | -1,00R |
 | 02/11 | AAVE | long | 132,23 | 130,1 | 133,79 | 135,64 | 10h–11h | Stop | -1,00R |
 | 02/11 | NEAR | long | 3,873 | 3,83 | 3,943 | 4,001 | 17h–18h | Stop | -1,00R |
-| 02/11 | ONDO | long | 0,3834 | 0,38 | 0,3887 | 0,3927 | 17h–18h | Alvo 1 (depois voltou à entrada em 02/11) | +1,56R |
+| 02/11 | ONDO | long | 0,3834 | 0,38 | 0,3887 | 0,3927 | 17h–18h | Alvo 1 (depois voltou à entrada em 02/11 e bateu o stop em 03/11) | +1,56R |
 | 02/11 | AAVE | long | 128,06 | 126,33 | 128,85 | 130,37 | 18h–19h | Stop | -1,00R |
 | 02/11 | BTC | long | 76.933,48 | 76.674 | 77.217 | 77.531 | 19h–20h | Stop | -1,00R |
 | 02/11 | ZEC | long | 1.156,61 | 1.126,8 | 1.174 | 1.202,6 | 19h–20h | Stop | -1,00R |
 | 03/11 | SUI | long | 0,8655 | 0,8612 | 0,8698 | 0,8749 | 02h–03h | Stop | -1,00R |
-| 03/11 | ONDO | long | 0,3827 | 0,3806 | 0,3838 | 0,3858 | 02h–03h | Alvo 1 | +0,52R |
+| 03/11 | ONDO | long | 0,3827 | 0,3806 | 0,3838 | 0,3858 | 02h–03h | Alvo 1 (depois voltou à entrada em 03/11 e bateu o stop em 03/11) | +0,52R |
+| 03/11 | ONDO | long | 0,3826 | 0,38055 | 0,38349 | 0,3852 | 04h–05h | Stop | -1,00R |
+| 03/11 | NEAR | long | 3,784 | 3,7535 | 3,8154 | 3,8525 | 04h–05h | Stop | -1,00R |
 
-- Flips (geral, separado do Placar principal): 46 acionados (46 encerrados, 0 abertos); alvo 1: 52%; stop: 48%; R médio por setup: -0,00R; soma: -0,11R
+- Flips (geral, separado do Placar principal): 48 acionados (48 encerrados, 0 abertos); alvo 1: 50%; stop: 50%; R médio por setup: -0,04R; soma: -2,11R
