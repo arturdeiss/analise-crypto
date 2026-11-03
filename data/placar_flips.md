@@ -43,8 +43,8 @@
 | 02/11 | AAVE | long | 132,23 | 130,1 | 133,79 | 135,64 | 10h–11h | Stop | -1,00R |
 | 02/11 | NEAR | long | 3,873 | 3,83 | 3,943 | 4,001 | 17h–18h | Aberto | 0R |
 | 02/11 | ONDO | long | 0,3834 | 0,38 | 0,3887 | 0,3927 | 17h–18h | Alvo 1 | +1,56R |
-| 02/11 | AAVE | long | 128,06 | 126,33 | 128,85 | 130,37 | 18h–19h | Aberto | 0R |
-| 02/11 | BTC | long | 76.933,48 | 76.674 | 77.217 | 77.531 | 19h–20h | Aberto | 0R |
+| 02/11 | AAVE | long | 128,06 | 126,33 | 128,85 | 130,37 | 18h–19h | Stop | -1,00R |
+| 02/11 | BTC | long | 76.933,48 | 76.674 | 77.217 | 77.531 | 19h–20h | Stop | -1,00R |
 | 02/11 | ZEC | long | 1.156,61 | 1.126,8 | 1.174 | 1.202,6 | 19h–20h | Stop | -1,00R |
 
-- Flips (geral, separado do Placar principal): 44 acionados (41 encerrados, 3 abertos); alvo 1: 56%; stop: 44%; R médio por setup: +0,08R; soma: +3,37R
+- Flips (geral, separado do Placar principal): 44 acionados (43 encerrados, 1 abertos); alvo 1: 53%; stop: 47%; R médio por setup: +0,03R; soma: +1,37R
