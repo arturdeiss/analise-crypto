@@ -51,5 +51,7 @@
 | 03/11 | ONDO | long | 0,3826 | 0,38055 | 0,38349 | 0,3852 | 04h–05h | Stop | -1,00R |
 | 03/11 | NEAR | long | 3,784 | 3,7535 | 3,8154 | 3,8525 | 04h–05h | Stop | -1,00R |
 | 03/11 | ETH | short | 2.292,91 | 2.309,92 | 2.287,97 | 2.275,07 | 15h–16h | Alvo 2 | +1,05R |
+| 04/11 | BTC | short | 79.997,8 | 81.228 | 79.504 | 78.466 | 16h–17h | Aberto | 0R |
+| 04/11 | ETH | short | 2.406,47 | 2.451 | 2.380,7 | 2.338,2 | 16h–17h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 49 acionados (49 encerrados, 0 abertos); alvo 1: 51%; stop: 49%; R médio por setup: +0,01R; soma: +0,52R
+- Flips (geral, separado do Placar principal): 51 acionados (49 encerrados, 2 abertos); alvo 1: 51%; stop: 49%; R médio por setup: +0,01R; soma: +0,52R
