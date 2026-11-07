@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 06/11 19:42. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 07/11 12:29. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -20,7 +20,7 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 18/10 | AAVE | long | 129,94 | 112,41 | 255,48 | — | Aberto | 0R | — |
 | 18/10 | LINK | long | 11,31 | 10,78 | 12,125 | 14 | Stop | -1,00R | — |
 | 20/10 | BTC | short | 83.145 | 84.261 | 78.203 | — | Stop | -1,00R | — |
-| 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Aberto | 0R | — |
+| 21/10 | XRP | short | 1,378 | 1,4086 | 1,1677 | — | Alvo 1 | +6,87R | — |
 | 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Alvo 1 | +6,68R | — |
 | 01/11 | LTC | long | 55,7 | 50,2 | 60,4 | 77,3 | Aberto | 0R | — |
 | 01/11 | PEPE | short | 0,00000487 | 0,0000057 | 0,0000032 | — | Aberto | 0R | — |
@@ -28,8 +28,8 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 05/11 | ETH | long | 2.306 | 2.220 | 2.390 | — | Stop | -1,00R | — |
 | 06/11 | AAVE | long | 130,66 | 114,6 | 249,78 | — | Aberto | 0R | — |
 
-- Total no registro: 21 (Não acionado: 3; Aberto: 5; Alvo 1: 2; Stop: 7; Expirado: 4)
-- Geral: 14 acionados (9 encerrados, 5 abertos); alvo 1: 22%; stop: 78%; R médio por setup: +0,09R; soma: +0,84R
+- Total no registro: 21 (Não acionado: 3; Aberto: 4; Alvo 1: 3; Stop: 7; Expirado: 4)
+- Geral: 14 acionados (10 encerrados, 4 abertos); alvo 1: 30%; stop: 70%; R médio por setup: +0,77R; soma: +7,72R
 
 ## Placar Jayson Casper
 
