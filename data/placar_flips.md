@@ -63,5 +63,7 @@
 | 06/11 | HBAR | long | 0,0678 | 0,0673 | 0,06792 | 0,06831 | 22h–23h | Stop | -1,00R |
 | 07/11 | ONDO | long | 0,3659 | 0,3632 | 0,3671 | 0,3719 | 10h–11h | Stop | -1,00R |
 | 07/11 | ONDO | long | 0,3646 | 0,3623 | 0,3651 | 0,3713 | 14h–15h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 07/11) | +0,22R |
+| 07/11 | ONDO | long | 0,3623 | 0,3595 | 0,3634 | 0,3699 | 19h–20h | Alvo 1 | +0,39R |
+| 07/11 | ZEC | long | 1.258,47 | 1.235,64 | 1.262,47 | 1.312,32 | 19h–20h | Alvo 1 | +0,18R |
 
-- Flips (geral, separado do Placar principal): 61 acionados (61 encerrados, 0 abertos); alvo 1: 51%; stop: 49%; R médio por setup: +0,01R; soma: +0,42R
+- Flips (geral, separado do Placar principal): 63 acionados (63 encerrados, 0 abertos); alvo 1: 52%; stop: 48%; R médio por setup: +0,02R; soma: +0,98R
