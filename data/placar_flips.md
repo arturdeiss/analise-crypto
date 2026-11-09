@@ -55,15 +55,15 @@
 | 04/11 | ETH | short | 2.406,47 | 2.451 | 2.380,7 | 2.338,2 | 16h–17h | Alvo 2 | +1,53R |
 | 05/11 | BTC | long | 76.090,01 | 75.266 | 77.313 | 78.382 | 15h–16h | Stop | -1,00R |
 | 05/11 | ETH | long | 2.252,1 | 2.227,83 | 2.302,9 | 2.343,4 | 15h–16h | Stop | -1,00R |
-| 05/11 | NEAR | long | 3,677 | 3,6195 | 3,797 | 3,952 | 15h–16h | Alvo 1 (depois voltou à entrada em 07/11) | +2,09R |
-| 05/11 | ONDO | long | 0,3725 | 0,3589 | 0,38 | 0,3903 | 16h–17h | Alvo 1 (depois voltou à entrada em 06/11) | +0,55R |
+| 05/11 | NEAR | long | 3,677 | 3,6195 | 3,797 | 3,952 | 15h–16h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 08/11) | +2,09R |
+| 05/11 | ONDO | long | 0,3725 | 0,3589 | 0,38 | 0,3903 | 16h–17h | Alvo 1 (depois voltou à entrada em 06/11 e bateu o stop em 08/11) | +0,55R |
 | 05/11 | DOGE | long | 0,07259 | 0,07083 | 0,07318 | 0,07472 | 16h–17h | Stop | -1,00R |
-| 05/11 | HBAR | long | 0,0684 | 0,06651 | 0,06889 | 0,07043 | 16h–17h | Alvo 1 (depois voltou à entrada em 06/11) | +0,26R |
+| 05/11 | HBAR | long | 0,0684 | 0,06651 | 0,06889 | 0,07043 | 16h–17h | Alvo 1 (depois voltou à entrada em 06/11 e bateu o stop em 08/11) | +0,26R |
 | 05/11 | SOL | long | 89,97 | 88,405 | 90,86 | 93,45 | 18h–19h | Stop | -1,00R |
 | 06/11 | HBAR | long | 0,0678 | 0,0673 | 0,06792 | 0,06831 | 22h–23h | Stop | -1,00R |
 | 07/11 | ONDO | long | 0,3659 | 0,3632 | 0,3671 | 0,3719 | 10h–11h | Stop | -1,00R |
 | 07/11 | ONDO | long | 0,3646 | 0,3623 | 0,3651 | 0,3713 | 14h–15h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 07/11) | +0,22R |
-| 07/11 | ONDO | long | 0,3623 | 0,3595 | 0,3634 | 0,3699 | 19h–20h | Alvo 1 | +0,39R |
-| 07/11 | ZEC | long | 1.258,47 | 1.235,64 | 1.262,47 | 1.312,32 | 19h–20h | Alvo 1 | +0,18R |
+| 07/11 | ONDO | long | 0,3623 | 0,3595 | 0,3634 | 0,3699 | 19h–20h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 07/11) | +0,39R |
+| 07/11 | ZEC | long | 1.258,47 | 1.235,64 | 1.262,47 | 1.312,32 | 19h–20h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 08/11) | +0,18R |
 
 - Flips (geral, separado do Placar principal): 63 acionados (63 encerrados, 0 abertos); alvo 1: 52%; stop: 48%; R médio por setup: +0,02R; soma: +0,98R
