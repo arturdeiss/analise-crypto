@@ -65,5 +65,6 @@
 | 07/11 | ONDO | long | 0,3646 | 0,3623 | 0,3651 | 0,3713 | 14h–15h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 07/11) | +0,22R |
 | 07/11 | ONDO | long | 0,3623 | 0,3595 | 0,3634 | 0,3699 | 19h–20h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 07/11) | +0,39R |
 | 07/11 | ZEC | long | 1.258,47 | 1.235,64 | 1.262,47 | 1.312,32 | 19h–20h | Alvo 1 (depois voltou à entrada em 07/11 e bateu o stop em 08/11) | +0,18R |
+| 09/11 | AAVE | short | 133,42 | 134,85 | 132,33 | 130,69 | 13h–14h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 63 acionados (63 encerrados, 0 abertos); alvo 1: 52%; stop: 48%; R médio por setup: +0,02R; soma: +0,98R
+- Flips (geral, separado do Placar principal): 64 acionados (63 encerrados, 1 abertos); alvo 1: 52%; stop: 48%; R médio por setup: +0,02R; soma: +0,98R
