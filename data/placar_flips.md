@@ -70,6 +70,7 @@
 | 09/11 | ZEC | long | 1.174,89 | 1.155,5 | 1.177,21 | 1.197,5 | 18h–19h | Alvo 1 (depois voltou à entrada em 09/11 e bateu o stop em 09/11) | +0,12R |
 | 10/11 | AAVE | long | 125,79 | 124,8 | 127,89 | 129,88 | 05h–06h | Stop | -1,00R |
 | 10/11 | AAVE | long | 125,01 | 123,95 | 126,43 | 129,47 | 08h–09h | Stop | -1,00R |
-| 10/11 | AAVE | long | 123,4 | 120,7 | 124,11 | 127,64 | 15h–16h | Aberto | 0R |
+| 10/11 | AAVE | long | 123,4 | 120,7 | 124,11 | 127,64 | 15h–16h | Alvo 1 | +0,26R |
+| 10/11 | DOGE | long | 0,06744 | 0,06652 | 0,06796 | 0,06856 | 16h–17h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 69 acionados (68 encerrados, 1 abertos); alvo 1: 51%; stop: 49%; R médio por setup: +0,00R; soma: +0,01R
+- Flips (geral, separado do Placar principal): 70 acionados (69 encerrados, 1 abertos); alvo 1: 52%; stop: 48%; R médio por setup: +0,00R; soma: +0,27R
