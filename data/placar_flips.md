@@ -76,5 +76,6 @@
 | 12/11 | AAVE | long | 118,75 | 117,6 | 120,15 | 122,43 | 00h–01h | Stop | -1,00R |
 | 12/11 | ONDO | long | 0,3536 | 0,3495 | 0,3587 | 0,3672 | 07h–08h | Stop | -1,00R |
 | 12/11 | NEAR | long | 3,493 | 3,45 | 3,568 | 3,678 | 07h–08h | Stop | -1,00R |
+| 12/11 | AAVE | long | 113,64 | 110,3 | 115,25 | 119,72 | 11h–12h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 74 acionados (74 encerrados, 0 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,02R; soma: -1,18R
+- Flips (geral, separado do Placar principal): 75 acionados (74 encerrados, 1 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,02R; soma: -1,18R
