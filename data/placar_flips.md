@@ -78,5 +78,11 @@
 | 12/11 | NEAR | long | 3,493 | 3,45 | 3,568 | 3,678 | 07h–08h | Stop | -1,00R |
 | 12/11 | AAVE | long | 113,64 | 110,3 | 115,25 | 119,72 | 11h–12h | Aberto | 0R |
 | 12/11 | NEAR | long | 3,403 | 3,33 | 3,488 | 3,634 | 12h–13h | Aberto | 0R |
+| 12/11 | ONDO | long | 0,3481 | 0,34227 | 0,35386 | 0,36455 | 13h–14h | Aberto | 0R |
+| 12/11 | ETH | long | 2.007,5 | 1.977,87 | 2.021 | 2.057,96 | 13h–14h | Aberto | 0R |
+| 12/11 | SOL | long | 81,42 | 80,22 | 82,13 | 83,79 | 13h–14h | Aberto | 0R |
+| 12/11 | SUI | long | 0,7979 | 0,7801 | 0,8046 | 0,8267 | 13h–14h | Aberto | 0R |
+| 12/11 | TAO | long | 208,2 | 203,59 | 210,96 | 217,67 | 13h–14h | Aberto | 0R |
+| 12/11 | DOGE | long | 0,0657 | 0,06433 | 0,06609 | 0,06764 | 13h–14h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 76 acionados (74 encerrados, 2 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,02R; soma: -1,18R
+- Flips (geral, separado do Placar principal): 82 acionados (74 encerrados, 8 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,02R; soma: -1,18R
