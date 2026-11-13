@@ -86,5 +86,7 @@
 | 12/11 | DOGE | long | 0,0657 | 0,06433 | 0,06609 | 0,06764 | 13h–14h | Alvo 1 (depois voltou à entrada em 12/11 e bateu o stop em 13/11) | +0,28R |
 | 12/11 | BTC | long | 71.906,98 | 71.041 | 72.357,5 | 73.452,9 | 14h–15h | Stop | -1,00R |
 | 12/11 | HBAR | long | 0,06375 | 0,06271 | 0,06404 | 0,06516 | 15h–16h | Alvo 1 (depois voltou à entrada em 12/11 e bateu o stop em 12/11) | +0,28R |
+| 13/11 | BTC | long | 69.074,43 | 67.365 | 69.480,8 | 71.381 | 03h–04h | Aberto | 0R |
+| 13/11 | HBAR | long | 0,062 | 0,0606 | 0,062395 | 0,06414 | 03h–04h | Alvo 1 | +0,28R |
 
-- Flips (geral, separado do Placar principal): 84 acionados (84 encerrados, 0 abertos); alvo 1: 52%; stop: 48%; R médio por setup: -0,03R; soma: -2,20R
+- Flips (geral, separado do Placar principal): 86 acionados (85 encerrados, 1 abertos); alvo 1: 53%; stop: 47%; R médio por setup: -0,02R; soma: -1,92R
