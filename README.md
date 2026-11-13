@@ -9,7 +9,7 @@ Relatório diário dos trades do Discord (CobraTrades e Jayson Casper), ao meio-
 
 | Data | Resumo | HTML | PDF | Discord |
 |---|---|---|---|---|
-| 2026-11-12 | - | - | - | [ver](https://htmlpreview.github.io/?https://github.com/arturdeiss/analise-crypto/blob/main/relatorios/2026-11-12/discord.html) · [html](relatorios/2026-11-12/discord.html) |
+| 2026-11-12 | [texto](relatorios/2026-11-12/resumo.md) | [html](relatorios/2026-11-12/resumo.html) | [pdf](relatorios/2026-11-12/resumo.pdf) | [ver](https://htmlpreview.github.io/?https://github.com/arturdeiss/analise-crypto/blob/main/relatorios/2026-11-12/discord.html) · [html](relatorios/2026-11-12/discord.html) |
 | 2026-11-11 | [texto](relatorios/2026-11-11/resumo.md) | [html](relatorios/2026-11-11/resumo.html) | [pdf](relatorios/2026-11-11/resumo.pdf) | [ver](https://htmlpreview.github.io/?https://github.com/arturdeiss/analise-crypto/blob/main/relatorios/2026-11-11/discord.html) · [html](relatorios/2026-11-11/discord.html) |
 | 2026-11-10 | [texto](relatorios/2026-11-10/resumo.md) | [html](relatorios/2026-11-10/resumo.html) | [pdf](relatorios/2026-11-10/resumo.pdf) | [ver](https://htmlpreview.github.io/?https://github.com/arturdeiss/analise-crypto/blob/main/relatorios/2026-11-10/discord.html) · [html](relatorios/2026-11-10/discord.html) |
 | 2026-11-09 | [texto](relatorios/2026-11-09/resumo.md) | [html](relatorios/2026-11-09/resumo.html) | [pdf](relatorios/2026-11-09/resumo.pdf) | [ver](https://htmlpreview.github.io/?https://github.com/arturdeiss/analise-crypto/blob/main/relatorios/2026-11-09/discord.html) · [html](relatorios/2026-11-09/discord.html) |
