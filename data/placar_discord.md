@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 12/11 19:31. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 13/11 12:17. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -27,11 +27,11 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 03/11 | KAS | long | 0,028487 | 0,02655 | 0,0352 | — | Aberto | 0R | — |
 | 05/11 | ETH | long | 2.306 | 2.220 | 2.390 | — | Stop | -1,00R | — |
 | 06/11 | AAVE | long | 130,66 | 114,6 | 249,78 | — | Stop | -1,00R | Cobra saiu com −0,5R (12/11 12h55) |
-| 09/11 | ETH | long | 1.936,66 | 1.820,44 | 2.893,23 | — | Não acionado | 0R | — |
-| 10/11 | NEAR | long | 3,265 | 3,049 | 9,147 | — | Não acionado | 0R | — |
+| 09/11 | ETH | long | 1.936,66 | 1.820,44 | 2.893,23 | — | Aberto | 0R | Cobra confirmou long em 13/11 07h37 (caixa ≈1.950 / stop ≈1.820 / alvo ≈2.796; disse que se antecipou ao plano); entrada mecânica 1.936,66 tocada 13/11 00h |
+| 10/11 | NEAR | long | 3,265 | 3,049 | 9,147 | — | Aberto | 0R | — |
 
-- Total no registro: 23 (Não acionado: 4; Aberto: 2; Alvo 1: 3; Stop: 10; Expirado: 4)
-- Geral: 15 acionados (13 encerrados, 2 abertos); alvo 1: 23%; stop: 77%; R médio por setup: +0,36R; soma: +4,72R
+- Total no registro: 23 (Não acionado: 2; Aberto: 4; Alvo 1: 3; Stop: 10; Expirado: 4)
+- Geral: 17 acionados (13 encerrados, 4 abertos); alvo 1: 23%; stop: 77%; R médio por setup: +0,36R; soma: +4,72R
 
 ## Placar Jayson Casper
 
@@ -40,7 +40,7 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 12/10 | BTC | long | 81.900 | 80.600 | 87.300 | — | Stop | -1,00R | Entrou 2× em 12/10 (20h08 e 21h35) com stops mais curtos e foi estopado nas duas: pequena perda |
 | 12/10 | BTC | short | 83.317 | 83.616 | 81.650 | — | Stop | -1,00R | Não comentou; o alvo bateu antes da entrada (setup vencido) |
 | 12/10 | BTC | short | 84.300 | 86.500 | 75.000 | — | Alvo 1 | +4,23R | — |
-| 12/10 | BTC | short | 84.900 | 90.000 | 69.667 | 68.357 | Aberto | 0R | — |
+| 12/10 | BTC | short | 84.900 | 90.000 | 69.667 | 68.357 | Alvo 2 | +3,24R | — |
 | 13/10 | BTC | long | 80.300 | 77.500 | 88.000 | — | Stop | -1,00R | — |
 | 14/10 | BTC | long | 81.595 | 81.200 | 86.500 | — | Stop | -1,00R | 2ª zona do mesmo gráfico; às 11h20 disse que ia ficar de fora |
 | 14/10 | BTC | long | 82.200 | 81.200 | 86.500 | — | Stop | -1,00R | Ficou de fora às 11h20: confirmação "muito duvidosa" |
@@ -72,11 +72,11 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 09/11 | BTC | short | 75.709,7 | 76.870,6 | 71.990,5 | — | Não acionado | 0R | — |
 | 09/11 | BTC | short | 76.885,6 | 78.029,9 | 71.705,5 | — | Não acionado | 0R | — |
 | 10/11 | BTC | long | 73.972,8 | 72.846,3 | 75.733,5 | — | Stop | -1,00R | — |
-| 11/11 | BTC | long | 72.524,9 | 70.765,6 | 87.946,7 | — | Aberto | 0R | Jayson: entrou, realizou TP1 de scalp e disse que foi estopado (12/11 11h54) |
+| 11/11 | BTC | long | 72.524,9 | 70.765,6 | 87.946,7 | — | Stop | -1,00R | Jayson: entrou, realizou TP1 de scalp e disse que foi estopado (12/11 11h54) |
 | 11/11 | BTC | long | 73.094,3 | 72.628,4 | 75.723,3 | — | Stop | -1,00R | — |
 | 11/11 | BTC | short | 75.592,9 | 76.107,4 | 71.874,9 | — | Não acionado | 0R | — |
 
-- Total no registro: 38 (Não acionado: 7; Aberto: 2; Alvo 1: 5; Alvo 2: 1; Stop: 20; Cancelado: 1; Ambíguo: 2)
-- Geral: 28 acionados (26 encerrados, 2 abertos); alvo 1: 23%; stop: 77%; R médio por setup: +0,60R; soma: +15,66R
+- Total no registro: 38 (Não acionado: 7; Alvo 1: 5; Alvo 2: 2; Stop: 21; Cancelado: 1; Ambíguo: 2)
+- Geral: 28 acionados (28 encerrados, 0 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,64R; soma: +17,91R
 
 *Sem alvo postado, o trade fica Aberto até o stop. Cancelado = o autor desistiu ou disse que a ordem foi front-runada antes da entrada (0R). Ativos sem par spot na Binance nem na Gate.io (S&P) e trades sem níveis (APT) ficam de fora.*
