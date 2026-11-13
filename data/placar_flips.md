@@ -85,6 +85,6 @@
 | 12/11 | TAO | long | 208,2 | 203,59 | 210,96 | 217,67 | 13h–14h | Alvo 1 (depois voltou à entrada em 12/11) | +0,60R |
 | 12/11 | DOGE | long | 0,0657 | 0,06433 | 0,06609 | 0,06764 | 13h–14h | Alvo 1 | +0,28R |
 | 12/11 | BTC | long | 71.906,98 | 71.041 | 72.357,5 | 73.452,9 | 14h–15h | Aberto | 0R |
-| 12/11 | HBAR | long | 0,06375 | 0,06271 | 0,06404 | 0,06516 | 15h–16h | Aberto | 0R |
+| 12/11 | HBAR | long | 0,06375 | 0,06271 | 0,06404 | 0,06516 | 15h–16h | Alvo 1 | +0,28R |
 
-- Flips (geral, separado do Placar principal): 84 acionados (79 encerrados, 5 abertos); alvo 1: 54%; stop: 46%; R médio por setup: +0,02R; soma: +1,52R
+- Flips (geral, separado do Placar principal): 84 acionados (80 encerrados, 4 abertos); alvo 1: 55%; stop: 45%; R médio por setup: +0,02R; soma: +1,80R
