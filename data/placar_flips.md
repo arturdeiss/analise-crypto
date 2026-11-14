@@ -97,5 +97,6 @@
 | 14/11 | ZEC | long | 912,21 | 892,15 | 922,77 | 954,11 | 06h–07h | Stop | -1,00R |
 | 14/11 | ONDO | long | 0,331 | 0,3241 | 0,3342 | 0,3434 | 06h–07h | Stop | -1,00R |
 | 14/11 | AAVE | long | 107,19 | 106,59 | 109,59 | 112,25 | 08h–09h | Stop | -1,00R |
+| 14/11 | ETH | long | 1.830,98 | 1.805,86 | 1.856,31 | 1.901,03 | 15h–16h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 95 acionados (95 encerrados, 0 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,06R; soma: -5,89R
+- Flips (geral, separado do Placar principal): 96 acionados (95 encerrados, 1 abertos); alvo 1: 51%; stop: 49%; R médio por setup: -0,06R; soma: -5,89R
