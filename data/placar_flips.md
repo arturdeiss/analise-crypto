@@ -91,5 +91,6 @@
 | 13/11 | ETH | long | 1.934,52 | 1.890,3 | 1.944,72 | 1.993,2 | 04h–05h | Alvo 1 (depois voltou à entrada em 13/11 e bateu o stop em 13/11) | +0,23R |
 | 13/11 | AAVE | long | 111,32 | 109 | 111,85 | 114,36 | 04h–05h | Alvo 2 | +1,31R |
 | 13/11 | BTC | long | 68.290,01 | 67.661,4 | 68.704,5 | 69.833,6 | 22h–23h | Stop | -1,00R |
+| 14/11 | SOL | long | 76 | 74,63 | 77,18 | 79,5 | 02h–03h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 89 acionados (89 encerrados, 0 abertos); alvo 1: 54%; stop: 46%; R médio por setup: +0,00R; soma: +0,11R
+- Flips (geral, separado do Placar principal): 90 acionados (89 encerrados, 1 abertos); alvo 1: 54%; stop: 46%; R médio por setup: +0,00R; soma: +0,11R
