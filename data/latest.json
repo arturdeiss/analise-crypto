@@ -1,6 +1,6 @@
 {
- "gerado": "13/11/2026 19:41",
- "fechamento": "2026-11-12",
+ "gerado": "13/11/2026 21:36",
+ "fechamento": "2026-11-13",
  "discord": "2026-11-13",
  "setups": [
   {
@@ -10,13 +10,12 @@
     1380,
     1380
    ],
-   "stop": 940.0,
+   "stop": 905.0,
    "alvos": [
-    1440,
-    1495
+    1041.0
    ],
    "saiu": false,
-   "setup": "1h: CC n/d (não lido em 11/11 nem hoje); proxy fita EMA hoje: preço <b>dentro</b> da fita, EMA8 < EMA55 / 4h: CC n/d (não lido em 11/11 nem hoje); proxy fita EMA hoje: preço <b>abaixo</b> da fita, EMA8 < EMA55",
+   "setup": "1h: CC n/d (não lido hoje à noite); proxy fita EMA (vela 13/11 20h): preço <b>abaixo</b> da fita, EMA8 < EMA55 / 4h: CC n/d (não lido hoje à noite); proxy fita EMA (vela 13/11 17h): preço <b>abaixo</b> da fita, EMA8 < EMA55",
    "id": "20261003-ZEC-long"
   }
  ]
