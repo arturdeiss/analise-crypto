@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 14/11 19:33. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 15/11 12:33. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -24,13 +24,14 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 27/10 | BTC | short | 81.770 | 82.287 | 78.318 | — | Alvo 1 | +6,68R | — |
 | 01/11 | LTC | long | 55,7 | 50,2 | 60,4 | 77,3 | Stop | -1,00R | — |
 | 01/11 | PEPE | short | 0,00000487 | 0,0000057 | 0,0000032 | — | Aberto | 0R | — |
-| 03/11 | KAS | long | 0,028487 | 0,02655 | 0,0352 | — | Stop | -1,00R | — |
+| 03/11 | KAS | long | 0,028487 | 0,02655 | 0,0352 | — | Stop | -1,00R | Cobra: estopado na entrada, stop movido para BE após o 2º repique (15/11 10h02) |
 | 05/11 | ETH | long | 2.306 | 2.220 | 2.390 | — | Stop | -1,00R | — |
 | 06/11 | AAVE | long | 130,66 | 114,6 | 249,78 | — | Stop | -1,00R | Cobra saiu com −0,5R (12/11 12h55) |
-| 09/11 | ETH | long | 1.936,66 | 1.820,44 | 2.893,23 | — | Stop | -1,00R | Cobra confirmou long em 13/11 07h37 (caixa ≈1.950 / stop ≈1.820 / alvo ≈2.796; disse que se antecipou ao plano); entrada mecânica 1.936,66 tocada 13/11 00h |
-| 10/11 | NEAR | long | 3,265 | 3,049 | 9,147 | — | Stop | -1,00R | — |
+| 09/11 | ETH | long | 1.936,66 | 1.820,44 | 2.893,23 | — | Stop | -1,00R | Cobra confirmou long em 13/11 07h37 (caixa ≈1.950 / stop ≈1.820 / alvo ≈2.796; disse que se antecipou ao plano); entrada mecânica 1.936,66 tocada 13/11 00h; Cobra confirmou que foi estopado (15/11 08h46) |
+| 10/11 | NEAR | long | 3,265 | 3,049 | 9,147 | — | Stop | -1,00R | Cobra disse que não entrou: o preço caiu rápido demais (15/11 08h46) |
+| 15/11 | CAKE | long | 1,481 | 1,339 | 3,061 | — | Não acionado | 0R | — |
 
-- Total no registro: 23 (Não acionado: 2; Aberto: 1; Alvo 1: 3; Stop: 13; Expirado: 4)
+- Total no registro: 24 (Não acionado: 3; Aberto: 1; Alvo 1: 3; Stop: 13; Expirado: 4)
 - Geral: 17 acionados (16 encerrados, 1 abertos); alvo 1: 19%; stop: 81%; R médio por setup: +0,11R; soma: +1,72R
 
 ## Placar Jayson Casper
