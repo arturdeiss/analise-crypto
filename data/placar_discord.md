@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 18/11 12:30. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 18/11 13:10. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -77,16 +77,16 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 11/11 | BTC | long | 73.094,3 | 72.628,4 | 75.723,3 | — | Stop | -1,00R | — |
 | 11/11 | BTC | short | 75.592,9 | 76.107,4 | 71.874,9 | — | Expirado | 0R | — |
 | 16/11 | BTC | short | 66.020 | 67.106 | 61.885 | — | Não acionado | 0R | — |
-| 17/11 | BTC | long | 64.045,8 | 62.006 | 66.945 | — | Aberto | 0R | Jayson entrou a mercado 17/11 12h58 ("taken the long train"); stop = abaixo da mínima de sábado 14/11 (62.006 na Binance); 17/11 21h03 aceitou TP1 de day trade no topo do range local (≈65.000–65.270) |
-| 18/11 | BTC | long | 63.250 | 61.885 | 66.065 | — | Não acionado | 0R | Jayson: "NOT the highest probability"; preço estava ≈63.247 no minuto do post (11h51) — placar conta a partir da vela das 12h |
-| 18/11 | BTC | long | 63.250 | 60.863 | 65.940 | — | Não acionado | 0R | Jayson: "Much nicer long setup" (alvo 65.940–66.065); preço estava ≈63.247 no minuto do post (11h51) — placar conta a partir da vela das 12h |
+| 17/11 | BTC | long | 64.045,8 | 62.006 | 66.945 | — | Aberto | 0R | Jayson entrou a mercado 17/11 12h58 ("taken the long train"); entrada mecânica = Binance ≈64.045,8 no minuto do post (o print de 21h03 mostra o fill dele em 63.575,5, Bybit); stop ≈ abaixo da mínima de sábado 14/11 (≈62.006 na Binance); 17/11 21h03 aceitou TP1 de day trade no topo do range local (≈65.000–65.270) |
+| 18/11 | BTC | long | 63.250 | 61.885 | 66.065 | — | Aberto | 0R | Jayson: "NOT the highest probability"; preço estava ≈63.247 no minuto do post (11h51) — placar conta a partir da vela das 12h |
+| 18/11 | BTC | long | 63.250 | 60.863 | 65.940 | — | Aberto | 0R | Jayson: "Much nicer long setup" (alvo 65.940–66.065); preço estava ≈63.247 no minuto do post (11h51) — placar conta a partir da vela das 12h |
 | 18/11 | BTC | short | 66.200 | 68.300 | 61.885 | — | Não acionado | 0R | — |
 | 18/11 | BTC | short | 67.000 | 68.800 | 61.885 | — | Não acionado | 0R | — |
 | 18/11 | BTC | short | 68.200 | 69.300 | 61.885 | — | Não acionado | 0R | — |
 | 18/11 | BTC | short | 74.500 | 77.660 | 66.676 | — | Não acionado | 0R | — |
 | 18/11 | BTC | short | 74.500 | 76.925 | 66.676 | — | Não acionado | 0R | — |
 
-- Total no registro: 47 (Não acionado: 14; Aberto: 1; Alvo 1: 5; Alvo 2: 2; Stop: 21; Expirado: 1; Cancelado: 1; Ambíguo: 2)
-- Geral: 29 acionados (28 encerrados, 1 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,64R; soma: +17,91R
+- Total no registro: 47 (Não acionado: 12; Aberto: 3; Alvo 1: 5; Alvo 2: 2; Stop: 21; Expirado: 1; Cancelado: 1; Ambíguo: 2)
+- Geral: 31 acionados (28 encerrados, 3 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,64R; soma: +17,91R
 
 *Sem alvo postado, o trade fica Aberto até o stop. Cancelado = o autor desistiu ou disse que a ordem foi front-runada antes da entrada (0R). Ativos sem par spot na Binance nem na Gate.io (S&P) e trades sem níveis (APT) ficam de fora.*
