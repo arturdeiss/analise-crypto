@@ -107,9 +107,9 @@
 | 15/11 | ETH | short | 1.812,15 | 1.850,72 | 1.711,08 | 1.561,22 | 13h–14h | Stop | -1,00R |
 | 15/11 | TAO | short | 190,75 | 196,187 | 177,5 | 163,9 | 13h–14h | Stop | -1,00R |
 | 15/11 | SUI | short | 0,7186 | 0,739311 | 0,6755 | 0,619359 | 13h–14h | Stop | -1,00R |
-| 15/11 | SOL | short | 71,24 | 73,4998 | 67,41 | 60,8249 | 13h–14h | Aberto | 0R |
+| 15/11 | SOL | short | 71,24 | 73,4998 | 67,41 | 60,8249 | 13h–14h | Stop | -1,00R |
 | 15/11 | HBAR | short | 0,05776 | 0,059588 | 0,05484 | 0,050929 | 13h–14h | Aberto | 0R |
-| 15/11 | DOGE | short | 0,05842 | 0,06017 | 0,05543 | 0,05055 | 13h–14h | Aberto | 0R |
+| 15/11 | DOGE | short | 0,05842 | 0,06017 | 0,05543 | 0,05055 | 13h–14h | Stop | -1,00R |
 | 15/11 | BTC | short | 64.600,9 | 66.330,4 | 62.006 | 58.086,4 | 13h–14h | Aberto | 0R |
 
-- Flips (geral, separado do Placar principal): 107 acionados (103 encerrados, 4 abertos); alvo 1: 48%; stop: 52%; R médio por setup: -0,11R; soma: -11,77R
+- Flips (geral, separado do Placar principal): 107 acionados (105 encerrados, 2 abertos); alvo 1: 47%; stop: 53%; R médio por setup: -0,13R; soma: -13,77R
