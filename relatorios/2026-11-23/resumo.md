@@ -33,24 +33,25 @@
 - **O 1D virou G em ZEC e NEAR**, então agora as 11 estão com o 1D acima do sinal (BTC desde 15/11, as outras desde 22/11 ou 23/11). O 12h (vela das 09h) sobe nas 11; o mais forte é o da TAO (−12/−26) e o mais fraco é o da AAVE (−55/−60). No 1h, o R em sobrecompra das 13h/14h já levou o WT para perto de zero ou abaixo, e ETH, ZEC, AAVE e NEAR estão abaixo da fita do 1h. **Pelo filtro do plano, nenhuma moeda está alinhada:** o 4h agora aponta para baixo, mas o 12h e o 1D sobem.
 - **Divergências:** a alta regular confirmada do 12h (fundo de 21/11) segue em 9 moedas (BTC, ETH, ZEC, DOGE, SUI, AAVE, TAO, ONDO e HBAR); SOL e NEAR têm só a versão fraca no 12h, e a NEAR tem a alta regular confirmada no 1D (15/11). **No 12h e no 1D há divergências formando:** alta formando no 1D nas 11 moedas e no 12h no ETH; **baixa formando no 1D em SUI, AAVE e NEAR** (a máxima de hoje passou do topo anterior com WT menor; confiança baixa, porque o WT está em −62 a −72, longe do nível de 45); baixa formando no 12h da HBAR (topo de 19/11). Há alta oculta confirmada nova no 1h de ETH, SUI, TAO, ONDO e NEAR (fundos de 23/11 00h–09h). Com o critério mais rígido desta rodada, as altas regulares do 1D de SUI, AAVE e HBAR aparecem como formando, e não como confirmadas.
 - **Range deviation (vigia RD de hoje):** no BTC, a zona do 4h não mudou (última azul em 20–21/11), e não apareceu zona vermelha. A vigia rodou de 01h a 19h20 e não achou sinal válido; os R do 1h em sobrecompra das 13h/14h foram descartados por falta de zona vermelha e de alinhamento de baixa.
-- **Conta real:** Esta análise não abriu nada.
+- **Conta real:** na última leitura registrada pela vigia RD (Central Command, ~19h18), a conta estava sem operações nem ordens abertas. Esta análise não abriu nada.
 
 ## Condicionais do relatório anterior (22/11) e das intradiárias de 23/11
 
 Conferência feita com as velas de 1h da Binance, de 22/11 21h até 23/11 21h BRT.
 
 - **Pós-fechamento de 22/11:** não havia condicional com nível. O gatilho de long (4h fechar acima da fita) **não aconteceu** em nenhuma moeda: o 4h das 09h fechou dentro da fita em todas, inclusive TAO (197,90 < 200,36) e SOL (75,66 < 76,80).
-- 72,63), então a entrada teria sido preenchida, e **o stop foi atingido às 10h** (máx. 76,76). Resultado no papel: **−1R**. O alvo 1 não foi tocado antes do stop.
+- **SOL short no papel (intradiária de 09h): short ~72,5, stop 73,7, alvo 1 70,9, alvo 2 69,9.** O preço passou por 72,5 na vela das 09h (máx. 72,63), então a entrada teria sido preenchida, e **o stop foi atingido às 10h** (máx. 76,76). Resultado no papel: **−1R**. O alvo 1 não foi tocado antes do stop.
+- **AAVE e HBAR short na tendência curta (intradiária de 03h, só papel, sem níveis):** já tinha sido **invalidado** às 09h, quando as duas voltaram para dentro da fita do 4h. Não disparou.
 - **Intradiária de 15h:** sem papel com nível. O aviso era que um R do 4h em sobrecompra na SOL a tornaria candidata a short no papel; **isso aconteceu às 17h** e virou o condicional de papel desta rodada (abaixo).
-- nenhum outro condicional disparou e nenhum alvo foi atingido.**
+- Resumo: **um papel (SOL 09h) foi preenchido e atingiu o stop (−1R no papel); nenhum outro condicional disparou e nenhum alvo foi atingido.**
 
 ## Oportunidades
 
-**Nenhuma Oportunidade nesta rodada (0).** O 4h virou para baixo, mas o 12h e o 1D sobem nas 11 moedas, então nenhum lado passa no filtro de tendência (4h + 12h + 1D). O short está bloqueado pelo 12h e pelo 1D subindo e pelas altas regulares confirmadas no 12h. O long está bloqueado pela fita do 4h para baixo e pela rejeição de hoje nas resistências. O gatilho a observar para um long continua sendo o **4h fechando acima da fita, com a fita virando para cima**.
+**Nenhuma Oportunidade nesta rodada (0).** O 4h virou para baixo, mas o 12h e o 1D sobem nas 11 moedas, então nenhum lado passa no filtro de tendência (4h + 12h + 1D). O short está bloqueado pelo 12h e pelo 1D subindo e pelas altas regulares confirmadas no 12h. O long está bloqueado pela fita do 4h para baixo e pela rejeição de hoje nas resistências. O gatilho a observar para um long continua sendo o **4h fechando acima da fita, com a fita virando para cima**. Para um short a favor da tendência, falta **o 12h voltar a cair** (R no 12h) com o preço abaixo da fita do 4h.
 
 ### Plano v18/11: ideias que ficam só no papel
 
-- **SOL short no repique (condicional de papel):** 72,90–73,40, stop 74,00, alvo 1 69,89, alvo 2 66,82 (RR ~3,1 / ~6,2 com entrada em ~73,00). Gatilho: R do 4h em sobrecompra às 17h, baixas ocultas confirmadas no 4h e no 12h e nenhuma alta regular confirmada no 12h/1D. Fica no papel pela regra 6 e também falha a regra 1 (12h e 1D sobem), sem zona vermelha RD lida (n/d) e sem MC B real (regra 4).
+- **SOL short no repique (condicional de papel):** 72,90–73,40, stop 74,00, alvo 1 69,89, alvo 2 66,82 (RR ~3,1 / ~6,2 com entrada em ~73,00). Gatilho: R do 4h em sobrecompra às 17h, baixas ocultas confirmadas no 4h e no 12h e nenhuma alta regular confirmada no 12h/1D. Fica no papel pela regra 6 e também falha a regra 1 (12h e 1D sobem), sem zona vermelha RD lida (n/d) e sem MC B real (regra 4). Lembrete: o short no papel da manhã na SOL bateu no stop no pico das 10h.
 - **AAVE short no repique (condicional de papel):** 98,40–99,50, stop 100,50, alvo 1 95,56, alvo 2 91,09 (RR ~1,9 / ~4,5 com entrada em ~98,80). É a mais fraca (abaixo da fita do 4h e do 1h, 12h mais fraco), mas falha a regra 1 (12h e 1D sobem, alta regular confirmada no 12h) e a regra 4, e fica no papel pela regra 6.
 - **Long de continuação (TAO, a mais adiantada):** fica no papel pela regra 6 e falha a regra 1 (fita do 4h para baixo). Depois de um fechamento do 4h acima de 199,41, com stop abaixo de 187,70, o RR seria ~1,2 até 213,90 e ~2,2 até 225,35, abaixo do RR total de 2,5.
 - **Nenhuma ideia desta rodada passaria nos filtros do plano** (tendência alinhada, RR Alvo 1 ≥ 1,0, RR total ≥ 2,5 e MC B real).
@@ -71,14 +72,14 @@ Conferência feita com as velas de 1h da Binance, de 22/11 21h até 23/11 21h BR
 
 ## Top 3
 
-1. O condicional é o repique em 72,90–73,40 com stop 74,00. Contra pesam o 12h e o 1D subindo e o stop da manhã.
+1. **SOL, short no papel (só observação):** é a única com R do 4h em sobrecompra e sem alta regular confirmada no 12h/1D. O condicional é o repique em 72,90–73,40 com stop 74,00. Contra pesam o 12h e o 1D subindo e o stop da manhã.
 2. **AAVE, a mais fraca (só observação):** está abaixo da fita do 4h e do 1h, com o 12h mais fraco das 11. Uma perda de 95,56 abriria espaço até 91,09; o repique em 98,40–99,50 é a zona do papel.
 3. **TAO, a mais forte (só observação):** tem o 12h mais alto das 11 e furou o topo da fita do 4h no pico, sem fechar acima. O gatilho de long é o 4h fechar acima de 199,41.
 
 ## Alertas
 
 - **Nenhum alerta criado** (rodada sem navegador e sem Oportunidade; regra 6 do plano). Os alertas do TradingView não foram mexidos.
-- Sem Oportunidade, **nenhum alerta é obrigatório**, e não há lista de alertas pendentes de zona.
+- Sem Oportunidade, **nenhum alerta é obrigatório**, e não há lista de alertas pendentes de zona. Para acompanhar os papéis, os nomes seriam "SOL short zona 1 - 72,90" (cruzando para cima) e "AAVE short zona 1 - 98,40" (cruzando para cima), **não criados**.
 
 ## Níveis de Fibonacci e perfil de volume
 
