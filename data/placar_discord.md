@@ -1,6 +1,6 @@
 # Placar Discord
 
-Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 24/11 19:34. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
+Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os níveis do dia em que apareceram no relatório. Velas de 1h da Binance (5m em empate; ativos fora da Binance spot, como KAS, pela Gate.io) a partir das 12h de Brasília desse dia (ou da hora do post, quando conhecida), até 25/11 12:20. A entrada conta como acionada se o preço chegar a 0,1% dela, ou na hora em que o autor relatou o fill. Faixa de entrada conta pela borda tocada primeiro; stop em faixa, pelo mais largo. A coluna Autor mostra o que ele disse que fez, quando difere da mecânica.
 
 ## Placar CobraTrades
 
@@ -35,10 +35,11 @@ Trades postados pela CobraTrades e pelo Jayson Casper desde 12/10/2026, com os n
 | 20/11 | BTC | long | 59.746 | 57.700 | — | — | Stop | -1,00R | Cobra fechou a mercado 20/11 15h45 (≈58.643, "Market not holding well"), meio risco |
 | 21/11 | BTC | long | 58.050 | 55.100 | — | — | Aberto | 0R | — |
 | 23/11 | BTC | short | 63.674 | 65.600 | 61.200 | 55.000 | Alvo 1 | +1,28R | Cobra postou 10h52 (limite 63.674), "Filled" 11h01; Binance tocou a entrada 10h59 |
-| 24/11 | BTC | long | 59.750 | 57.911 | 63.650 | 73.030 | Aberto | 0R | — |
+| 24/11 | BTC | long | 59.750 | 57.911 | 63.650 | 73.030 | Stop | -1,00R | — |
+| 25/11 | PAXG | long | 3.441 | 3.236 | — | — | Aberto | 0R | — |
 
-- Total no registro: 30 (Não acionado: 2; Aberto: 3; Alvo 1: 5; Stop: 14; Expirado: 4; Cancelado: 2)
-- Geral: 22 acionados (19 encerrados, 3 abertos); alvo 1: 26%; stop: 74%; R médio por setup: +0,21R; soma: +4,01R
+- Total no registro: 31 (Não acionado: 2; Aberto: 3; Alvo 1: 5; Stop: 15; Expirado: 4; Cancelado: 2)
+- Geral: 23 acionados (20 encerrados, 3 abertos); alvo 1: 25%; stop: 75%; R médio por setup: +0,15R; soma: +3,01R
 
 ## Placar Jayson Casper
 
