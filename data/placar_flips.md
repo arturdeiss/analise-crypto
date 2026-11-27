@@ -112,4 +112,7 @@
 | 15/11 | DOGE | short | 0,05842 | 0,06017 | 0,05543 | 0,05055 | 13h–14h | Stop | -1,00R |
 | 15/11 | BTC | short | 64.600,9 | 66.330,4 | 62.006 | 58.086,4 | 13h–14h | Alvo 2 | +3,77R |
 
-- Flips (geral, separado do Placar principal): 107 acionados (107 encerrados, 0 abertos); alvo 1: 48%; stop: 52%; R médio por setup: -0,06R; soma: -6,26R
+| 26/11 | ZEC | short | 695,8 | 723,63 | 640,14 | — | 19h–20h | Stop | -1,00R |
+| 27/11 | NEAR | long | 3,124 | 3,07 | 3,232 | — | 06h–07h | Stop | -1,00R |
+
+- Flips (geral, separado do Placar principal): 109 acionados (109 encerrados, 0 abertos); alvo 1: 47%; stop: 53%; R médio por setup: -0,08R; soma: -8,26R
