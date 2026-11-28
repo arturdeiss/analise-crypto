@@ -46,5 +46,6 @@
 | 19/11 08:05 | BTC | short | 64.600,9 | 66.330,4 | 62.006 | Encerrado (manual) | +0,47R |
 | 19/11 08:05 | HBAR | short | 0,05776 | 0,059588 | 0,05484 | Encerrado (manual) | +1,26R |
 | 26/11 15:10 | SUI | long | 0,6676 | 0,6483 | 0,7047 | Stop (na entrada) | -0,04R |
+| 27/11 21:25 | TAO | long | 186,51 | 179,9 | 200,3 | Aberto | — |
 
-- Reais (separado do Geral): 7 trades, 7 encerrados, soma -2,34R
+- Reais (separado do Geral): 8 trades, 7 encerrados, soma -2,34R

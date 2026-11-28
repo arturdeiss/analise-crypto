@@ -1,6 +1,22 @@
 {
- "gerado": "27/11/2026 20:11",
- "fechamento": "2026-11-26",
+ "gerado": "27/11/2026 22:32",
+ "fechamento": "2026-11-27",
  "discord": "2026-11-27",
- "setups": []
+ "setups": [
+  {
+   "ativo": "TAO",
+   "direcao": "long",
+   "zona": [
+    184.89,
+    186.53
+   ],
+   "stop": 263,
+   "alvos": [
+    291
+   ],
+   "saiu": false,
+   "setup": "1h: CC: neutro (sem cor nas últimas velas; preço dentro da fita), lido 27/11 ~21h15. Proxy fita EMA (vela 27/11 20h): preço <b>acima</b> da fita (184,89–186,53), EMA8 > EMA55 / 4h: CC: n/d (não lido; terminal voltava para BTC). Proxy fita EMA (vela 27/11 17h): preço <b>dentro</b> da fita (184,78–192,68), EMA8 < EMA55",
+   "id": "20261016-TAO-long-cp"
+  }
+ ]
 }
